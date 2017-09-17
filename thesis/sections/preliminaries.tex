@@ -20,7 +20,7 @@ Let $X=\Proj \mathscr R$ and $Y = \Proj \mathscr S$. Then we define the \emph{jo
 \[
 X \ast Y \stackrel \Delta =  \Proj (\mathscr R \otimes_{\OO_S} \mathscr S).
 \]
-   
+
 If $X$ and $Y$ are projective varieties over $S$, they come with graded $\OO_S$-algebras $\mathscr R = \Sym_S \OO_X(1)$ and $\mathscr S = \Sym_S \OO_Y(1)$. Then we define the join of $X$ and $Y$ to be join of these algebras.
 
 The join construction is a contravariant functor in two variables from the category of graded $\OO_S$-algebras and surjective maps to the category of projective varieties.
@@ -31,19 +31,16 @@ Let $X=\P(E)$ and $Y=\P(F)$, where $E,F$ are quasi-coherent $\OO_S$-modules. The
 
 The algebra $\mathscr R \otimes_{\OO_S} \mathscr S$ contains the ideal $\mathscr R \otimes \mathscr S_+$. The associated subscheme is denoted by $V_X$, and it is isomorphic to $X = \Proj \mathscr R$. We define $V_Y$ similarly. We call $V_X$ and $V_Y$ the \emph{fundamental subschemes} of $X \ast Y$.
 
-There is a geometric definition of the join, as described in section (C11) in \cite{altman_joins}. Let $E,F$ be quasi-coherent $\OO_S$-modules\footnote{In our case, $S=\Spec k$  always. So $E,F$ are just vector spaces.}. Suppose $X$ and $Y$ are subschemes of $\P(E)$ and $\P(F)$. Then $X\ast Y$ is a closed subscheme of $\P(E \oplus F)$. Identify $X$ and $Y$ with their fundamental subschemes in $X \ast Y$. Then it is not difficult to see that $X \ast Y$ is the (closure of the) locus of points lying on the lines of $\P(E \oplus F)$ determined by pairs of points of $X$ and $Y$. 
-
-%For a graded $\OO_S$-algebra $\mathscr R$ there are two natural homomorphisms. We have the \emph{structure map} $\rho: \OO_S \to \mathscr R$, and the \emph{augmentation map} $\epsilon: \mathscr R \to \OO_S$, sending everything in positive degree to zero. Clearly $\epsilon \circ \rho = \id_S$.
-
+There is a geometric definition of the join, as described in section (C11) in \cite{altman_joins}. Let $E,F$ be quasi-coherent $\OO_S$-modules\footnote{In our case, $S=\Spec k$  always. So $E,F$ are just vector spaces.}. Suppose $X$ and $Y$ are closed subschemes of $\P(E)$ and $\P(F)$, respectively. Then $X\ast Y$ is a closed subscheme of $\P(E \oplus F)$. Identify $X$ and $Y$ with their fundamental subschemes in $X \ast Y$. Then it is not difficult to see that $X \ast Y$ is the (closure of the) locus of points lying on the lines of $\P(E \oplus F)$ determined by pairs of points of $X$ and $Y$. 
 
 \begin{proposition}
 \label{lemma:join}
-Suppose $X/k \subset \P^n$ and $Y/k \subset \P^m$ are smooth projective schemes. Then their join, $X \ast Y$ have dimension $\dim X+\dim Y+1$. The singular locus is of dimension $\max\{a,b\}$ and consist of the disjoint union of $X$ and $Y$.
+Suppose $X/k \subset \P^n$ and $Y/k \subset \P^m$ are smooth projective schemes. Then their join, $X \ast Y$ has dimension $\dim X+\dim Y+1$. The singular locus is of dimension $\max\{\dim X,\dim Y\}$ and consists of the disjoint union of $V_X$ and $V_Y$.
 \end{proposition}
 \begin{proof}
-Let $S_X = \bigoplus_{d \geq 0} H^0(X,\OO_X(d))$ and $S_Y = \bigoplus_{d \geq 0} H^0(Y,\OO_Y(d))$ be the homogeneous coordinate rings of $X$ and $Y$. Then $X \ast Y \subset \P^{n+m+1}$. 
+Let $S_X = \bigoplus_{d \geq 0} H^0\left(X,\OO_X(d)\right)$ and $S_Y = \bigoplus_{d \geq 0} H^0\left(Y,\OO_Y(d)\right)$ be the homogeneous coordinate rings of $X$ and $Y$, respectively. Then $X \ast Y \subset \P^{n+m+1}$. 
 
-Denote by $C(X \ast Y)$ the scheme $\Spec (S_X \otimes_k S_Y)$, which is the affine cone over $X \ast Y$. It is a general fact that if $A$, $B$ are two algebraic varieties, then the singular locus of the product is equal to the union $\Sing A \times B \cup A \times \Sing(B)$. It follows that the singular locus of $C(X \ast Y) = C(X) \times C(Y)$ is equal to
+Denote by $C(X \ast Y)$ the scheme $\Spec (S_X \otimes_k S_Y)$, which is the affine cone over $X \ast Y$. It is a general fact that if $A$, $B$ are two algebraic varieties, then the singular locus of the product is equal to the union $\Sing (A) \times B \cup A \times \Sing(B)$. It follows that the singular locus of $C(X \ast Y) = C(X) \times C(Y)$ is equal to
 
 \[
 \Sing C(X) \times C(Y) \bigcup C(X) \times \Sing C(Y).
@@ -52,19 +49,19 @@ Denote by $C(X \ast Y)$ the scheme $\Spec (S_X \otimes_k S_Y)$, which is the aff
 Since $X$ and $Y$ are smooth, the only singular point on the affine cones are the origins. Hence
 
 $$
-\Sing\left(C(X \ast Y)\right) = 0 \times \Sing(C(Y)) \bigcup \Sing(C(X)) \times 0.
+\Sing\left(C(X \ast Y)\right) = \{0\} \times \Sing(C(Y)) \bigcup \Sing(C(X)) \times \{ 0\}.
 $$
 
-Projectivizing, we find that $\Sing(X \ast Y) = \Sing Y \sqcup \Sing X$, since $(0,\ldots,0)$ is the only common point of the affine cones. 
+Projectivising, we find that $\Sing(X \ast Y) = V_X \sqcup V_Y$, since $(0,\ldots,0)$ is the only common point of the affine cones. 
 \end{proof}
 
 Recall that a scheme $X$ is \emph{Cohen--Macaulay} if all its local rings $\OO_{X,x}$ are Cohen--Macaulay. This means that depth and codimension agree everywhere on $X$. One implication of being Cohen--Macaulay is that $X$ will have a dualizing sheaf $\omega_X$. If the dualizing sheaf is a line bundle, then we say that $X$ is \emph{Gorenstein}.
 
 If the homogeneous coordinate ring of a projective variety $X$ is a Gorenstein ring, we say that $X$ is \emph{arithmetically Gorenstein}. In that case, the canonical sheaf can be computed as the sheaf associated to the graded module
 
-$$\Ext^{\codim X}(S_X,S_X(-\dim N-1))=S_X(-d),$$
+$$\Ext_R^{\codim X}(S_X,S_X(-\dim N-1))=S_X(-d),$$
 
-for some $d$, where $N$ is the dimension of the projective space. The number $d$ is the degree of the anticanonical embedding.
+where $R$ is the homogeneous coordinate ring of projective space. The last equality is true  because of Gorenstein duality, which says that for some $d$, where $N$ is the dimension of the projective space. The number $d$ is the degree of the anticanonical embedding. %%%% TODO: not true as is! Find correct formulation.
 
 If $X$ and $Y$ are two arithmetically Gorenstein schemes, then their join is also arithmetically Gorenstein. Furthermore, we can compute the canonical sheaf in terms of the canonical sheaves of $X$ and $Y$.
 
@@ -83,36 +80,38 @@ If $X$ and $Y$ are arithmetically Gorenstein projective schemes, the resolution 
 
 %%%%%%%%%
 %%%%%%%%%
-\section{Toric geometry} % (fold)
+\section{Toric geometry}
 \label{sec:toric_geometry}
 
-Toric geometry lies somewhere in the intersection between algebraic geometry and combinatorics and convex geometry. Toric varieties and their geometry can be described completely in terms of explicit finite combinatorial data. This makes toric geometry well suited for examples and explicit computations. In this section I give a quick and dirty introduction to the toric geometry.
+Toric geometry lies somewhere in the intersection between algebraic geometry, combinatorics and convex geometry. Toric varieties and their geometry can be described completely in terms of explicit finite combinatorial data. This makes toric geometry well suited for examples and explicit computations. In this section we give a quick and dirty introduction to the toric geometry.
 
-A toric variety is an irreducible and normal variety containing the torus ${T={(\C^\ast)}^n}$  as a dense subset, such that the action of the torus on itself extends to an action on the variety.
+\begin{definition}
+A \emph{toric variety} is an irreducible normal variety containing the torus ${T={(\C^\ast)}^n}$  as a dense subset, such that the action of the torus on itself extends to an action on the variety.
+\end{definition}
 
 We fix some notation that will be used throughout. Details and proofs can be found in \cite{cox_toric,fulton_toric}. Each toric variety comes with two dual lattices. The \emph{lattice of 1-parameter subgroups $N$} and the \emph{character lattice $M$}. A one-parameter subgroup is a morphism $\lambda:\C ^\ast \to T$ that is a group homomorphism. The set of one-parameter subgroups is a lattice isomorphic to $\Z^n$. A \emph{character} is a morphism $\chi:T \to \C^\ast$ that is a group homomorphism. The set of characters is a lattice $M$ isomorphic to $\Z^n$ which is naturally dual to $N$.
 
-Let $V$ be a $\R$-vector space. Let $V^\vee$ be the dual vector space. A \emph{convex polyhedral cone} is a subset $\sigma$ of $V$ of the form
+Let $V$ be an $\R$-vector space. Let $V^\vee$ be the dual vector space. A \emph{convex polyhedral cone} is a subset $\sigma$ of $V$ of the form
 
 $$
-\sigma = \{ r_1 v_1 + \ldots + r_s v_s \mid r_i \geq 0 \text{ for all } i \},
+\sigma = \{ r_1 v_1 + \dots + r_s v_s \mid r_i \geq 0 \text{ for all } i \},
 $$
 
-where the $v_i$ is a finite set of vectors in $V$ and the $r_i$ are real numbers. A \emph{rational polyhedral cone} is a cone such that the vectors $v_i$ can be taken to have rational coordinates.
+where the $v_i$'s are a finite set of vectors in $V$ and the $r_i$'s are real numbers. A \emph{rational polyhedral cone} is a cone such that the vectors $v_i$ can be taken to have rational coordinates.
 
 The \emph{dual cone $\sigma^\vee$} lives in $V^\vee$, and is defined as the set of functionals that are positive on $\sigma$:
 $$
-\sigma^\vee = \{ u \in V^\vee \mid \langle u,v\rangle \geq 0, v \in \sigma \}.
+\sigma^\vee \stackrel{\Delta}{=} \{ u \in V^\vee \mid \langle u,v\rangle \geq 0, v \in \sigma \}.
 $$
-Cones have two descriptions: either as the positive hull of a finite set of vectors (as above), or implicitly, as the intersection of finitely many half-spaces. If $u_i$ generate $\sigma^\vee$, then it is true that
+Cones have two descriptions: either as the positive hull of a finite set of vectors (as above), or implicitly, as the intersection of finitely many half-spaces. If the $u_i$'s generate $\sigma^\vee$, then it is true that
 $$
 \sigma = {\sigma^\vee}^ \vee  = \{ v \in V \mid \langle u_i,v \rangle \geq 0 \text{ for all } i \}.
 $$
 The vectors $u_i$ are the inner normal vectors of the facets of $\sigma$.
 
-A \emph{(commutative) semigroup} is a set $S$ with a commutative binary operation $S \times S \to S$, together with an identity element $0 \in S$. Given a cone $\sigma \subset N$, we can form a semigroup $S\stackrel{\Delta}{=} \sigma^\vee \cap M \subseteq M$. From this semigroup $S$, we can form the \emph{semigroup algebra} $\C[S]$: it is the algebra generated by the elements of $S$, with multiplicative structure inherited from $S$. We then define $U_\sigma$ as $\Spec \C[\sigma^\vee \cap M]$, and call it the \emph{affine toric variety associated to $\sigma$}. 
+A \emph{(commutative) semigroup} is a set $S$ with an associative, commutative binary operation $S \times S \to S$, together with an identity element $0 \in S$. Given a cone $\sigma \subset N$, we can form a semigroup $S\stackrel{\Delta}{=} \sigma^\vee \cap M \subseteq M$. From this semigroup $S$, we can form the \emph{semigroup algebra} $\C[S]$: it is the algebra generated by the elements of $S$, with multiplicative structure inherited from $S$. We then define $U_\sigma$ as $\Spec \C[\sigma^\vee \cap M]$, and call it the \emph{affine toric variety associated to $\sigma$}. 
 
-We thus have a contravariant functor from the category of cones to the category of affine toric varieties, sending $\sigma \mapsto U_\sigma$. This is an equivalence of categories.
+We thus have a contravariant functor from the category of cones to the category of affine toric varieties, sending $\sigma$ to $U_\sigma$. This is an equivalence of categories.
 
 \begin{example}
 \label{ex:first_toric}
@@ -141,12 +140,12 @@ Let $\sigma=\langle (1,0), (1,2) \rangle \subset \R^2$. Then
 See \cref{fig:first_toric_example}. Then the semigroup ring $S_\sigma = \C[\sigma^\vee \cap M] = \C[x,y,x^2/y]$, where we have identified $x$ and $y$ with the standard basis of $\R^2$. This ring is isomorphic to $\C[a,b,c]/(a^2-bc)$, which is a quadric cone.
 \end{example}
 
-General toric varieties are described using collections of cones called \emph{fans}. A set $\Sigma$ of cones is called a \emph{fan} if it closed under intersections and faces of cones: if $\sigma, \sigma' \in \Sigma$, then we also have $\sigma \cap \sigma' \in \Sigma$, and if $\sigma' \subset \sigma$ is a face with $\sigma \in \Sigma$, then $\sigma' \in \Sigma$ also. Thus, given a fan $\Sigma$, we get a collection of affine toric varieties $U_\sigma$ for each cone $\sigma \in \Sigma$. We have inclusions $U_{\sigma \cap \sigma'} \subset U_\sigma$, and using these inclusions we glue to get a separated toric variety.
+General toric varieties are described using collections of cones called \emph{fans}. A set $\Sigma$ of cones is called a \emph{fan} if it closed under intersections and faces of cones: if $\sigma, \sigma' \in \Sigma$, then we also have $\sigma \cap \sigma' \in \Sigma$, and if $\sigma' \subset \sigma$ is a face with $\sigma \in \Sigma$, then $\sigma' \in \Sigma$ also. Thus, given a fan $\Sigma$, we get a collection of affine toric varieties $U_\sigma$ for each cone $\sigma \in \Sigma$. We have inclusions $U_{\sigma \cap \sigma'} \subset U_\sigma$, and using these inclusions we may glue the affine open sets $U_\sigma$ to get a separated toric variety.
 
-If the fan is \emph{complete} (meaning that the union of its cones is equal to $N$), the corresponding toric variety is complete. A toric variety is smooth if and only if all of its cones are smooth, and we say that a cone is smooth if its ray is part of a $\Z$-basis for $N$.
+If the fan is \emph{complete} (meaning that the union of its cones is equal to $N$), the corresponding toric variety is complete. A toric variety is smooth if and only if all of its cones are smooth, and we say that a cone is smooth if it is generated by part of a $\Z$-basis for $N$.
 
 \begin{remark}
-Note that since the matrix formed by $(1,0)$ and $(1,2)$ have determinant unequal to $\pm 1$, we can observe directly (without computing the dual cone) that the variety in \cref{ex:first_toric} is singular.
+Note that since the matrix formed by $(1,0)$ and $(1,2)$ have determinant $2$ ($\neq 1$), we can observe directly (without computing the dual cone) that the variety in \cref{ex:first_toric} is singular.
 \end{remark}
 
 \begin{remark}
