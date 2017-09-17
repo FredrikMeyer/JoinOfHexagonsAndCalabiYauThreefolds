@@ -1,0 +1,381 @@
+\NeedsTeXFormat{LaTeX2e}
+
+\ProvidesPackage{style}[2016/06/30 Custom LaTeX style]
+
+\newcommand{\MONTH}
+{
+    \ifcase\the\month
+    \or January
+    \or February
+    \or March
+    \or April
+    \or May
+    \or June
+    \or July
+    \or August
+    \or September
+    \or October
+    \or November
+    \or December
+    \fi
+}
+ 
+\newcommand{\uiotitle}
+{
+    \begin{titlingpage}
+        \calccentering{\unitlength}
+        \begin{adjustwidth*}{\unitlength}{-\unitlength}
+            {
+                \centering
+                \vspace*{-12 mm}
+                \includegraphics[width = \textwidth]{mnphd-logo}
+                \vfill
+                {
+                    \huge
+                    \bfseries
+                    \MakeUppercase
+                    \theauthor
+                    \vskip \onelineskip
+                }
+                \parbox{\textwidth}{\hrulefill}
+                {
+                    \vskip -0.5\onelineskip
+                    \Huge
+                    \sffamily
+                    \bfseries
+                    \thetitle
+                    \vskip 0.5\onelineskip
+                }
+                \parbox{\textwidth}{\hrulefill}
+                \vfill
+                {
+                    \LARGE
+                    Thesis submitted for the degree of Philosophiae~Doctor
+                    \vskip 1.5 em
+                    \Large
+                    Department of Mathematics
+                }
+                \vfill
+            }
+            \hspace*{6 mm} % 6mm
+            \begin{center}
+            \includegraphics[width = 2.6 cm]{mnphd-apollon} \\
+
+            %\vbox to 2.6 cm
+            {
+                \vfill
+                %\hsize = \dimexpr\textwidth-5.15cm\relax
+                %\hfill
+                \LARGE 
+                \sffamily 
+                \bfseries
+                \MONTH~\the\year
+                \vfill
+            }
+            %\vspace{-6 mm}
+            \end{center}
+        \end{adjustwidth*}
+    \end{titlingpage}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% Standalone
+\RequirePackage{standalone}
+
+
+%% Encoding
+\RequirePackage[utf8]{inputenx}
+\RequirePackage[T1]{fontenc}
+
+%%% moved further up b.c.o. lst
+\RequirePackage[dvipsnames,
+                svgnames,
+                cmyk]{xcolor}     % Pre-defined colors
+
+%% Fonts and typography
+\RequirePackage{lmodern}           % Latin Modern
+\renewcommand{\sfdefault}{phv}     % Helvetica
+\RequirePackage[scaled]{beramono}  % Bera Mono (Bitstream Vera Sans Mono)
+\RequirePackage[final]{microtype}  % Improved typography
+\RequirePackage{siunitx}           % Typesetting units
+\RequirePackage{listings}          % Typesetting code
+\lstset{basicstyle = \ttfamily,frame = tb}
+\RequirePackage{url}               % Typesetting URLs
+\urlstyle{tt}
+
+
+%% Mathematics
+\RequirePackage{amssymb}    % Extra symbols
+\RequirePackage{amsthm}     % Theorem-like environments 
+\RequirePackage{thmtools}   % Theorem-like environments, extends amsthm
+\RequirePackage{mathtools}  % Fonts and environments for mathematical formulae
+\RequirePackage{mathrsfs}   % Script font with \mathscr{}
+\RequirePackage{dsfont}     % Double stroke font with \mathds{}
+\RequirePackage{cancel}     % Cancel terms with \cancel, \bcancel or \xcancel
+\RequirePackage{stmaryrd}   % Brackets
+
+
+
+%% Graphics
+\RequirePackage{graphicx}         % Tool for importing images
+\graphicspath{{figures/}}
+\RequirePackage{tikz,tikz-cd}             % Drawing tool
+\usepackage{tikz-3dplot}
+\usetikzlibrary{calc,matrix,arrows,decorations.pathmorphing}
+\usetikzlibrary{intersections}
+\usetikzlibrary{decorations.markings}
+\newsubfloat{figure}
+
+%% Organising tools
+%\RequirePackage[notref, notcite]{showkeys}               % Labels in margin
+\usepackage[    color       = LightGray,
+                bordercolor = LightGray,
+                textsize    = footnotesize,
+                figwidth    = 0.98\textwidth]{todonotes} % Marginal notes                /disable
+
+
+%% Miscellaneous
+\RequirePackage{xspace}         % Clever space
+\RequirePackage{textcomp}       % Extra symbols
+\RequirePackage{multirow}       % Rows spanning multiple lines in tables
+\RequirePackage{tablefootnote}  % Footnotes for tables
+\usepackage{longtable} %%% lang tabell
+
+
+%% Bibliography
+\RequirePackage[backend = biber, style = alphabetic]{biblatex}
+\addbibresource{bibliography.bib}
+
+
+%% Cross references
+\RequirePackage{varioref}
+\RequirePackage{hyperref}
+\RequirePackage[nameinlink, capitalize, noabbrev]{cleveref}
+%%%%%%%%%%%%%%%%
+%%% start M2 style
+\lstset{language=Macaulay2}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize\ttfamily,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Macaulay2,                 % the language of the code
+  otherkeywords={*,...},           % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+%%% slutt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MEMOIR SETTINGS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% A4 paper
+%\pageaiv
+%\stockaiv
+%% Layout
+\setstocksize{240mm}{170mm}
+\settrimmedsize{240mm}{170mm}{*}
+\settrims{0mm}{0mm}
+\setlrmarginsandblock{20mm}{30mm}{*}
+\setulmarginsandblock{30mm}{30mm}{*}
+\checkandfixthelayout
+
+
+%% Title page
+\pretitle{\begin{center}\huge\sffamily\bfseries}
+
+
+%% Book
+\renewcommand*{\printbooktitle}[1]
+{
+    \hrule\vskip\onelineskip
+    \centering\booktitlefont #1
+    \vskip\onelineskip\hrule
+}
+\renewcommand*{\afterbookskip}{\par}
+\renewcommand*{\booktitlefont}{\Huge\bfseries\sffamily}
+\renewcommand*{\booknamefont}{\normalfont\huge\bfseries\MakeUppercase}
+
+
+%% Part
+\renewcommand*{\printparttitle}[1]
+{
+    \hrule\vskip\onelineskip
+    \centering\parttitlefont #1
+    \vskip\onelineskip\hrule
+}
+\renewcommand*{\afterpartskip}{\par}
+\renewcommand*{\parttitlefont}{\Huge\bfseries\sffamily}
+\renewcommand*{\partnamefont}{\normalfont\huge\bfseries\MakeUppercase}
+
+
+%% Chapter 
+\chapterstyle{demo2}
+\renewcommand*{\printchaptername}
+{
+    \centering\chapnamefont\MakeUppercase{\@chapapp}
+}
+\renewcommand*{\printchapternum}{\chapnumfont\thechapter\space}
+\renewcommand*{\chaptitlefont}{\Huge\bfseries\sffamily\center}
+\let\ps@chapter\ps@empty
+
+
+%% Lower level sections
+\setsecheadstyle{\Large\bfseries\sffamily\raggedright}
+\setsubsecheadstyle{\large\bfseries\sffamily\raggedright}
+\setsubsubsecheadstyle{\normalsize\bfseries\sffamily\raggedright}
+\setparaheadstyle{\normalsize\bfseries\sffamily\raggedright}
+\setsubparaheadstyle{\normalsize\bfseries\sffamily\raggedright}
+
+
+%% Abstract
+\renewcommand{\abstractnamefont}{\sffamily\bfseries}
+
+
+%% Header
+\pagestyle{ruled}
+\makeevenhead{ruled}{\sffamily\leftmark}{}{}
+\makeoddhead {ruled}{}{}{\sffamily\rightmark}
+
+
+%% Trim marks
+\trimLmarks
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% USER-DEFINED MACROS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% Environments
+\declaretheorem[style = plain, numberwithin = section]{theorem}
+\declaretheorem[style = plain,      sibling = theorem]{corollary}
+\declaretheorem[style = plain,      sibling = theorem]{lemma}
+\declaretheorem[style = plain,      sibling = theorem]{proposition}
+\declaretheorem[style = plain,      sibling = theorem]{observation}
+\declaretheorem[style = plain,      sibling = theorem]{conjecture}
+\declaretheorem[style = definition, sibling = theorem]{definition}
+\declaretheorem[style = definition, sibling = theorem, qed=$\heartsuit$]{example}
+\declaretheorem[style = definition, sibling = theorem]{notation}
+\declaretheorem[style = remark,     sibling = theorem, qed=$\diamond$]{remark}
+\crefname{observation}{Observation}{Observations}
+\Crefname{observation}{Observation}{Observations}
+\crefname{conjecture}{Conjecture}{Conjectures}
+\Crefname{conjecture}{Conjecture}{Conjectures}
+\crefname{notation}{Notation}{Notations}
+\Crefname{notation}{Notation}{Notations}
+
+
+%% Operators
+\DeclareMathOperator{\im}{im}
+
+
+%% Delimiters
+\DeclarePairedDelimiter{\p}{\lparen}{\rparen}          % Parenthesis
+\DeclarePairedDelimiter{\set}{\lbrace}{\rbrace}        % Set
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}          % Absolute value
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}         % Norm
+\DeclarePairedDelimiter{\ip}{\langle}{\rangle}         % Inner product, ideal
+\DeclarePairedDelimiter{\sqb}{\lbrack}{\rbrack}        % Square brackets
+\DeclarePairedDelimiter{\ssqb}{\llbracket}{\rrbracket} % Double brackets
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}         % Ceiling
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}      % Floor
+
+
+%% Sets
+\newcommand{\N}{\mathbb{N}}    % Natural numbers
+\newcommand{\Z}{\mathbb{Z}}    % Integers
+\newcommand{\Q}{\mathbb{Q}}    % Rational numbers
+\newcommand{\R}{\mathbb{R}}    % Real numbers
+\newcommand{\C}{\mathbb{C}}    % Complex numbers
+\newcommand{\A}{\mathbb{A}}    % Affine space
+\renewcommand{\P}{\mathbb{P}}  % Projective space
+
+%% Sheaves
+\newcommand{\OO}{\mathscr{O}}
+
+%% Functors
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\Spec}{Spec}
+
+
+%% Vectors 
+\renewcommand{\a}{\mathbf{a}}
+\renewcommand{\b}{\mathbf{b}}
+\renewcommand{\c}{\mathbf{c}}
+%\renewcommand{\v}{\mathbf{v}}
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\0}{\mathbf{0}}
+\newcommand{\1}{\mathbf{1}}
+
+
+%% Miscellaneous
+\renewcommand{\qedsymbol}{\(\blacksquare\)}
+\newcommand{\ie}{\leavevmode\unskip, i.e.,\xspace}
+\newcommand{\eg}{\leavevmode\unskip, e.g.,\xspace}
+\newcommand{\dash}{\textthreequartersemdash\xspace}
+\newcommand{\TikZ}{Ti\textit{k}Z\xspace}
+\newcommand{\matlab}{\textsc{Matlab}\xspace}
+
+\newcommand{\CY}{Calabi--Yau\xspace}
+\newcommand{\MM}{\texttt{Macaulay2}\xspace}
+
+\DeclareMathOperator{\dP6}{dP_6}
+\DeclareMathOperator{\Gr}{\mathbb{G}}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Sing}{Sing}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Def}{{Def}}
+\DeclareMathOperator{\EmbDef}{{EmbDef}}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\supp}{{supp}}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Bl}{Bl}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\lk}{\mathrm{lk}}
+\newcommand{\mm}{\mathfrak{m}}
+
+\newcommand\restr[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+  }}
+
+
+ \newcommand*{\rmap}[1][]{\mathbin{\tikz [baseline=-0.25ex,-latex, ->, densely dashed,#1] \draw [#1] (0pt,0.5ex) -- (1.3em,0.5ex);}}% 
+
+
+\renewcommand{\Bbb}{\mathbb}
+\endinput
+
+
+%%%%%%%%%%%%
+
+

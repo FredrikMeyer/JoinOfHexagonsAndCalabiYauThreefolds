@@ -1,0 +1,51 @@
+% Tikz File '222tensor.tex'
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{tikz-3dplot}
+%\usetikzlibrary{...}
+\begin{document}
+
+\tdplotsetmaincoords{70}{110}
+  \begin{tikzpicture}[scale=3,tdplot_main_coords]
+
+%    \draw[thick,->] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+%    \draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
+%    \draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$}; 
+
+   \coordinate (A) at (1,0,0);
+   \coordinate (B) at (0,1,0);
+   \coordinate (C) at (-1,0,0);
+   \coordinate (D) at (0,-1,0);
+   \coordinate (E) at (0,0,1);
+   \coordinate (F) at (0,0,-1);
+
+   \coordinate(H1) at (0.5,0.5,0);
+   \coordinate(H2) at (0,0.5,0.5);
+   \coordinate(H3) at (-0.5,0,0.5);
+   \coordinate(H4) at (-0.5,-0.5,0);
+   \coordinate(H5) at (0,-0.5,-0.5);
+   \coordinate(H6) at (0.5,0,-0.5);
+
+\node at (0,0,0) {$\bullet$};
+
+\draw[thick,red] (D) -- (A) -- (B);
+\draw[red] (B) -- (C) -- (D);
+\draw[thick,red] (E) -- (A);
+\draw[thick, red] (E) -- (B);
+\draw[red] (E) -- (C);
+\draw[thick, red] (E) -- (D);
+\draw[thick,red] (F) -- (A);
+\draw[thick,red] (F) -- (B);
+\draw[red] (F) -- (C);
+\draw[thick,red] (F) -- (D);
+\draw[very thick, fill = green, fill opacity = 0.2] (H1) -- (H2) -- (H3) -- (H4) -- (H5) -- (H6) -- cycle;
+   
+  % \draw[thick,->] (0,0,0) -- (0.2,-0.2,0.2); % normal vector
+  % \draw[thick, ->] (0,0,0) -- (2,0,0);
+  % \draw[thick, ->] (0,0,0) -- (0,2,0);
+  % \draw[thick, ->] (0,0,0) -- (0,0,2);
+
+  \end{tikzpicture}
+
+  \end{document}

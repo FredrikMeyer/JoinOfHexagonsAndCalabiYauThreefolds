@@ -1,0 +1,75 @@
+\chapter{Triangulations of spheres with 8 vertices}
+\label{sec:spheres8}
+
+In the article \cite{grunbaum_enumeration}, Grünbaum enumerates all simplicial $4$-polytopes with $7$ and $8$ vertices. There are $5$ combinatorial types of triangulations of the $4$-sphere with $7$ vertices, and there are $37$ combinatorial types of triangulations with $8$ vertices.
+
+In her thesis \cite{fausk_thesis}, Ingrid Fausk considered the polytopes with $7$ vertices, and their associated Stanley--Reisner schemes. She showed that four out of the five possible Stanley--Reisner schemes of triangulations of $4$-spheres with seven vertices admit a smoothing. These smoothings correspond to \CY varieties with Hodge numbers $(1,73)$, $(1,73)$, $(1,61)$ and $(1,50)$, respectively. The last one is Rødland's construction.
+
+In this Appendix, we perform deformation theoretic calculations on the $37$ triangulations with $8$ vertices. Unfortunaly, most of them appear to be non-smoothable, at least with naïve techniques.
+
+Unfortunaly, there seems to be a mistake in Grünbaums list. Two of spheres listed have $H^3(K;k)=0$, which should not occur if they were spheres.
+
+In \cite{kapustka_delpezzo}, the author compiles a list of smooth Calabi--Yau varieties with $\Pic X = \Z$. Several of the smoothings we find below occur in that list. There is also the paper \cite{MR3591944}, where the authors make a list of arithmetically Gorenstein Calabi--Yau threefolds in $\P^7$, which they conjecture is the complete list of such threefolds. One can ask if all of these are smoothings of one of the Stanley--Reisner schemes from the below list.
+
+\subsection{Technique}
+
+We manually entered the maximal facets from each triangulation $P_i^8$ (in Grünbaum's notation) into \MM. Then we used Nathan Ilten's package \cite{ilten_versaldeformations} to compute their first order deformations and the obstruction spaces, $T^1$ and $T^2$, respectively.
+
+Those with $T^2=0$ are perhaps the most interesting, as they correspond to smooth points on the Hilbert scheme. Having $T^2=0$ means that all first-order deformations lift to a second-order deformation. In many cases this implies that it lifts automatically to an honest family over $\Spec \C[t_1,\ldots,t_N]$ (where $N=\dim_k T^1$).
+
+However, even in non-obstructed cases, we might have power series solutions, meaning that lifting the equations one step at a time will never terminate.
+
+Then we compute the $T^i$ modules for the other triangulations. We also compute their automorphism groups, using SAGE.
+
+\section{Table of information}
+
+Here is the whole table of $T^i$-dimensions together with some other information. Compare with the list in \cite{kapustka_delpezzo}.
+
+%%% no, degree, c_2.H T^1, T^2 Aut(T), funnet glatting?
+\begin{center}
+\begin{longtable}{ l >{$}c<{$}  >{$}c<{$} >{$}c<{$}  >{$}c<{$}  >{$}c<{$} c }
+Number & \mathrm{degree} & c_2 \cdot H &T^1 & T^2 & \mathrm{Aut}(T) & Comment \\
+\hline
+\endhead
+$P_{1}^8$ & 14 & - & - & - & - & Not a sphere. \\
+$P_2^8$   & 14 & 68 & 98 & 9 &  \Z/2 \times \Z/2 \\
+$P_3^8$   & 14 & 68 &108 & 24 & D_6 \\
+$P_4^8$   & 15 & 66 & 95 & 17 & \Z/2 \times \Z/2 \\
+$P_5^8$   & 15 & 64 & 88 & 32 & \Z/2 \times D_4 \\
+$P_6^8$   & 15 & 66 & 88 & 9 &  \Z/2 \times \Z/2 \\
+$P_7^8$   & 15 & - & - & - & - & Not a sphere.\\
+$P_8^8$   & 16 & 64 & 78 & 9 &  1 \\
+$P_9^8$   & 16 & 64 & 82 & 17 & \Z/2 \\
+$P_{10}^8$& 16 & 64 & 92 & 32 & \Z/4 \\
+$P_{11}^8$& 17 & 62 & 74 & 18 & \Z/2 \\
+$P_{12}^8$& 17 & 62 & 77 & 25 & \Z/2 \\
+$\mathbf{P_{13}^8}$& 15 & 66 & 83 & 0 & S_3 \times D_5 & Smooths to $X_{113} \subset \mathbb G(2,5)$. \\
+$P_{14}^8$& 16 & 64 & 80 & 18 & D_4 &  \\
+$P_{15}^8$& 16 & 64 & 88 & 32 &\Z/2 \times \Z/4 \\
+$\mathbf{P_{16}^8}$& 16 & 64 & 72 & 0 &\Z/2 \times \Z/2  \\
+$\mathbf{P_{17}^8}$& 16 & 64 & 72 & 0 &\Z/2 \times \Z/2 \times \Z/2  \\
+$P_{18}^8$& 17 & 62 & 72 & 17 & \Z/2 \times \Z/2 \\
+$P_{19}^8$& 17 & 62 & 72 & 17 & \Z/2  \\ 
+$P_{20}^8$& 17 & 62 & 67 & 9 & \Z/2 \\
+$P_{21}^8$& 17 & 62 & 80 & 32 & D_4 \\
+$\mathbf{P_{22}^8}$& 17 & 62 & 62 & 0 & \Z/2 \\
+$P_{23}^8$& 18 & 60 & 63 & 17 & \Z/2 \\
+$P_{24}^8$& 18 & 60 & 18 & 18 & \Z/2  \\
+$P_{25}^8$& 18 & 60 & 67 & 25 & 1\\
+$\mathbf{P_{26}^8}$& 17 & 62 & 62 & 0 & D_6 \\
+$P_{27}^8$& 18 & 60 & 58 & 9 & \Z/2 \\
+$P_{28}^8$& 18 & 60 & 58 & 9 & \Z/2 \times \Z/2 \\
+$P_{29}^8$& 18 & 60 & 58 & 9 & \Z/2 \times \Z/2 \\
+$P_{30}^8$& 19 & 58 & 63 & 33 & \Z/2 \\
+$P_{31}^8$& 19 & 58 & 59 & 26 & 1 \\
+$P_{32}^8$& 19 & 58 & 55 & 18 & \Z/2\\
+$P_{33}^8$& 19 & 58 & 60 & 27 & \Z/2 \times \Z/2 \\
+$\mathbf{P_{34}^8}$& 16 & 64 & 72 & 0 & S_4 \times (\Z/2)^4  & Smooths to $X_{2222} \subset \P^7$. \\
+$P_{35}^8$& 20 & 56 & 72 & 64 & D_8 \\
+$P_{36}^8$& 20 & 56 & 64 & 50 & \Z/4 \\
+$P_{37}^8$& 20 & 56 & 61 & 43 & \Z/2 \\
+$\mathcal M$& 20 & 56 & 53 & 27 & S_3
+\end{longtable}
+\end{center}
+
+The notation $X_{112}$ and $X_{2222}$ means a complete intersection of degrees $1,1,2$ (resp. $2,2,2,2$) in $X$.

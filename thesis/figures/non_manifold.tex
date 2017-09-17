@@ -1,0 +1,26 @@
+% Tikz File '222tensor.tex'
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\begin{document}
+
+\tikzstyle{ball} = [circle,shading=ball, ball color=OliveGreen!80!white,
+    minimum size=0.01cm]
+  \begin{tikzpicture}
+
+\coordinate (A) at (0,0);
+\coordinate (B) at (0,2);
+\coordinate (C) at (1.2,1);
+\coordinate (D) at (2.2,1);
+
+\draw[fill=green, fill opacity=0.2] (A) -- (B) -- (C) -- cycle;
+\draw (C) -- (D);
+
+\node[style=ball, scale=0.5] at (A) {};
+\node[style=ball, scale=0.5] at (B) {};
+\node[style=ball, scale=0.5] at (C) {};
+\node[style=ball, scale=0.5] at (D) {};
+
+\end{tikzpicture}
+
+  \end{document}

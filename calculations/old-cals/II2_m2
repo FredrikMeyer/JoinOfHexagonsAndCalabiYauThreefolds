@@ -1,0 +1,53 @@
+restart
+--
+-- Calculations on the 
+-- cohomology of I/I^2 of M (in
+-- thesis notation)
+
+R = QQ[x_1..x_18]
+M1 = genericMatrix(R,3,3)
+M2 = genericMatrix(R,x_10,3,3)
+
+I = minors(2,M1) + minors(2,M2)
+
+II2 = prune (I/I^2);
+
+--betti res II2
+
+F = sheaf II2;
+
+euler F
+
+time apply(0..9, i-> HH^i(F))
+--                     2
+--o16 = (0, 0, 0, 0, QQ , 0, 0, 0, 0, 0)
+time apply(0..9, i-> HH^i(F(-1)))
+--                     18
+--o17 = (0, 0, 0, 0, QQ  , 0, 0, 0, 0, 0)
+time apply(0..9, i-> HH^i(F(-2)))
+
+--72
+
+
+time apply(0..9, i-> HH^i(F(-3)))
+
+     -- used 99.0161 seconds
+--
+--                     200          2
+--o21 = (0, 0, 0, 0, QQ   , 0, 0, QQ , 0, 0)
+time apply(0..9, i-> HH^i(F(-4)))
+     -- used 100.099 seconds
+--                     450          18
+--o22 = (0, 0, 0, 0, QQ   , 0, 0, QQ  , 0, 0)
+
+
+A = R/I
+T1M = sheaf prune ker ((jacobian I) ** A);
+
+apply(0..9, i-> HH^i(T1M))
+prune T1M
+
+A = R/I
+M = Proj A
+CT = time cotangentSheaf M;
+

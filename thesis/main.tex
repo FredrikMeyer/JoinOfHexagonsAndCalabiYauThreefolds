@@ -1,0 +1,56 @@
+\documentclass[a4paper]{memoir}
+\setsecnumdepth{subsubsection}
+
+\usepackage{style}      % Custom style
+
+\bibliography{bibliography} %% in order for sublime to find bib refs 
+
+
+\title{Join of hexagons and Calabi--Yau threefolds}
+\author
+{
+    Fredrik Meyer
+}
+
+ \includeonly
+ {
+    sections/acknowledgements,
+    sections/introduction,
+    sections/preliminaries,
+    sections/cp2_triang,
+    sections/two_smoothings,
+    sections/constructions,
+    sections/computer_code,
+    sections/spheres8
+ }
+
+\begin{document}
+
+    \frontmatter        
+
+    \uiotitle
+ 
+    \include{sections/acknowledgements}
+
+    \tableofcontents*    % Or \tableofcontents*
+
+    \include{sections/introduction}
+
+    \mainmatter     
+
+
+    \include{sections/preliminaries}
+    \include{sections/cp2_triang}
+    \include{sections/two_smoothings}
+    \include{sections/constructions}    
+
+    \appendix           % "Chapter" is renamed "Appendix"
+    \appendixpage       % Short for \part*{Appendices}
+
+    \include{sections/computer_code}
+    \include{sections/spheres8}
+
+    \backmatter        
+    \printbibliography
+
+\end{document}

@@ -1,0 +1,78 @@
+\chapter{Introduction}
+\label{sec:intro}
+
+The work leading up to this thesis started with a naïve idea concerning smoothings of certain Stanley--Reisner schemes. Stanley--Reisner schemes are highly singular projective schemes, whose components are all projective spaces. They are constructed from a simplicial complex, in such a way that the components correspond to the maximal faces of the simplicial complex. 
+
+If the simplicial complex is homeomorphic to $S^1$, a circle, then a smoothing of the Stanley--Reisner scheme yields an elliptic curve. Similarly, if the simplicial complex is a sphere, a smoothing of the Stanley--Reisner scheme will give a K3 surface. Many properties of the simplicial complex correspond to properties of the Stanley--Reisner scheme and its smoothings. 
+
+The mentioned naïve idea was this: what if the simplicial complex is a triangulated $\C \P^2$? A smoothing of the associated Stanley--Reisner scheme would then give us an (algebraic) hyper-Kähler variety, as we explain in \cref{sec:cp2triangs}. This would be interesting, since there are very few known families of hyper-Kähler varieties.
+
+Unfortunately, given a triangulation of $\C \P^2$ with few vertices, a smoothing of the Stanley--Reisner scheme turned out to be too difficult to find. Even the existence of smoothings are in most cases unclear. However, one particular triangulation of $\C \P^2$ led us to study the problems in Chapter 3 and 4. This triangulation, found by Gaifullin \cite{cp2_15_chess}, is the union of three $4$-balls, all of which are suspensions over joins of hexagons. Leaving the idea of studying triangulations of $\C \P^2$, we began studying 
+triangulations of the $3$-sphere.
+
+The join of two hexagons is a triangulated $3$-sphere. A smoothing of the associated Stanley--Reisner scheme $X_0$ is a Calabi--Yau variety. Finding new Calabi--Yau varieties has become a small industry, which we did not hesitate to join. This decision turned out to be profitable. The scheme $X_0$ deforms to several interesting varieties, and three of them are smooth. One of them, which we have denoted by $X_Y$, is a singular Calabi--Yau variety, whose singularities are all locally-analytically cones over del Pezzo-surfaces. This discovery motivates the third chapter, in which we study this singularity and its two smoothings. We prove that they are topologically different, and calculate their Betti numbers.
+
+We construct three smoothings of $X_0$. To define them, recall the definition of \emph{join} of two algebraic varieties. It is the closure of the union of all lines between them. Let $M$ the join of two copies of $\P^2 \times \P^2$ (embedded in disjoint projective spaces). Let $N$ be the join of two copies of $\P^1 \times \P^1 \times \P^1$, and let $W$ be the join of $\P^2 \times \P^2$ and $\P^1 \times \P^1 \times \P^1$. Define $X_1$ to be $M$ intersected by a codimension~$6$ hyperplane. Let $X_2$ be $N$ intersected by a codimension~$4$ hyperplane, and let $X_3$ be $W$ intersected by a codimension~$5$ hyperplane. 
+
+We show that $X_i$ ($i=1,2,3$) are all smooth Calabi--Yau manifolds, and that they are deformations of $X_0$. They have Euler characteristics $-72$, $-48$, and $-60$, respectively. 
+
+To our knowledge, these three Calabi--Yau's have not been previously described. There are many connections to the physics literature, and to works by other mathematicians. Let us explain some of them.
+
+In \cite{kapustka_delpezzo}, the author compiles a list of smooth \CY varieties with $\Pic X = \Z$. One of the elements of the list is a Calabi--Yau in $\P^{11}$ with the same Hilbert polynomial as our $X_1$, and with the Euler characteristic. This Calabi--Yau was however only conjectured to exist, based on the conjecture that to every differential equation of ``Calabi--Yau type'', there should exist a one parameter family of smooth Calabi--Yau varieties having that equation as its Picard--Fuchs differential equation. A list of such equations has been computed by van Straten in \cite{monodromy_straten}.
+
+All of these equations have been made searchable in the online database \cite{cy_database}. Entering the invariants $H^3=36$, $H \cdot c_2 = 72$ and $\dim |H|=12$, yield exactly three matches, corresponding to Calabi--Yau varities with Euler characteristics $-72$, $-60$ and $-48$, respectively. These numbers are exactly the Euler characteristics of our $X_i$ ($i=1,2,3$).
+
+Furthermore, their differential operators are Hadamard products, $c \ast c$, $a \ast a$ and $a \ast c$, which according to van Straten (personal communication) is ``mirror dual'' to join.
+
+This seems like a perfect match, confirming the existence predicted by the conjecture. The only problem is that our varieties seem to have $h^{11} > 1$.
+
+Several questions arise: can our $X_i$ still correspond to these differential equations, without having $h^{11}=1$? If not, what is their connection to the conjecture?
+
+There also seem to be connections with discoveries made by physicists. For example, Braun et al. describe in \cite{braun_smallhodgenumbers} a Calabi--Yau with small Hodge numbers, whose mirror dual lies in the same deformation family as our $X_i$'s.
+
+We did not have the time to ponder these questions, but would very much like to see them answered in the future.
+
+
+\hfill \break
+
+Finally, there is the phenomenon of \emph{mirror symmetry}, which is a sort of duality between different Calabi--Yau manifolds. Producing mirror candidates of Calabi--Yau manifolds is a hard problem, and there are many ways to do this. One heuristic which often works is this: suppose you have a family $\pi: \mathscr X \to S$ of Calabi--Yau manifolds, and that some central fiber has a large automorphism group. One can consider the (often singular) sub-family invariant under this group. It is then often the case that a resolution of singularities of an invariant fiber is a mirror to the general fiber of $\pi$. This technique is called \emph{orbifolding}. We give a brief introduction to mirror symmetry and orbifolding in the first chapter.
+
+By using the technique of orbifolding, we produce mirror candidates for $X_1$ and $X_2$.
+
+\hfill \break
+
+The organization of the thesis is as follows:
+
+\begin{itemize}
+\item In the first chapter, we gather background material which is relevant for the next chapters. We have erred on the side of \emph{too much} background information rather than too little, serving as a motivation for both myself and potential young readers. We end with a give a brief sketch of some of the ideas from mirror symmetry.
+
+\item In the second chapter we motivate the original naïve idea about smoothing triangulations of $\C \P^2$ to find new hyper-Kähler varieties.
+
+We describe four already known triangulations of $\C \P^2$, with the number of vertices ranging from $9$ to $15$, and describe the obstacles encountered in trying to smooth them. We also compute their associated Stanley--Reisner schemes, and the dimensions of their cotangent modules. Their obstruction spaces are in all cases large.
+
+\item The third chapter is devoted to a special toric singularity, namely the affine cone $C(\dP6)$ over the del Pezzo surface $\dP6$. This singularity has two topologically different smoothings, and we compute their singular homology groups using techniques from toric geometry.
+
+We start the chapter by discussing $\dP6$ in some generality. We discuss its Picard group and two natural embeddings in $\P^1 \times \P^1 \times \P^1$ and $\P^2 \times \P^2$, respectively.
+
+It is well known that $C(\dP6)$ has two smoothings components. We identify them as hyperplane complements of $\P^1 \times \P^1 \times \P^1$ and of $\P(\mathcal T_{\P^2})$, and use this fact to compute their singular homology groups. In the final computation, we use theorems from algebraic topology, such as Poincaré duality and Lefschetz duality. 
+
+\item The final chapter is devoted to the construction of new Calabi--Yau varieties and their mirror candidates.
+
+We start the chapter by discussing the Stanley--Reisner scheme $X_0$, which comes from the simplicial complex that is the join of two hexagons. We compute its Hilbert polynomial, and explain how it deforms to a special singular Calabi--Yau variety $X_Y$.
+
+Then we explain the construction of three topologically different smoothings $X_i$ ($i=1,2,3$) of $X_Y$ (and hence of $X_0$). They are topologically different, which we prove using a \MM computation: it shows that their topological Euler characteristics are different. The construction is very similar to that of Rødland \cite{rodland_pfaffian}.
+
+Then we explain the existence of special singular subfamilies of $X_1$ and $X_2$ which are invariant under a finite subgroup of the big torus. Using {orbifolding} and a formula by Roan \cite{roan_euler}, we propose conjectural mirror candidates for $X_1$ and $X_2$.
+
+We end with many open questions, which we hope to see answered in the future.
+\end{itemize}
+
+In the last appendix we included some computations on triangulations of spheres with $8$ vertices. Grünbaum have computed all such triangulations \cite{grunbaum_enumeration}, and we used his list to compute deformation theoretic invariants for each of the associated Stanley--Reisner schemes of the spheres with $8$ vertices. unfortunately, there seem to be a few typographical errors in his article, as some of the complexes in his list turn out not to be spheres.
+
+The source code of the thesis and all computer computations are available on GitHub at \url{https://github.com/FredrikMeyer/Matematikknotater/tree/master/thesis} and \url{https://github.com/FredrikMeyer/m2files}, respectively.
+
+%%%%%%
+%%%%%%
+\section{Notation}
+
+If $V$ is a vector space, we denote by $\P(V)$ its projectivisation. We write $k$ for a field, which is almost always assumed to be $\C$. If $X$ is a projective variety, we write $S(X)$ for its homogeneous coordinate ring (if the embedding is implicit). If $X$ is a scheme over $k$, we write $X/k$. We will write $h^i(X,\mathscr F)$ for $\dim_k H^i(X,\mathscr F)$. All schemes are noetherian. We will often write $\stackrel \Delta = $ for definitions (instead of  ``$:=$'', common in computer science literature). Unless otherwise stated, we use the definitions from \cite{hartshorne}.
