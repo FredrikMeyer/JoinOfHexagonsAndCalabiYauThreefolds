@@ -1,7 +1,7 @@
-\chapter{Construction of \CY's}
+\chapter{New Calabi--Yau varieties and mirror symmetry}
 \label{sec:constructions}
 
-In this chapter I describe the construction of three topologically different smoothings of a singular Calabi-Yau manifold. They correspond to different components of the Hilbert scheme of threefolds in $\P^{11}$ with Hilbert polynomial $p(t)=6t^3+6$. 
+In this chapter we describe the construction of three topologically different smoothings of a singular Calabi-Yau manifold. They correspond to different components of the Hilbert scheme of threefolds in $\P^{11}$ with Hilbert polynomial $p(t)=6t^3+6$. 
 
 We first describe a degenerate \CY $X_0$ in the form of a Stanley--Reisner scheme $\P(\K)$, which has a quite large symmetry group. We show that $X_0$ has several topologically distinct smoothings $X_i$ (${i=1,2,3}$), which lie on different components of the Hilbert scheme in $\P^{11}$.
 
@@ -26,7 +26,7 @@ In the other case, it has the form $x_i^ax_{i+1}^b$, with $a+b=t$ and $a,b \neq 
 Alternatively, we could note that $\P(E_6)$ smooths to an elliptic curve of degree $6$. Since Hilbert polynomials are constant in flat families, it follows from the Riemann--Roch theorem that \[h(t)=\deg \OO_{\P(E_6)}(6t)-1+1=6t.\]
 \end{remark}
 
-Note that the Hilbert polynomial only differ from the Hilbert function for $t=0$, since $h(0)=0$, while $\dim_\C {(S_{\P(E_6)})}_0=1$. 
+Note that the Hilbert polynomial only differs from the Hilbert function for $t=0$, since $h(0)=0$, while $\dim_\C {(S_{\P(E_6)})}_0=1$. 
 
 We now introduce the central fiber in the discussions onward. Let $\K$ be the simplicial complex $E_6 \ast E_6$. It is a triangulation of the $3$-sphere.
 
@@ -40,7 +40,7 @@ There are $12$ vertices, and $6 \times 6=36$ maximal facets. Since $\K$ is a 3-s
 \end{proof}
 
 \begin{lemma}
-The Hilbert polynomial of $\P(\K)$ is $h(t)=6t^3+6$.
+The Hilbert polynomial of $\P(\K)$ is $h(t)=6t^3+6t$.
 \end{lemma}
 \begin{proof}
 The homogeneous coordinate ring $S_{\P(\K)}= \bigoplus_{t \geq 0} S_t$ of $\P(\K)$ is the graded tensor product of $S_{\P(E_6)}$ with itself. It follows from \cref{lemma:hilbpoly} that
@@ -51,13 +51,13 @@ where the last term is a correction term because $h(t) \neq 1$. It is now a rout
 \end{proof}
 
 \begin{corollary}
-Any smoothing of $\P(\K)$ satisfy $|H|=12$, $c_2 \cdot H = 72$, and $H^3=36$.
+Any smoothing of $\P(\K)$ satisfy $\dim |H|=12$, $c_2 \cdot H = 72$, and $H^3=36$.
 \end{corollary}
 \begin{proof}
 All these invariants can be read off from the Hilbert polynomial.
 \end{proof}
 
-Either by using \MM or by using the more combinatorial description of the $T^i$-modules from \cite{deforming_christophersen}, we can compute: 
+Either by using \MM or by using the more combinatorial description of the $T^i$-modules from \cite{deforming_christophersen}, we can compute to give the following result:
 
 \begin{proposition}
 We have that
@@ -69,15 +69,15 @@ We have that
 \begin{proof}
 We will prove this using the techniques and notation from \cite{deforming_christophersen}. Our goal is to compute the degree zero part of $T^1_{A_\K}$. We will do this using \cref{thm:t1dims}.
 
-First notice that all links of vertices of $\K=E_6 \ast E_6$ are double suspensions over hexagons (they are denoted by $\Sigma E_6$ in Christophersen's article). 
+First notice that all links of vertices of $\K=E_6 \ast E_6$ are double suspensions over hexagons (they are denoted by $\Sigma E_6$ in \cite{deforming_christophersen}).
 
-According to Table 1 in Christophersen's article, double suspensions over hexagons contribute with one dimension to $T^1_{A_\K}$, namely in degree $x_i^2/x_{i-1}x_{i+1}$ (if $\mathbf a =x_i^2$). In total there are $6+6=12$ contributions of this form.
+According to Table 1 in Christophersen's and Altmann's article, double suspensions over hexagons contribute with one dimension to $T^1_{A_\K}$, namely in degree $x_i^2/x_{i-1}x_{i+1}$ (if $\mathbf a =x_i^2$). In total there are $6+6=12$ contributions of this form.
 
-Taking the link at the vertex $x_iz_j$ produces a square with vertices $x_{i+1}$,$z_{j+1}$,$x_{i-1}$,$z_{j-1}$ (in that order). According to Table 1 in Christophersen's article, these links contribute with dimension $2$ to $T^1_{A_\K}$. The contributions have degrees $x_iz_j/x_{i+1}x_{i-1}$ and $x_iz_j/z_{j+1}z_{j-1}$. There are $2 \cdot 6 \cdot 6=72$ contributions of this form.
+Taking the link at the vertex $x_iz_j$ produces a square with vertices $x_{i+1}$,$z_{j+1}$,$x_{i-1}$, and $z_{j-1}$ (in that order). According to Table 1 in the article, these links contribute with dimension $2$ to $T^1_{A_\K}$. The contributions have degrees $x_iz_j/x_{i+1}x_{i-1}$ and $x_iz_j/z_{j+1}z_{j-1}$. There are $2 \cdot 6 \cdot 6=72$ contributions of this form.
 
 Thus, in total, $T^1_{A_\K}$ have $\C$-dimension $84$.
 
-We now compute $T^2_{A_\K}$. The contributions come from choosing $\mathbf a=x_i^2$ and $\mathbf a=x_ix_{i+1}$, respectively. If $|a|=1$ (as in the first case), the results from Christophersen's article imply that $L_b := \cap_{b' \subset b} \lk(b',\lk(x_i,\K))$ must have more than one connected component (the contribution comes from $\widetilde H^0(L_b,\C)$). This is the case if $b$ consist of two opposite vertices in the suspended circle. In total there are $2 \cdot 6 \cdot 3=36$ contributions of this form. 
+We now compute $T^2_{A_\K}$. The contributions come from choosing $\mathbf a=x_i^2$ and $\mathbf a=x_ix_{i+1}$, respectively. If $|a|=1$ (as in the first case), the results from the article imply that $L_b := \cap_{b' \subset b} \lk(b',\lk(x_i,\K))$ must have more than one connected component (the contribution comes from $\widetilde H^0(L_b,\C)$). This is the case if $b$ consist of two opposite vertices in the suspended circle. In total there are $2 \cdot 6 \cdot 3=36$ contributions of this form. 
 
 If $|a|=2$, the contributing links are hexagons, and in this case the contributions come from $b$ such that $L_b=\emptyset$. Again choosing $b$ to consist of opposite vertices of the hexagon, we find three pairs $b$ with $L_b=\emptyset$ for each hexagon. Thus in total there are $2 \cdot 6 \cdot 3=36$ contributions of this form.
 
@@ -96,29 +96,29 @@ The automorphism group of $\K$ is $D_6 \times D_6 \times \Z_2$, and have order $
 \label{fig:hexagon}
 \end{figure}
 
-Consider \cref{fig:hexagon}. It is the $2$-dimensional polytope associated to the del Pezzo surface of degree $6$. The fan over this polytope correspond to a unimodular regular triangulation of the polytope, and it follows by Theorem 8.3 in \cite{sturmfels}, that $\dP6$ degenerates to the Stanley--Reisner scheme $\P(E_6 \ast \{pt\})$, where $\{ pt \}$ correspond to the origin. Concretely, the equations of $\dP6$ are given by $x_ix_{i+2}-yx_{i+1}=x_ix_{i+3}-y^2=0$ inside $\P^6$. The degeneration to $\P(E_6 \ast \{ pt \})$ is given by setting the second terms to zero.
+Consider \cref{fig:hexagon}. It is the $2$-dimensional polytope associated to the del Pezzo surface of degree $6$. The fan over this polytope correspond to a unimodular regular triangulation of the polytope, and it follows by Theorem 8.3 in \cite{sturmfels}, that $\dP6$ degenerates to the Stanley--Reisner scheme $\P(E_6 \ast \{pt\})$, where $\{ pt \}$ correspond to the origin. Concretely, the equations of $\dP6$ are given by $x_ix_{i+2}-yx_{i+1}=x_ix_{i+3}-y^2=0$ inside $\P^6$. The degeneration to $\P(E_6 \ast \{ pt \})$ is given by setting the second terms equal to zero.
 
 Now form the join of two copies of $\dP6$, to get a new variety $Y \subset \P^{13}$. By \cref{lemma:join}, this is a $2+2+1=5$-dimensional toric variety with singular locus consisting of two copies of $\dP6$. Since the coordinate ring is just the tensor product of two copies of $S(\dP6)$, it follows that $Y$ degenerates to $\P(E_6 \ast \{pt\} \ast E_6 \ast \{ pt \})=\P(\K \ast \Delta^1)$.
 
 The following holds:
 
 \begin{proposition}
-There is a deformation of the Stanley--Reisner scheme $X_0$ to an irreducible \CY variety $X_Y \subset Y$ with $12$ isolated singularities. They are locally isomorphic to cones over del Pezzo surfaces. More precisely: let $(U,p_i)$ be the germ of $X_0$ at $p_i$ in the analytic topology. Then $(U,p_i) \simeq (C(\dP6),0)$.
+There is a deformation of the Stanley--Reisner scheme $X_0$ to an irreducible \CY variety $X_Y \subset Y$ with $12$ isolated singularities. The singularities are locally isomorphic to cones over del Pezzo surfaces. More precisely: let $(U,p_i)$ be the germ of $X_Y$ at $p_i$ in the analytic topology. Then $(U,p_i) \simeq (C(\dP6),0)$.
 \end{proposition}
 \begin{proof}
-Since $X_0$ is a complete intersection side $\P(\K \ast \Delta^1)$, it follows that $X_0$ deforms to a complete intersection inside any deformation of $\P(\K \ast \Delta^1)$. We explained above that $\P(\K \ast \Delta^1)$ deforms to the join $Y$ of two del Pezzo surfaces, and it follows that $X_0$ deforms to $Y$ intersected with two generic hyperplanes.
+Since $X_0$ is a complete intersection inside $\P(\K \ast \Delta^1)$, it follows that $X_0$ deforms to a complete intersection inside any deformation of $\P(\K \ast \Delta^1)$. We explained above that $\P(\K \ast \Delta^1)$ deforms to the join $Y$ of two del Pezzo surfaces, and it follows that $X_0$ deforms to $Y$ intersected with two generic hyperplanes.
 
-Since $Y$ has singular locus of dimension $2$ and degree $6+6=12$, it follows by Bertini's theorem \cite[Chapter II, Theorem 8.18]{hartshorne} that $X_0$ has twelve isolated singularities $p_i$.
+Since $Y$ has singular locus of dimension $2$ and is of degree $6+6=12$, it follows by Bertini's theorem \cite[Chapter II, Theorem 8.18]{hartshorne} that $X_Y$ has twelve isolated singularities $p_i$.
 
 To see how the singularities look locally, we argue as follows. Locally, $Y$ looks like $\A^2_{a_1,a_2} \times C(\dP6)_{x_i}$, where the subscripts refer to the coordinates.
 
 The claim now follows from two applications of Theorem 3.1.5 in \cite{batyrev_mirrorsymmetry}, which says that the singularities on $\Sigma$-regular toric hypersurfaces are inherited from the ambient toric variety.
 \end{proof}
 
-Since the cone over $\dP6$ deforms in two topologically different ways, we might expect that $X_Y$ does this too. This is indeed true.
+Since the cone over $\dP6$ deforms in two topologically different ways, we might expect that $X_Y$ does so too. This is indeed true.
 
 %%%%%%%%%%
-\section{Smoothings of $X_Y$}
+\section{Three different smoothings of $X_Y$}
 
 By embedding $\dP6$ in different spaces, we obtain different smoothings of $X_Y$ as subvarieties of the join of these spaces.
 
@@ -128,7 +128,7 @@ We are inspired by the construction in Rødland's thesis \cite{rodland_pfaffian}
 
 Let $E$ be a 3-dimensional vector space. Let $\{e_1,e_2,e_3\}$ be a basis for $E$. Then we can form the vector space $V=(E \otimes E) \oplus (E \otimes E)$, which has dimension $18$. Let $\P^{17}=\P(V)$. Choose coordinates $x_1,\ldots,x_{18}$ on $\P^{17}$. 
 
-Thinking of $E \otimes E$ as $3 \times 3$-matrices, we can think of the elements of $\P^{17}$ as pairs of $3 \times 3$-matrices up to scalar, not both zero. Concretely, two pairs of matrices $(A',B')$ and $(A,B)$ are equivalent if $(A',B') = (\lambda A, \lambda B)$ for some $\lambda \in \C^\ast$.
+Thinking of $E \otimes E$ as $3 \times 3$-matrices, we can think of the elements of $\P^{17}$ as pairs of $3 \times 3$-matrices up to a scalar, not both zero. Concretely, two pairs of matrices $(A',B')$ and $(A,B)$ are equivalent if $(A',B') = (\lambda A, \lambda B)$ for some $\lambda \in \C^\ast$.
 
 We can also interpret $\P^{17}$ as the geometric join of $\P(E \otimes E)$ with itself. This is the set of all lines connecting pairs of $3 \times 3$-matrices.
 
@@ -184,20 +184,21 @@ $X_1$ is a smooth Calabi--Yau variety with $\chi(X_1)=-72$.
 \begin{proof}
 The singularities of $M$ are of dimension $4$. By Bertini's theorem, intersecting $M$ with a codimension $6$ hyperplane gives a smooth variety $X_1$.
 
-That $X_1$ is Calabi--Yau follows from \cref{prop:anticanonicalsection}.
+The fact that $X_1$ is Calabi--Yau follows from \cref{prop:anticanonicalsection}.
 
-To find the topological Euler characteristic, we compute in \MM. Computing the whole cotangent sheaf of $X_1$ is infeasible with current computer technology\footnote{An external computer has been trying to compute this sheaf for several months now without terminating.}, we make use of standard exact sequences. Let $\mathscr I$ be the ideal sheaf of $M$ in $\P^{17}$. First off, we have the exact sequence
+To find the topological Euler characteristic, we compute in \MM. Computing the whole cotangent sheaf of $X_1$ is infeasible with current computer technology\footnote{An external computer has been trying to compute this sheaf for several months now without terminating.}.
+
+We make use of standard exact sequences. Let $\mathscr I$ be the ideal sheaf of $M$ in $\P^{17}$. First, we have the exact sequence
 $$
 0 \to \restr{\mathscr I/\mathscr I^2}{X_1} \to \restr{\Omega_{\P^{17}}^1}{X_1} \to \restr{\Omega_M^1}{X_1} \to 0.
 $$
-
 The restriction to ${X_1}$ is exact since $\mathscr I/\mathscr I^2$ is locally free on the smooth locus.
 
 The \MM command \texttt{eulers} computes the Euler characteristics of generic linear sections of a sheaf $\mathscr F$ (behind the scene, this is equivalent to computing the Koszul resolution of the relative ideal sheaf $\mathscr I_{X_1/M}$). Using this command, we find that $\chi(\restr{\mathscr I/\mathscr I^2}{X_1})=-180$. Using the exact sequence
 $$
 0 \to \restr{\Omega_{\P^{17}}^1}{X_1} \to \OO_{X_1}(-1)^{18} \to \OO_{X_1} \to 0,
 $$
-we find that the Euler characteristic of $\restr{\Omega_{\P^{17}}^1}{X_1}$ is $-216=12\cdot 18$. It follows from the first exact sequence that $\restr{\Omega_M^1}{X_1}$ has Euler characteristic $-36$.
+we find that the Euler characteristic of $\restr{\Omega_{\P^{17}}^1}{X_1}$ is $-216=-12\cdot 18$. It follows from the first exact sequence that $\restr{\Omega_M^1}{X_1}$ has Euler characteristic $-36$.
 
 Since $X_1$ is a complete intersection in $M$, the conormal sequence is
 $$
@@ -244,19 +245,19 @@ is the join of $\dP6$ with itself. Since $X_Y \subset \dP6 \ast \dP6$, we see th
 \end{remark}
 
 \begin{remark}
-I have not been able to rigorously compute the Hodge nubmers of $X_1$. However, over several finite fields I have computed the dimension of the degree zero part of the $T^1$ module in \MM. By \cref{prop:t1h1}, we have that $(T^1(S_{X_1}/k,S_{X_1}))_0 = H^1(X_1,\Omega^2_X)$. This module can be computed in \MM.
+We have not been able to rigorously compute the Hodge numbers of $X_1$. However, over several finite fields we have computed the dimension of the degree zero part of the $T^1$-module in \MM. By \cref{prop:t1h1}, we have that $(T^1(S_{X_1}/k,S_{X_1}))_0 = H^1(X_1,\Omega^2_X)$.
 
 After about a week of computation on a modern desktop computer, the answer turns out to be $\dim_{\mathbb F_p} (T^1(S_{X_1}/\mathbb F_p,S_{X_1}))_0 = 39$ for several large primes $p$.
 
-This is plausible because of the following heuristic moduli count: $X_1$ is parametrized by the Grassmannian $\mathbb Gr(12,(E \otimes E)^{\oplus 2} )$, which has dimension $(18-12)\cdot 12 = 72$. Each $E$-factor is acted upon by $\GL(E)$. There are four of these factors, so we have an action of $\prod^4 \GL(E)$ on the Grassmannian. There is a torus subgroup $(\C^\ast)^4$ acting by $(v \otimes w, r \otimes s) \mapsto (t_1t_2 v \otimes w, t_3t_4 r \otimes s)$ on $\P^{17}$. Elements of $(\C^\ast)^4$ satisfying $t_1t_2=t_3t_4$ act trivially, forming a isotropy subgroup $K$.  Hence we have an action of the quotient group $G \stackrel \Delta = \left(\prod_{i=1}^4 \GL(4)\right)/K$ on the Grassmannian. This quotient group has dimension $9 \cdot 4 - 3 = 33$.
+This is plausible because of the following heuristic moduli count: $X_1$ is parametrized by the Grassmannian $\mathbb Gr(12,(E \otimes E)^{\oplus 2} )$, which has dimension $(18-12)\cdot 12 = 72$. Each $E$-factor is acted upon by $\GL(E)$. There are four of these factors, so we have an action of $\prod^4 \GL(E)$ on the Grassmannian. There is a torus subgroup $(\C^\ast)^4$ acting by $(v \otimes w, r \otimes s) \mapsto (t_1t_2 v \otimes w, t_3t_4 r \otimes s)$ on $\P^{17}$. Elements of $(\C^\ast)^4$ satisfying $t_1t_2=t_3t_4$ act trivially, forming an isotropy subgroup $K$.  Hence we have an action of the quotient group $G \stackrel \Delta = \left(\prod_{i=1}^4 \GL(4)\right)/K$ on the Grassmannian. This quotient group has dimension $9 \cdot 4 - 3 = 33$.
 
-We form the quotient space $\mathbb G(12,(E \otimes E)^{\oplus 2})/G$, which have dimension $72-33=39$.
+We form the quotient space $\mathbb G(12,(E \otimes E)^{\oplus 2})/G$, which has dimension $72-33=39$.
 
 If this is true, then $X_1$ has Hodge numbers $h^{11}=3$ and $h^{12}=39$, since we have computed the Euler characteristic. It is not clear which other divisors there are besides the hyperplane divisor.
 \end{remark}
 
 \begin{remark}
-Since $X_1$ avoids the fundamental subscheme $V_1 \cup V_2$, the inverse image $\pi^{-1}(X_1) \subset \widetilde{\P^{17}}$ is isomorphic to $X_1$. Thus we can realize $X_1$ as a subvariety of a \emph{smooth} variety. Unfortunaly, $X_1$ is cut out by non-ample divisors in $\widetilde{\P^{17}}$.
+Since $X_1$ avoids the fundamental subscheme $V_1 \cup V_2$, the inverse image $\pi^{-1}(X_1) \subset \widetilde{\P^{17}}$ is isomorphic to $X_1$. Thus we can realize $X_1$ as a subvariety of a \emph{smooth} variety. Unfortunately, $X_1$ is cut out by non-ample divisors in $\widetilde{\P^{17}}$.
 \end{remark}
 
 %%%%%%%%%%%%
@@ -265,15 +266,15 @@ Since $X_1$ avoids the fundamental subscheme $V_1 \cup V_2$, the inverse image $
 
 The construction in the previous section used the embedding of $\dP6$ in $\P^2 \times \P^2$ to deform $X_Y$. There is also the embedding of $\dP6$ in $\P^1 \times \P^1 \times \P^1$ to exploit. The construction is similar.
 
-Let $F$ be a $2$-dimensional vector space with basis $\{f_0,f_1\}$. Then we can form the vector space $V = (F \otimes F \otimes F)^{\oplus 2}$. Let $\P^{15}=\P(V)$. Choose coordinates $a_{ijk}=(f_i \otimes f_j \otimes f_j,0)$ and $b_{ijk}=(0,f_i\otimes f_j \otimes f_k)$ ($i,j,k=0,1$) for $\P^{15}$. 
+Let $F$ be a $2$-dimensional vector space with basis $\{f_0,f_1\}$. Then we can form the vector space $V = (F \otimes F \otimes F)^{\oplus 2}$. Let $\P^{15}=\P(V)$. Choose coordinates $a_{ijk}=(f_i \otimes f_j \otimes f_k,0)$ and $b_{ijk}=(0,f_i\otimes f_j \otimes f_k)$ ($i,j,k=0,1$) for $\P^{15}$. 
 
 The elements of $\P^{15}$ are pairs $(A,B)$ of $2 \times 2 \times 2$ tensors, not both zero. There is also in this case a natural map $\pi:\P^{15} \to \P^7 \times \P^7$, given by dividing out by the antidiagonal $\C^\ast$-action.
 
 \begin{remark}
-Just as above, let $V_1$ and $V_2$ be the subspaces $A=0$ and $B=0$, respectively. Let $\widetilde{\P^{15}}$ be the blowup of $\P^{15}$ in $V_1 \cup V_2$. The $V_i$'s are exactly the indeterminacy locus of $\pi$, so $\pi$ extends to a morphism $\pi:\widetilde{\P^{15}} \to \P^8 \times \P^8$, which is a $\P^1$-bundle. Also in this case it is true that $\widetilde{\P^{15}}=\P\left(\OO_{\P^7 \times \P^7} \oplus \OO_{\P^7 \times \P^7}\left(1,-1\right)\right)$.
+Just as above, let $V_1$ and $V_2$ be the subspaces $A=0$ and $B=0$, respectively. Let $\widetilde{\P^{15}}$ be the blowup of $\P^{15}$ in $V_1 \cup V_2$. The $V_i$'s are exactly the indeterminacy locus of $\pi$, so $\pi$ extends to a morphism $\pi:\widetilde{\P^{15}} \to \P^8 \times \P^8$, which is a $\P^1$-bundle. In this case it is also true that $\widetilde{\P^{15}}=\P\left(\OO_{\P^7 \times \P^7} \oplus \OO_{\P^7 \times \P^7}\left(1,-1\right)\right)$.
 \end{remark}
 
-Let $N$ be the closure of set of pairs $(A,B)$ where both $A$ and $B$ have tensor rank $1$\footnote{An element of $F^{\otimes 3}$ have rank $1$ if it is a pure tensor. It has rank $\leq k$ if it can be written as a sum of $k$ pure tensors.}.
+Let $N$ be the closure of the set of pairs $(A,B)$ where both $A$ and $B$ have tensor rank $1$\footnote{An element of $F^{\otimes 3}$ has rank $1$ if it is a pure tensor. It has rank $\leq k$ if it can be written as a sum of $k$ pure tensors.}.
 
 \begin{proposition}
 The variety $N$ is the join of two copies of $\P^1 \times \P^1 \times \P^1 \subset \P^7$, and has singular locus $\P^1 \times \P^1 \times \P^1 \subset V_i$ of dimension $3$.
@@ -295,7 +296,7 @@ The equations of the set of rank $1$ tensors in $\P(F \otimes F \otimes F)$ are 
 
 Hence the equations for $N$ are given by $[a_{ijk}] \leq 1$, together with $[b_{ijk}] \leq 1$. Since these are equations in a disjoint set of variables, it is clear that ${N=\left(\P^1 \times \P^1 \times \P^1\right)^{\ast 2}}$.
 
-The claim about the singular locus and the canonical sheaf follow as in the proof of \cref{prop:m}.
+The claim about the singular locus and the canonical sheaf follows as in the proof of \cref{prop:m}.
 \end{proof}
 
 Let $X_2$ be the intersection of $N$ with a general $\P^{11}$.
@@ -311,11 +312,13 @@ The proof is identical to the proof of \cref{prop:x1}.
 \begin{remark}
 A heuristic moduli count works also in this case.
 
-$X_2$ lies in a $\P^{11}$ in $\P((F \otimes F \otimes F)^{\oplus 2})$. Such planes are parametrized by $\Gr(12,16)$, the Grassmannian of $12$-planes in $k^{16}$. This space is $12 \cdot (16-12)=48$-dimensional. There is an action of the group $\prod_{i=1}^6 \GL(F)$ on $(F \otimes F \otimes F)^{\oplus 2}$. There is also in this case a torus subgroup acting trivially. Namely, the elements satisfying $t_1t_2t_3=t_4t_5t_6$. Call this subgroup $K$. Thus we really have an action of the group $\left(\prod_{i=1}^6 \GL(F)\right)/K$, which have dimension $6 \cdot 4 - 5 = 19$. Thus in total we have $48-19=29$ moduli parameters.
+$X_2$ lies in a $\P^{11}$ in $\P((F \otimes F \otimes F)^{\oplus 2})$. Such planes are parametrized by $\Gr(12,16)$, the Grassmannian of $12$-planes in $k^{16}$. This space is $12 \cdot (16-12)=48$-dimensional. There is an action of the group $\prod_{i=1}^6 \GL(F)$ on $(F \otimes F \otimes F)^{\oplus 2}$. There is also in this case a torus subgroup acting trivially, namely the elements satisfying $t_1t_2t_3=t_4t_5t_6$. Call this subgroup $K$. Thus we really have an action of the group $\left(\prod_{i=1}^6 \GL(F)\right)/K$, which has dimension $6 \cdot 4 - 5 = 19$. Thus in total we have $48-19=29$ moduli parameters.
 
 Since we know the Euler characteristic, we predict the Hodge numbers to be $(h^{11},h^{12})=(5,29)$.
 \end{remark}
 
+%%%%%%%%%%
+%%%%%%%%%%
 \subsection{The mixed smoothing}
 
 In the above cases, we formed the join of equal varieties. We mix things up: let $V=(E \otimes E) \oplus (F \otimes F \otimes F)$. Then let $\P^{16}=\P(V)$.
@@ -331,13 +334,13 @@ The proof is identical to the proofs above.
 \end{proof}
 
 \begin{remark}
-We again give a heuristic moduli count. The Grassmannian in this case is $60$-dimensional. The group acting on it is $\prod^2_{i=1} \GL(E) \times \prod^3_{i=1} \GL(F)$. Here the trivially acting torus subgroup will be those satisfying $t_1t_2=t_3t_4t_5$. It follows the the parameter space is $60-(18+12-4)=34$-dimensional.
+Again we give a heuristic moduli count. The Grassmannian in this case is $60$-dimensional. The group acting on it is $\prod^2_{i=1} \GL(E) \times \prod^3_{i=1} \GL(F)$. Here the trivially acting torus subgroup consists of the elements satisfying $t_1t_2=t_3t_4t_5$. It follows that the parameter space is $60-(18+12-4)=34$-dimensional.
 
 Hence we predict the Hodge numbers to be $(h^{11},h^{12})=(4,34)$.
 \end{remark}
 
 \begin{remark}
-Even though we did not find a satisfying proof that the Euler characteristics of the $X_i$'s were $-72$, $-48$ and $-60$, there is an internal consistency here. The first smoothing, $X_1$, of $X_Y$, correspond to smoothing all the cones over del Pezzo-surfaces. They are cut out and replaced by the smoothing corresponding to the largest smoothing component. This smoothing, $Z_2$, had Euler characteristic zero. If we instead smoothed by glueing in the other smoothing of $C(\dP6)$, the Euler characteristic would increase by $12 \cdot 2=24$. Thus we would have a smoothing with Euler characteristic $-72+24=-48$, which is exactly what happens.
+Even though we did not find a satisfying proof that the Euler characteristics of the $X_i$'s were $-72$, $-48$ and $-60$, respectively, there is an internal consistency here. The first smoothing, $X_1$, of $X_Y$, correspond to smoothing all the cones over del Pezzo-surfaces. They are cut out and replaced by the smoothing corresponding to the largest smoothing component. This smoothing, $Z_2$, had Euler characteristic zero. If we instead smoothed by glueing in the other smoothing of $C(\dP6)$, the Euler characteristic would increase by $12 \cdot 2=24$. Thus we would have a smoothing with Euler characteristic $-72+24=-48$, which is exactly what happens.
 \end{remark}
 
 %%%%%%%%%%%
@@ -345,7 +348,7 @@ Even though we did not find a satisfying proof that the Euler characteristics of
 \section{Degeneration of $X_Y$}
 \label{sec:degenjoin}
 
-Consider the construction of $X_1$ from above, and the explicit equations from \cref{remark_X1}. Putting $t=0$ and $h_1=h_2$, gives a degeneration of $X_Y$ to another, more singular, variety, which we denote by $X_{Y'}$. Explicitly, it is given by the $2 \times 2$-minors of the following two matrices, where $h$ is a generic hypersurface in the variables.
+Consider the construction of $X_1$ from above, and the explicit equations from \cref{remark_X1}. Putting $t=0$ and $h_1=h_2$, gives a degeneration of $X_Y$ to another, more singular, variety, which we denote by $X_{Y'}$. Explicitly, it is given by the $2 \times 2$-minors of the following two matrices, where $h$ is a generic linear form in the variables.
 
 \[
 A_1 = \begin{pmatrix}
@@ -361,7 +364,7 @@ x_{16} & x_{16} & h
 \end{pmatrix}.
 \]
 
-We can realize $X_{Y'}$ as a hypersurface in the toric variety $Y'$ as follows. Introduce a new variable $y$, and consider the variety defined by the $2 \times 2$ minors of
+We can realize $X_{Y'}$ as a hypersurface in the toric variety $Y'$ as follows. Introduce a new variable $y$, and consider the variety defined by the $2 \times 2$-minors of
 \[
 A_1 = \begin{pmatrix}
 y   & x_2 & x_3 \\
@@ -383,14 +386,14 @@ This is a $4$-dimensional toric variety. It is the toric variety associated to t
 
 A computation shows that $Y'$ has $1$-dimensional singularities, and the singular locus is a graph of $\P^1$'s: take two hexagons, and join each vertex of one of them with all vertices of the other one. This makes in total $48$ $\P^1$'s.
 
-The variety $Y'$ is a Fano toric variety, and as such, it has a anticanonical section $X_{Y'}$ which is a singular Calabi--Yau variety. A local computation shows that $X_{Y'}$ has $12$ singularities that are locally isomorphic to $C(\dP6)$, and $36$ double points. This can also be seen torically: the cones in the fan of $Y'$ corresponding to the singular locus comes in two types. The first type is a cone over a hexagon, and the other type is the cone over a square. These give (algebro-geometrically) cones over $\dP6$ and double points, respectively.
+The variety $Y'$ is a Fano toric variety, and as such, it has an anticanonical section $X_{Y'}$ which is a singular Calabi--Yau variety. A local computation shows that $X_{Y'}$ has $12$ singularities that are locally isomorphic to $C(\dP6)$, and $36$ double points. This can also be seen torically: the cones in the fan of $Y'$ corresponding to the singular locus comes in two types. The first type is a cone over a hexagon, and the other type is a cone over a square. These give (algebro-geometrically) cones over $\dP6$ and double points, respectively.
 
-Since $Y'$ is a four-fold, it is proved in \cite{mirrorsymmetry} that $X_{Y'}$ has a maximal projective crepant resolution of singularities (a \emph{MPCP-desingularization}), which we denote by $\widetilde{X_{Y'}}$.
+Since $Y'$ is a four-fold, it follows that $X_{Y'}$ has a maximal projective crepant resolution of singularities (a \emph{MPCP-desingularization}), which we denote by $\widetilde{X_{Y'}}$. This is proved in \cite{mirrorsymmetry}.
 
 A computation using PALP \cite{palp} shows that $\widetilde{X_{Y'}}$ has Hodge numbers $(44,8)$ and Euler-characteristic $72$. 
 
 \begin{remark}
-There is a heuristic surgical reason for the Euler characteristic being $+72$. Our $X_{Y'}$ deforms to $X_1$, which has Euler characteristic $-72$. This is obtained by starting with $X_{Y'}$, smoothing $36$ double points and $12$ cones over del Pezzo surfaces. By the inclusion-exclusion principle, it follows that a small resolution of the singularities of $X_{Y'}$ have Euler characteristic $\chi(X_1)+2\cdot 36 + 6 \cdot 12=72$.
+There is a heuristic surgical reason for the Euler characteristic being $+72$. Our $X_{Y'}$ deforms to $X_1$, which has Euler characteristic $-72$. This is obtained by starting with $X_{Y'}$, smoothing $36$ double points and $12$ cones over del Pezzo surfaces. By the inclusion-exclusion principle, it follows that a small resolution of the singularities of $X_{Y'}$ has Euler characteristic $\chi(X_1)+2\cdot 36 + 6 \cdot 12=72$.
 \end{remark}
 
 \begin{remark}
@@ -407,19 +410,19 @@ In \cite{candelas_newcy}, the authors study \CY complete intersections admitting
 %%%%%%%%%%%%%%%
 \section{Invariant \CY's and a mirror construction}
 
-In this section, I will explain natural group actions on the $X_i$'s constructed above. Using the mirror construction Ansatz from above, we propose mirror candidates for $X_1$ and $X_2$.
+In this section, we will explain natural group actions on the $X_i$'s constructed above. Using the mirror construction Ansatz from above, we propose mirror candidates for $X_1$ and $X_2$.
 
 \subsection{Invariant subfamily of $X_1$} 
 
-Let us first consider $M=(\P^2 \times \P^2)^{\ast 2}$. Recall that $M$ can be thought of as pairs of rank one $3 \times 3$ matrices up to scalar. We will describe several natural finite group actions on $M$.
+Let us first consider $M=(\P^2 \times \P^2)^{\ast 2}$. Recall that $M$ can be thought of as pairs of rank one $3 \times 3$-matrices up to a scalar. We will describe several natural finite group actions on $M$.
 
-There is a natural $\Z/3$-action on $M$, defined as follows. If $E$ is a $3$-dimensional vector space with basis $\{e_0,e_1,e_2\}$, then we can define $e_i \mapsto \omega^i e_i$, where $\omega^i$ is a fixed third root of unity. This action extends to an action on $E \otimes E$ by the rule $e_{ij} \mapsto \omega^{i+j} e_{ij}$\footnote{We write $e_{ij}$ for $e_i \otimes e_j$.}. Furthermore, it extends to an action on $(E \otimes E) \oplus (E \otimes E)$ by $(v,w) \mapsto (gv,gw)$. Call a generator for this group for $g$. 
+There is a natural $\Z/3$-action on $M$, defined as follows. If $E$ is a $3$-dimensional vector space with basis $\{e_0,e_1,e_2\}$, then we can define $e_i \mapsto \omega^i e_i$, where $\omega$ is a fixed third root of unity. This action extends to an action on $E \otimes E$ by the rule $e_{ij} \mapsto \omega^{i+j} e_{ij}$\footnote{We write $e_{ij}$ for $e_i \otimes e_j$.}. Furthermore, it extends to an action on $(E \otimes E) \oplus (E \otimes E)$ by $(v,w) \mapsto (gv,gw)$. Call a generator for this group for $g$. 
 
 There is also a non-toric permutation action defined as follows. Let $\langle \sigma \rangle \subset S_3$ be the cyclic permutation action on $\{ e_0,e_1,e_2 \}$ defined by $e_i \mapsto e_{i+1}$, where $\sigma$ is a generator for this subgroup. Again, we get an action on $E \otimes E$ by $e_{ij} \mapsto e_{i+1,j+1}$, and by extension an action on $(E \otimes E) \oplus (E \otimes E)$.
 
 Furthermore, there is a $\Z/2$-action switching the $E \otimes E$-factors. Call the generator for this group for $\tau$.
 
-All these groups commute up to a scalar, so we get a $\Z/3 \times \Z/2 \times \Z/2$-action on $\P(E \otimes E \oplus E \otimes E)$. Let $G$ be the abelian group generated by $g$ and $\sigma$. Let $G'$ be the group generated by $g, \sigma$ and $\tau$. 
+All these groups commute up to a scalar, so we get a $\Z/3 \times \Z/3 \times \Z/2$-action on $\P(E \otimes E \oplus E \otimes E)$. Let $G$ be the abelian group generated by $g$ and $\sigma$. Let $G'$ be the group generated by $g, \sigma$ and $\tau$. 
 
 For the $G$-action to restrict to $X_1=M \cap H$, we must choose $H$ to be invariant under the group action. We describe a family of $G$-invariant $\P^{11}$'s: denote a unit matrix in the first factor of $(E \otimes E) \oplus (E \otimes E)$ by $e_{ij}^0$, and denote a unit matrix in the second factor by $e_{ij}^1$, where $0,1$ are taken modulo $2$. 
 
@@ -428,10 +431,9 @@ Now consider the $H_t=\P^{11}$ spanned by the following matrices:
 \label{eq:fija}
 f_{ij}^\alpha = e_{ij}^\alpha + t_{i-j}^\alpha e_{-i-j,-i-j}^{\alpha+1} \in (E \otimes E) \oplus (E \otimes E),
 \end{equation}
-
 where $i \neq j \in \Z_3$ and $\alpha \in \Z_2$, and $t_{i+j}^\alpha$ is a parameter. Note that $g \cdot f_{ij}^\alpha = \omega^{i+j} f_{ij}^\alpha$, so that $H$ is spanned by eigenvectors of the $\Z/3$-action. This gives us a $4$-parameter family of $G$-invariant planes. However, multiplying all the $t_{i-j}^\alpha$ by the same number yield isomorphic families, so we really have a $3$-parameter family.
 
-Denote the intersection between $M$ and $H$ by $X_{H_t}$. Denote by $P_i$ the coordinate points $(0:\ldots:1:\ldots:0)$. Then $\langle \sigma \rangle \simeq \Z/3$ act without fixed points outside these points (this can be computed in \MM). A \MM computation also shows that for $t_i \neq 1,0$, the family has $48$ isolated singularities: the $P_i$, and $36$ other points, which come in two orbits under the $G$-action. These are all double points, which can be verified by local computations.
+Denote the intersection between $M$ and $H$ by $X_{H_t}$. Denote by $P_i$ the coordinate points $(0:\ldots:1:\ldots:0)$. Then $\langle \sigma \rangle \simeq \Z/3$ acts without fixed points outside these points (this can be computed in \MM). A \MM computation also shows that for $t_i \neq 1,0$, the family has $48$ isolated singularities: the $P_i$, and $36$ other points, which come in two orbits under the $G$-action. These are all double points, which can be verified by local computations.
 
 \begin{lemma}
 There exists a minimal resolution of $X_{H_t}$ ($t \neq 0,1$), respecting the group action by $G$, leaving the dualizing sheaf trivial.
@@ -439,7 +441,7 @@ There exists a minimal resolution of $X_{H_t}$ ($t \neq 0,1$), respecting the gr
 \begin{proof}
 Analytically, a small resolution is a local operation. The singularities come in $3$ orbits under the action, so it is enough to do the resolution on one singularity in each orbit.
 
-Since the singularity is small, the change happen in codimension $2$. The holomorphic $3$-form on $X_{H_t}$ extends holomorphically to all of the resolution by Hartog's theorem from complex analysis.
+Since the singularity is small, the change happens in codimension $2$. The holomorphic $3$-form on $X_{H_t}$ extends holomorphically to all of the resolution by Hartog's theorem from complex analysis.
 \end{proof}
 
 \begin{lemma}
@@ -465,20 +467,20 @@ The Euler characteristic of a small resolution is given by $\chi(\widetilde{X_{H
 
 These resolutions are still Calabi--Yau manifolds. One reference for this fact is \cite{clemens_double}. 
 
-Let $\Z/3$ denote the torus subgroup group acting on $\widetilde{X_{H_t}}$. 
+Let $\Z/3$ denote the torus subgroup acting on $\widetilde{X_{H_t}}$. 
 
 \begin{theorem}
 Let $X_1^\circ$ be a minimal resolution of $\widetilde{X_{H_t}}/(\Z/3)$. Such a resolution exists, and it has Euler-characteristic $+72$, making it a potential mirror for $X_1$.
 \end{theorem}
 \begin{proof}
-The existence of this kind of quotient singularity is proved in Roan's article \cite{roan_minres}. Furthermore, in his article \cite{roan_euler}, Roan proves a formula for the Euler characteristic of such resolutions (let $V=\widetilde{X_{H_t}})$:
+The existence of a resolution of this kind of quotient singularity is proved in Roan's article \cite{roan_minres}. Furthermore, in his article \cite{roan_euler}, Roan proves a formula for the Euler characteristic of such resolutions (let $V=\widetilde{X_{H_t}})$:
 
 \[
 \chi\left(\widetilde{V/(\Z/3)} \right) = \frac{1}{3} \sum_{g,h \in \Z/3}  \chi(V^g \cap V^h),
 \]
 where $V^g$ refers to the fixed points of $g$.
 
-For $(g,h) \neq (e,e)$, $\chi(V^g \cap V^h)$ is just the finite set of of fixed points. There are $24$ of these. For $(g,h)=(e,e)$, $\chi(V^e \cap V^e)=\chi(V)$ is the Euler characteristic of the resolution of $X_{H_t}$, which is $24$.
+For $(g,h) \neq (e,e)$, $\chi(V^g \cap V^h)$ is just the finite set of fixed points. There are $24$ of these. For $(g,h)=(e,e)$, $\chi(V^e \cap V^e)=\chi(V)$ is the Euler characteristic of the resolution of $X_{H_t}$, which is $24$.
 
 In sum, we find
 
@@ -488,7 +490,7 @@ $$
 \end{proof}
 
 \begin{remark}
-We still have the cyclic permutation action $\sigma$. Since $\sigma$ commutes (up to scalar) with $g$, it act on the mirror as well. It can be checked that it has no fixed points on $X_{H_t}$. Thus the induced $\Z/3$-action is free, and we can form the quotiens $X_{H_t}/\langle \sigma \rangle $ and $X_{H_t}^\circ/\langle \sigma \rangle$. These will have Euler characteristics $24$ and $-24$, respectively. However, the fundamental group will be non-trivial.
+We still have the cyclic permutation action $\sigma$. Since $\sigma$ commutes (up to scalar) with $g$, it acts on the mirror as well. It can be checked that it has no fixed points on $X_{H_t}$. Thus the induced $\Z/3$-action is free, and we can form the quotients $X_{H_t}/\langle \sigma \rangle $ and $X_{H_t}^\circ/\langle \sigma \rangle$. These will have Euler characteristics $24$ and $-24$, respectively. However, the fundamental group will be non-trivial.
 \end{remark}
 
 
@@ -496,11 +498,11 @@ We still have the cyclic permutation action $\sigma$. Since $\sigma$ commutes (u
 %%%%%%%%%%%%
 \subsection{Invariant subfamily of $X_2$}
 
-Also in this case we are able to produce a mirror candidate. We start by describing natural group actions on $N$, and then describe a natural invariant subfamily. 
+In this case we are also able to produce a mirror candidate. We start by describing natural group actions on $N$, and then describe a natural invariant subfamily. 
 
-Recall that $F$ is a $2$-dimensional vector space with basis $f_0, f_1$. There is, as above, a natural $\Z/2$-action given by $f_i \mapsto (-1)^i f_i$. Concretely, $\Z/2$ act by sending $f_0$ to itself and multiplying $f_1$ by $-1$. This action extend in the natural way to an action on $\P(F^{\otimes 3} \oplus F^{\otimes 3})$.
+Recall that $F$ is a $2$-dimensional vector space with basis $f_0, f_1$. There is, like above, a natural $\Z/2$-action given by $f_i \mapsto (-1)^i f_i$. Concretely, $\Z/2$ acts by sending $f_0$ to itself and multiplying $f_1$ by $-1$. This action extends in a natural way to an action on $\P(F^{\otimes 3} \oplus F^{\otimes 3})$.
 
-Furhermore, there is another $\Z/2$-action given by $f_i \mapsto f_{i+1}$ (indices taken modulo $2$).
+Furthermore, there is another $\Z/2$-action given by $f_i \mapsto f_{i+1}$ (indices taken modulo $2$).
 
 Using the same notation as in the previous section, define $K_t$ to be $\P^{11}$ 
 spanned by the following matrices:
@@ -509,10 +511,9 @@ spanned by the following matrices:
 \label{eq:gijk}
 g_{ijk}^\alpha = e_{ijk}^\alpha + t_{i,j,k} e_{i+j+k,i+j+k,i+j+k}^{\alpha+1}
 \end{equation}
-
 for $(i,j,k)\neq (0,0,0),(1,1,1)$ and $\alpha=0,1$. These matrices span a $\P^{11}$. As above, the $g_{ijk}^\alpha$ are eigenvectors for the $\Z/2$-action.
 
-For $t_{i,j,k}=1$ for all $i,j,k$ the variety $X_{K_t} \stackrel \Delta =  N \cap K_t$ has $36$ double points. Using the same arguments as in the previous section, it follows that a small resolution of $X_{K_1}$ has Euler-characteristic $24$ as well. Again, using Roan's formula, we find that a small resolution of the quotient $X_{K_1}$ has Euler-characteristic $+48$. Thus we have a mirror candidate for $X_2$ as well.
+For $t_{i,j,k}=1$ for all $i,j,k$ the variety $X_{K_t} \stackrel \Delta =  N \cap K_t$ has $36$ double points. Using the same arguments as in the previous section, it follows that a small resolution of $X_{K_1}$ has Euler-characteristic $24$ as well. Again, using Roan's formula, we find that a small resolution of the quotient $X_{K_1}$ has Euler characteristic $+48$. Thus we have a mirror candidate for $X_2$ as well.
 
 \begin{proposition}
 There exists a mirror candidate for $X_2$ as well. More precisely, there exists a \CY desingularization $X_2^\circ $of the quotient $\widetilde {X_{K_t}}/H$ in such a way that the Hodge numbers satisfy $\chi(X_2) = -\chi(X_2^\circ) = -48$.
@@ -522,7 +523,7 @@ There exists a mirror candidate for $X_2$ as well. More precisely, there exists 
 %%%%%%%%%%%%%%%%%%%%
 \subsection{Comment about $X_3$}
 
-The same mirror construction does not work for $X_3$, at least not directly. In the case of $X_1$ and $X_2$, there were natural torus actions on $E$ and $F$,  respectively. This action extendend to $\P\left(\left( E \otimes E\right)^{\oplus 2}\right)$ and $\P\left(\left(F \otimes F \otimes F\right)^{\otimes 2}\right)$, and we intersected with invariant $\P^{11}$'s to get special Calabi--Yaus.
+The same mirror construction does not work for $X_3$, at least not directly. In the cases of $X_1$ and $X_2$, there were natural torus actions on $E$ and $F$,  respectively. The actions extended to $\P\left(\left( E \otimes E\right)^{\oplus 2}\right)$ and $\P\left(\left(F \otimes F \otimes F\right)^{\otimes 2}\right)$, and we intersected with invariant $\P^{11}$'s to get special Calabi--Yau's.
 
 In the case of $X_3$, there is no natural torus action on the ambient projective space coming from the join factors, so the same construction does not apply.
 
@@ -530,21 +531,20 @@ In the case of $X_3$, there is no natural torus action on the ambient projective
 %%%%%%%%%%%%%%%%%%%%
 \section{Conclusion and further questions}
 
-In this final chapter we constructed several smooth Calabi--Yau manifolds. Three of them, $X_1,X_2$ and $X_3$ lie in the same flat family. They are all smoothings of $X_Y$, a complete intersection in a 5-dimensional toric variety $Y$. This $X_Y$ has a maximally crepant resolution of singularities which is a smooth Calabi--Yau. We constructed mirror candidates and finite group quotiens of $X_1$ and $X_2$.
+In this final chapter we constructed several smooth Calabi--Yau manifolds. Three of them, $X_1,X_2$ and $X_3$ lie in the same flat family. They are all smoothings of $X_Y$, a complete intersection in a 5-dimensional toric variety $Y$. This $X_Y$ has a maximally crepant resolution of singularities which is a smooth Calabi--Yau. We constructed mirror candidates and finite group quotients of $X_1$ and $X_2$.
 
-We end with a few open questions that we would like to see answered in the future.
+We end with a few open questions that we would like to see answered in the future. 
 
+The Calabi--Yau with Hodge numbers $(44,8)$ in \cref{sec:degenjoin} seem to have some connection with our $X_1$. Its mirror dual $X_{8,44}$ is a complete intersection in $\P^2 \times \P^2 \times \P^2 \times \P^2$, while $X_1$ is a complete intersection in $(\P^2 \times \P^2) \ast (\P^2 \times \P^2)$ with the same Euler characteristic. There seem to be some kind of duality going on, which is unfortunately not described (to our knowledge) in the literature.
 
-The Calabi--Yau with Hodge numbers $(44,8)$ in \cref{sec:degenjoin} seem to have some connection with our $X_1$. Its mirror dual $X_{8,44}$ is a complete intersection in $\P^2 \times \P^2 \times \P^2 \times \P^2$, while $X_1$ is a complete intersection in $(\P^2 \times \P^2) \ast (\P^2 \times \P^2)$ with the same Euler characteristic. There seem to be some kind of duality going on, which is unfortunaly not described (to my knowledge) in the literature.
+We have a morphism $\pi:X_1 \to \P^2 \times \P^2 \times \P^2 \times \P^2$ defined by $(v \otimes w, r \otimes s) \mapsto v \otimes w \otimes r \otimes s$. The morphism is generically $1-1$. We have not been able to see what the image is (or if the morphism is an isomorphism).
 
-We have a morphism $\pi:X_1 \to \P^2 \times \P^2 \times \P^2 \times \P^2$ defined by $(v \otimes w, r \otimes s) \mapsto v \otimes w \otimes r \otimes s$. The morphism is generically $1-1$. I have not been able to see what the image is (or if the morphism is an isomorphism).
+The same situation occurs with $X_2$. Here there is a morphism ${\pi:X_2 \to (\P^1)^{\times 6}}$. We do not know what the image is. Also here there should be a connection with $X_{8,44}$, since $X_{8,44}$ can also be realized as a complete intersection in $(\P^1)^{\times 6}$. See the introduction of \cite{braun_smallhodgenumbers}.
 
-The same situation occurs with $X_2$. Here there is a morphism ${\pi:X_2 \to (\P^1)^{\times 6}}$. I don't know what the image is. Also here there should be a connection with $X_{8,44}$, since $X_{8,44}$ also can be realized as a complete intersection in $(\P^1)^{\times 6}$. See the introduction of \cite{braun_smallhodgenumbers}.
-
-We have a morphism $\pi:X_1 \to \P^2 \times \P^2 \times \P^2 \times \P^2$ defined by $(v \otimes w, r \otimes s) \mapsto v \otimes w \otimes r \otimes s$. The morphism is generically $1-1$. I have not been able to see what the image is (or if the morphism is an isomorphism).
+We have a morphism $\pi:X_1 \to \P^2 \times \P^2 \times \P^2 \times \P^2$ defined by $(v \otimes w, r \otimes s) \mapsto v \otimes w \otimes r \otimes s$. The morphism is generically $1-1$. We have not been able to see what the image is (or if the morphism is an isomorphism).
 
 It would also be interesting to find proofs of the Euler characteristics being $-72,-60$ and $-48$ not involving computer calculations. In all cases the Grassmannian parametrizing the $X_i$ have dimension $72$, $60$, and $48$, though we haven't seen the connection yet.
 
-Assuming that my, or rather my computer's, calculation of the Hodge numbers of the $X_i$ are correct, what are representatives of the generators of $\Pic X_i$? (being $\Z^3$, $\Z^5$ and $\Z^4$, respectively)
+Assuming that our, or rather our computer's, calculation of the Hodge numbers of the $X_i$ are correct, what are representatives of the generators of $\Pic X_i$? (being $\Z^3$, $\Z^5$ and $\Z^4$, respectively)
 
-Can my construction via joins be generalized to produce other (potentially new) Calabi--Yau varieties?
+Can our construction via joins be generalized to produce other (potentially new) Calabi--Yau varieties?

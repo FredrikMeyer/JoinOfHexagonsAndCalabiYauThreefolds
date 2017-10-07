@@ -11,7 +11,7 @@ We describe the smoothings and show that they are topologically different. We al
 We start this chapter by talking about the del Pezzo surface of degree $6$ in some generality. We first recall the definition of a del Pezzo surface:
 
 \begin{definition}
-A \emph{del Pezzo surface} is a smooth surface with ample anticanonical bundle. In other words, they are 2-dimensional Fano varieties.
+A \emph{del Pezzo surface} is a smooth surface with ample anticanonical bundle. In other words, it is a 2-dimensional Fano variety.
 \end{definition}
 
 Denote by $\dP6$ the blow-up of $\P^2$ in three non-collinear points.  These points can be chosen to be the coordinate points $(1:0:0),(0:1:0)$ and $(0:0:1)$. Since the coordinate points are invariant under the natural torus action on $\P^2$, it follows that the $\dP6$ is a toric variety.
@@ -82,7 +82,7 @@ The effect on the hexagon is a horizontal reflection.
 \subsection{Embedding in $\P^1 \times \P^1 \times \P^1$}
 \label{sec:emb_p1p1p1}
 
-Blowing up is ``transitive'', in the sense that we blowing up two points, is the same as blowing up one point, and then blowung up the inverse image of the second point. It follows that one way to find equations describing $\dP6$, we can blow up each point separately. Let $x_0,x_1,x_2$ be coordinates of $\P^2$. Then the blowup of $\P^2$ in the point $(1:0:0)$ can be realized as the closed subscheme of $\P^2 \times \P^1$ given by the equation $r_0x_1-r_1x_2=0$, where $r_0,r_1$ are coordinates on $\P^1$. We can repeat this procedure on the two other points $(0:1:0)$ and $(0:0:1)$ to obtain similar equations. Collecting these, we see that $\dP6$ is given by the matrix equation
+Blowing up is ``transitive'', in the sense that blowing up two points is the same as blowing up one point, and then blowing up the inverse image of the second point. It follows that one way to find equations describing $\dP6$, is to blow up each point separately. Let $x_0,x_1,x_2$ be coordinates of $\P^2$. Then the blowup of $\P^2$ in the point $(1:0:0)$ can be realized as the closed subscheme of $\P^2 \times \P^1$ given by the equation $r_0x_1-r_1x_2=0$, where $r_0,r_1$ are coordinates on $\P^1$. We can repeat this procedure on the two other points $(0:1:0)$ and $(0:0:1)$ to obtain similar equations. Collecting these, we see that $\dP6$ is given by the matrix equation
 
 \[
 M\vec x = 
@@ -95,7 +95,6 @@ s_1 & 0 & -s_0 \\
 x_0 \\ y_0 \\ z_0
 \end{pmatrix}= 0
 \]
-
 in $\P^2 \times \P^1 \times \P^1 \times \P^1$. Since $\vec x$ is non-zero, it follows that we must have $\det M = 0$. It is not difficult to see that $M$ cannot have rank $1$ or lower, because that would force some of the $\P^1$-coordinates to be all zero. Consider the projection forgetting the $\P^2$-factor:
 $$
 \pi:\P^2 \times \P^1 \times \P^1 \times \P^1 \to \P^1 \times \P^1 \times \P^1.
@@ -116,7 +115,6 @@ It is also interesting to see how this embedding arises from a toric perspective
  \begin{figure}
 \centering 
 \includestandalone{./figures/octahedron_hexagon}
-%\caption{The hexagon.}
 \caption{The inclusion of a cube in a octahedron.}
 \label{fig:octahedron_hexagon}
 \end{figure}
@@ -136,6 +134,7 @@ A =
 
 Note that there are essentially four inclusions of the hexagon into the octahedron, because each inclusion is given by choosing a line through opposite faces of the cube (the line spanned by the normal vector of the hexagon), and there are $8$ faces, hence $4$ lines through opposite faces.
 
+%%%%%%%%%%%%
 \subsection{Embedding in $\P^2 \times \P^2$}
 \label{sec:emb_p2p2}
 
@@ -147,7 +146,7 @@ On the other hand, blowups can also be realized as closures of graphs of rationa
 
 Let $\Gamma \subset \P^2 \times \P^2$ be the closure of the graph of $\varphi$. Then, in coordinates ${(a_0:a_1:a_2) \times(b_0:b_1:b_2)}$ on $\P^2 \times \P^2$, the equations $a_0b_0=a_1b_1=a_2b_2$ hold \label{eq:dp6_inp2p2} on $\Gamma$. These are the equations of the blowup along the indeterminacy locus of the rational map $\varphi$. The indeterminacy locus is exactly the three coordinate points. Hence $\dP6$ can also be realized as the intersection of two $(1,1)$-divisors in $\P^2 \times \P^2$. 
 
-There is also in this case a description in terms of polytopes. The polytope associated with $\P^2 \times \P^2$ is $\Delta^2 \times \Delta^2$, the product of two two-simplices. Also in this case, there is a projection onto a hexagon in $\R^2$. This is harder to visualize, but can be described as follows: if we order the vertices of $\Delta^2$ by $v_1,v_2,v_3$, then the vertices of $\Delta^2 \times \Delta^2$ are of the form $(v_i,v_j)$. The projection is then given by identifying the vertices $(v_i,v_i)$. 
+There is also in this case a description in terms of polytopes. The polytope associated with $\P^2 \times \P^2$ is $\Delta^2 \times \Delta^2$, the product of two $2$-simplices. Also in this case, there is a projection onto a hexagon in $\R^2$. This is harder to visualize, but can be described as follows: if we order the vertices of $\Delta^2$ by $v_1,v_2,v_3$, then the vertices of $\Delta^2 \times \Delta^2$ are of the form $(v_i,v_j)$. The projection is then given by identifying the vertices $(v_i,v_i)$. 
 
 Hence, using the Segre embedding, $\dP6$ lives naturally in both ${\left( \P^1 \right)}^3 \hookrightarrow \P^7$ and $\P^2 \times \P^2 \hookrightarrow \P^8$. 
 
@@ -164,7 +163,7 @@ Since $\P({\OO_{\P^2}(1)}^3)=\P^2$,  $\P(\mathcal T_{\P^2})$ can be realized as 
 %%%%%%%
 \section{The cone over \texorpdfstring{$\dP6$}{dP6} and its two smoothings}
 
-The singularity $Z\stackrel{\Delta}{=} C(\dP6)$ is one of the most studied singularities with an obstructed deformation space, For example, in the paper \cite{altmann_versaldeformation}, Klaus Altmann describe a method to study the versal deformations of isolated affine Gorenstein toric singularities using only the combinatorial data of the toric variety. He shows that different components of the base space correspond to different ways of writing the defining polytope as a Minkowski sum of smaller polytopes. See the illustation in \cref{fig:minkowski_decompositions} for a decomposition of the hexagon.
+The singularity $Z\stackrel{\Delta}{=} C(\dP6)$ is one of the most studied singularities with an obstructed deformation space, For example, in the paper \cite{altmann_versaldeformation}, Klaus Altmann describe a method to study the versal deformations of isolated affine Gorenstein toric singularities using only the combinatorial data of the toric variety. He shows that different components of the base space correspond to different ways of writing the defining polytope as a Minkowski sum of smaller polytopes. See the illustration in \cref{fig:minkowski_decompositions} for a decomposition of the hexagon.
 
 \begin{figure}
 \centering 
@@ -200,7 +199,7 @@ On the other hand, $\dP6$ can be realized as a subvariety of $\P^1 \times \P^1 \
 \label{fig:p1p1p1_equations}
 \end{figure}
 
-The first smoothing is obtained by perturbing the equations of $\dP6$ as a subvariety of $\P^2 \times \P^2$.  It can be described by perturbing two of the entries of the matrix below:
+The first smoothing is obtained by perturbing the equations of $\dP6$ as a subvariety of $\P^2 \times \P^2$.  It can be described by perturbing two of the entries of the matrix shown below:
 
 \begin{equation}
 \label{eq:def2}
@@ -232,7 +231,7 @@ in $\P^2 \times \P^2$. As long as $t_1 \neq t_2$ and $t_1,t_2 \neq 0$, we can do
 \[
 (z_0,z_1,z_2) \cdot (z_0',z_1',z_2') = 0.
 \]
-Hence we see that $M$ is isomorphic to the total space of the Grassmannian of lines in $\P^2$ (each point in one of the $\P^2$'s give a line in the other $\P^2$). This is in turn isomorphic to $\P(\mathcal T_{\P^2})$, since each tangent vector through a point determines a line through it.
+Hence we see that $M$ is isomorphic to the total space of the Grassmannian of lines in $\P^2$ (each point in one of the $\P^2$'s gives a line in the other $\P^2$). This is in turn isomorphic to $\P(\mathcal T_{\P^2})$, since each tangent vector through a point determines a line through it.
 
 What have we gained by homogenizing? The divisor at infinity is $y_1=0$, which is a $\dP6$ again. In our new coordinates this is equivalent to $y_1'=y_2'=y_0'$.
 \end{proof}
@@ -242,7 +241,7 @@ The other smoothing is obtained by replacing one of the corners of the cube in \
 Call this smoothing $Z_1.$
 
 \begin{lemma}
-The smoothing $Z_1$ is isomorpic to $\P^1 \times \P^1 \times \P^1 \bs \dP6$.
+The smoothing $Z_1$ is isomorphic to $\P^1 \times \P^1 \times \P^1 \bs \dP6$.
 \end{lemma}
 \begin{proof}
 The proof is almost identical to the previous proof.
@@ -256,7 +255,7 @@ The two smoothings are topologically different.
 \begin{proof}
 The Euler characteristic of $\P(\mathcal T_{\P^2})$ is $6$, which follows from the next lemma.
 
-This let us calculate the Euler characteristics of the smoothings. Note that $\chi(\P^1)=2$. By the Künneth formula, the Euler characteristic is multiplicative on products, so that $\chi(\P^1 \times \P^1 \times \P^1)=8$. By additivity of Euler characteristics we have $\chi(Z_1)=2$ and $\chi(Z_2)=0$, since $\chi(\dP6)=6$.
+This lets us calculate the Euler characteristics of the smoothings. Note that $\chi(\P^1)=2$. By the Künneth formula, the Euler characteristic is multiplicative on products, so that $\chi(\P^1 \times \P^1 \times \P^1)=8$. By additivity of Euler characteristics we have $\chi(Z_1)=2$ and $\chi(Z_2)=0$, since $\chi(\dP6)=6$.
 
 It follows that the two smoothing components correspond to topologically different smoothings, since the Euler characteristic is a topological invariant.
 \end{proof}
@@ -288,9 +287,9 @@ Where in addition $i^\ast : \Pic(X) \to \Pic(Y)$ is the map of Picard groups ind
 \begin{proof}
 The vertical rows are well-known. See for example Theorem 4.1.3 in \cite{cox_toric}.
 
-The matrix $C^T$ is defined as follows: each primitive ray generator of cones in $\Sigma_1(1)$  can be thought of as lying in $N_2$ via the embedding $A$. THe image lies in a unique minimal cone in $\Sigma_2(1)$, and as such, can be written as a unique linear combination of primitive ray generators from this cone. Let the columns of $C$ be the coefficients of this linear combination. Then, by definition, the first square commutes.
+The matrix $C^T$ is defined as follows: each primitive ray generator of cones in $\Sigma_1(1)$  can be thought of as lying in $N_2$ via the embedding $A$. The image lies in a unique minimal cone in $\Sigma_2(1)$, and as such, can be written as a unique linear combination of primitive ray generators from this cone. Let the columns of $C$ be the coefficients of this linear combination. Then, by definition, the first square commutes.
 
-It follows that there is an induced map of Picard groups. We must show that the induced map is exactly the one induced by the closed embedding. To see this, note that what the  map $C$ does, is to write divisors on $Y$ as a linear combination of divisors on $X$, which correspond to restriction to $X$ (which is what the map $i^\ast$ is.
+It follows that there is an induced map of Picard groups. We must show that the induced map is exactly the one induced by the closed embedding. To see this, note that what the map $C$ does, is to write divisors on $Y$ as a linear combination of divisors on $X$, which correspond to the restriction to $X$ (which is what the map $i^\ast$ is).
 
 Alternatively, consider the commutative diagram dual to the diagram in the lemma:
 \[
@@ -307,12 +306,12 @@ In Proposition 6.2.7 in \cite{cox_toric}, there is a description of the induced 
 \begin{example}
 \label{example:p1p1p1}
 
-Let us see how we can use the Lemma to find an explicit form of the induced map on Picard groups coming from the inclusion $\dP6 \to \P^1 \times \P^1 \times \P^1$. We use the matrix $A$ from \cref{eq:A}. The rows of $R_1$ are the coordinates of the primitive ray generators of the rays of the fan of $\P^1 \times \P^1 \times  \P^1$. They are also the vertices of the octahedron in \cref{fig:octahedron_hexagon}.
+Let us see how we can use \cref{lemma:induced} to find an explicit form of the induced map on Picard groups coming from the inclusion $\dP6 \to \P^1 \times \P^1 \times \P^1$. We use the matrix $A$ from \cref{eq:A}. The rows of $R_1$ are the coordinates of the primitive ray generators of the rays of the fan of $\P^1 \times \P^1 \times  \P^1$. They are also the vertices of the octahedron in \cref{fig:octahedron_hexagon}.
 
 
 The rows in $R_2$ are the coordinates of the hexagon in \cref{fig:hexagon_dp6}.
 
-In order to compute explicit cokernel, we need to find splittings of $\Z^6$ as $\Z^6 = \Z^3 \oplus \Pic (\P^1 \times \P^1 \times \P^1)$ and $\Z^6 = \Z^2 \oplus \Pic(\dP6)$, respectively.
+In order to compute explicit cokernels, we need to find splittings of $\Z^6$ as $\Z^6 = \Z^3 \oplus \Pic (\P^1 \times \P^1 \times \P^1)$ and $\Z^6 = \Z^2 \oplus \Pic(\dP6)$, respectively.
 
 This can be done explicitly by Gaussian elimination. We illustrate this with the first map. We start with the matrix $(R_1,I_6)$, and after Gaussian elimination (row operations), we get the matrix $(R_1',B)$.
 
@@ -453,9 +452,13 @@ The other groups depend upon the explicit form of the maps \[{H^2(M;\Z) \to H^2(
 
 The map $H^2(M;\Z) \to H^2(\dP6;\Z)$ can be identified with the map \[{i^\ast \colon \Pic(M) \to \Pic(\dP6)}\] induced by the inclusion. This map was computed in \cref{example:p1p1p1}. It is an injective map with torsion-free cokernel, and it follows from the long-exact sequence and the Lefschetz theorem that $H_3(Z_1;\Z) \simeq H^3(M,dP_6; \Z) \simeq \Z$, and also that $H_4(Z_1;\Z)=0$.
 
-To compute the map $H^4(M;\Z) \to H^4(\dP6;\Z)$, note that $H^4(M;\Z)$ is Poincaré dual to $H_ 2(M;\Z)$, and this group is generated by $\P^1 \times \{pt\} \times \{ pt\}$ (and permutations). Also, $H^4(\dP6;\Z) \simeq H_0(\dP6,\Z)=\Z$. In this description, pullback corresponds to intersection, and one sees that the map is given by $(a,b,c) \mapsto a+b+c$, since the three $\P^1$'s intersect $\dP6$ in a single point each\footnote{I thank the math.stackexchange user \emph{nefertiti} for this argument.}. This map has two-dimensional kernel, and we conclude that $H_2(Z_1;\Z) \simeq H^4(M,\dP6;\Z) = \Z^2$, and that $H^1(Z_1;\Z)=0$.
+To compute the map $H^4(M;\Z) \to H^4(\dP6;\Z)$, note that $H^4(M;\Z)$ is Poincaré dual to $H_ 2(M;\Z)$, and this group is generated by $\P^1 \times \{pt\} \times \{ pt\}$ (and permutations). Also, $H^4(\dP6;\Z) \simeq H_0(\dP6,\Z)=\Z$. In this description, pullback corresponds to intersection, and one sees that the map is given by $(a,b,c) \mapsto a+b+c$, since the three $\P^1$'s intersect $\dP6$ in a single point each\footnote{We thank the math.stackexchange user \emph{nefertiti} for this argument.}. This map has two-dimensional kernel, and we conclude that $H_2(Z_1;\Z) \simeq H^4(M,\dP6;\Z) = \Z^2$, and that $H^1(Z_1;\Z)=0$.
 
-The computations for $Z_2$ are similar. We first note that the Picard group of $M=\P(\mathcal T_{\P^2})$ is generated by the pullbacks $F,G$ of the generators of ${\Pic(\P^2_{x_0x_1x_2} \times \P^2_{y_0y_1y_2})}$. Say $F$ is represented by $V(x_0)$ and $G$ is represented by $V(y_0)$.
+The computations for $Z_2$ are similar. We first note that the Picard group of $M=\P(\mathcal T_{\P^2})$ is generated by the pullbacks $F,G$ of the generators of
+\[
+{\Pic(\P^2_{x_0x_1x_2} \times \P^2_{y_0y_1y_2})}.
+\]
+Say $F$ is represented by $V(x_0)$ and $G$ is represented by $V(y_0)$.
 
 Again we compute the intersections of $F$ and $G$ with $dP_6$. Intersecting with $F$ is computed by decomposing the ideal $(x_0,x_1y_0-x_2y_1,x_1y_0-x_0y_2)$ in $k[x_0,x_1,x_2,y_0,y_1,y_2]$ and saturating by $(x_0,x_1,x_2)$ and $(y_0,y_1,y_2)$. This can either be done by hand or by using \MM. Either way, we find that $\restr{F}{dP_6} = E_3+L_{23} + E_2=H$, using the notation from earlier this chapter. Similarly $\restr{G}{dP_6}=L_{23}+L_{12}+E_2=2H-E_1-E_2-E_3$. Hence the map on cohomology is given by the matrix
 
@@ -472,7 +475,7 @@ H^2(M;\Z) \simeq H_4(M;\Z) \simeq \Z^2 \xrightarrow{
 
 This is an injective map, and as above, we conclude that $H_3(Z_2;\Z) \simeq H^3(M,\dP6;\Z) \simeq \Z^2$, and also that $H_4(Z_1;\Z)=0$.
 
-Another way to see that this, is to consider the composition
+Another way to see this, is to consider the composition
 \[
 \Pic \left( \P^2 \times \P^2 \right) \to \Pic \P(\mathcal T_{\P^2}) \to \Pic \dP6.
 \]
