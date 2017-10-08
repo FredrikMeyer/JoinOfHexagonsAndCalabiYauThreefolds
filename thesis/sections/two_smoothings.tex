@@ -64,7 +64,7 @@ Since $L_{ij}$ intersects $P_i$ and $P_j$ exactly once, it intersects $E_i$ and 
 \label{fig:blowup_hexagon}
 \end{figure}
 
-Here is an interesting calculation (which we won't use later, but we found it interesting). There is an automorphism of $\dP6$ which is induced from the Cremona transformation $(x_0:x_1:x_2) \mapsto \left( \frac 1{x_0} : \frac 1{x_1} : \frac 1{x_2}\right)$ on $\P^2$. Since the undefined locus is exactly the three blown up points, it induces a permutation of the exceptional divisors $\{E_1,E_2,E_3\}$. The lines $L_{ij}$ are contracted to points.
+Here is an interesting calculation (which we won't use later, but we found it interesting). There is an automorphism of $\dP6$ which is induced from the Cremona transformation $(x_0:x_1:x_2) \mapsto \left( \frac 1{x_0} : \frac 1{x_1} : \frac 1{x_2}\right)$ on $\P^2$. It induces a permutation of the lines in \cref{fig:blowup_hexagon}: the exceptional divisors $\{E_1,E_2,E_3\}$ are switched with the lines $L_{ij}$.
 
 This induces a linear automorphism of the Picard group, which in matrix form is
 \[
@@ -115,7 +115,7 @@ It is also interesting to see how this embedding arises from a toric perspective
  \begin{figure}
 \centering 
 \includestandalone{./figures/octahedron_hexagon}
-\caption{The inclusion of a cube in a octahedron.}
+\caption{The inclusion of a hexagon in an octahedron.}
 \label{fig:octahedron_hexagon}
 \end{figure}
 
@@ -155,7 +155,7 @@ Intersecting $\P^2 \times \P^2$ with a single $(1,1)$-divisor gives us the proje
 \[
 0 \to \OO_{\P^2} \xrightarrow{\begin{pmatrix}x_0 \\ x_1 \\ x_2\end{pmatrix}} {\OO_{\P^2}(1)}^3 \to \mathcal T_{\P^2} \to 0.
 \]
-Since $\P({\OO_{\P^2}(1)}^3)=\P^2$,  $\P(\mathcal T_{\P^2})$ can be realized as the subset of $\P^2 \times \P^2$ such that $a_0b_0+a_1b_1+a_2b_2=0$. The space $\P(\mathcal T_{\P^2})$ is a non-toric Fano 3-fold.
+Since $\P({\OO_{\P^2}(1)}^3)=\P^2 \times \P^2$, the projective bundle $\P(\mathcal T_{\P^2})$ can be realized as the subset of $\P^2 \times \P^2$ such that $a_0b_0+a_1b_1+a_2b_2=0$. The space $\P(\mathcal T_{\P^2})$ is a non-toric Fano 3-fold.
 \end{remark}
 
 
@@ -184,7 +184,7 @@ Using the Segre embedding of $\P^2 \times \P^2$ and substituting from the linear
 \begin{equation}
 \begin{vmatrix}
 y & x_1 & x_2 \\
-x_3 & y & x_4 \\
+x_4 & y & x_3 \\
 x_5 & x_6 & y
 \end{vmatrix} \leq 1,
 \end{equation}
@@ -262,7 +262,7 @@ It follows that the two smoothing components correspond to topologically differe
 
 \subsection{Topology of the smoothings}
 
-In this final section, we compute the topology of the two smoothings.
+In this final section, we compute the simplicial homology groups of the two smoothings.
 
 \begin{lemma}
 The cohomology ring of $\P(\mathcal T_{\P^2})$ is $\Z[x,y]/(x^3,y^2+3y+3)$, where $x$ and $y$ have degree $2$. In particular, the cohomology of $\P(\mathcal T_{\P^2})$ is given by $(1,0,2,0,2,0,1)$.
@@ -285,7 +285,7 @@ Let $Y \xhookrightarrow{i} X$ be a closed immersion of smooth toric varieties, c
 Where in addition $i^\ast : \Pic(X) \to \Pic(Y)$ is the map of Picard groups induced by the closed embedding.
 \end{lemma}
 \begin{proof}
-The vertical rows are well-known. See for example Theorem 4.1.3 in \cite{cox_toric}.
+The horizontal rows are well-known. See for example Theorem 4.1.3 in \cite{cox_toric}.
 
 The matrix $C^T$ is defined as follows: each primitive ray generator of cones in $\Sigma_1(1)$  can be thought of as lying in $N_2$ via the embedding $A$. The image lies in a unique minimal cone in $\Sigma_2(1)$, and as such, can be written as a unique linear combination of primitive ray generators from this cone. Let the columns of $C$ be the coefficients of this linear combination. Then, by definition, the first square commutes.
 
@@ -391,10 +391,10 @@ We are now ready to compute the (ranks of) singular cohomology groups of the two
 The two affine smoothings are topologically different. The homology groups are:
 \begin{center}
 \begin{tabular}{ l | >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$} | c }
- Group & 1 & 1 & 2 & 3 & 4 & 5 & 6 & Euler-characteristic \\
+ Group & 0 & 1 & 2 & 3 & 4 & 5 & 6 & Euler-characteristic \\
 \hline
-$H^i(Z_1,\Z)$ & 1 & 0 & 2 & 1 & 0 & 0 & 0 & 2 \\
-$H^i(Z_2,\Z)$ & 1 & 0 & 1 & 2 & 0 & 0 & 0  & 0
+$H_i(Z_1,\Z)$ & 1 & 0 & 2 & 1 & 0 & 0 & 0 & 2 \\
+$H_i(Z_2,\Z)$ & 1 & 0 & 1 & 2 & 0 & 0 & 0  & 0
 \end{tabular}
 \end{center}
 \end{theorem}
