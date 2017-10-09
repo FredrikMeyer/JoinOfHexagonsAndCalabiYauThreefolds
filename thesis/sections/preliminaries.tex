@@ -60,12 +60,14 @@ Recall that a scheme $X$ is \emph{Cohen--Macaulay} if all its local rings $\OO_{
 If the homogeneous coordinate ring of a projective variety $X$ is a Gorenstein ring, we say that $X$ is \emph{arithmetically Gorenstein}. In that case, the canonical sheaf can be computed as the sheaf associated to the graded module
 
 $$\Ext_R^{\codim X}(S_X,S_X(-\dim N-1))=S_X(-d),$$
-where $R$ is the homogeneous coordinate ring of projective space. The last equality is true  because of Gorenstein duality, which says that for some $d$, where $N$ is the dimension of the projective space. The number $d$ is the degree of the anticanonical embedding. %%%% TODO: not true as is! Find correct formulation.
+where $R$ is the homogeneous coordinate ring of projective space. The last equality is true by definition of Gorenstein graded rings (see \cite[page 550]{eisenbud_commalg}). The number $d$ is the degree of the anticanonical embedding. 
 
 If $X$ and $Y$ are two arithmetically Gorenstein schemes, then their join is also arithmetically Gorenstein. Furthermore, we can compute the canonical sheaf in terms of the canonical sheaves of $X$ and $Y$.
 
 \begin{proposition}
-Let $X=\Proj R$ and $Y=\Proj S$ be arithmetically Gorenstein projective schemes with dualizing sheaves $\omega_X, \omega_Y$, respectively (here $R, S$ are graded $k$-algebras). Then $X \ast Y$ is arithmetically Gorenstein with dualizing sheaf $\omega_X \otimes_k \omega_Y$.
+Let $X=\Proj R$ and $Y=\Proj S$ be arithmetically Gorenstein projective schemes with dualizing sheaves $\omega_X, \omega_Y$, respectively (here $R, S$ are graded $k$-algebras). Let $\Omega_X, \Omega_Y$ be $R$- and $S$-modules corresponding to $\omega_X$ and $\omega_Y$, respectively.
+
+Then $X \ast Y$ is arithmetically Gorenstein with dualizing sheaf $\omega_{X \ast Y}$ given by the sheaf associated to the $R \otimes_k S$-module $j_1^\ast \Omega_X \otimes_{R \otimes_k S} j_2^\ast \Omega_Y$ (the homomorphism $j_1:R \to R \otimes_k S$ is given by $r \mapsto r \otimes 1$, and similarly $j_2$).
 \end{proposition}
 
 \begin{proof}
@@ -74,7 +76,7 @@ The statement follows from Theorem 4.2 in \cite{herzog_canonical}, where the aut
 
 \begin{remark}
 \label{remark:canonical}
-If $X$ and $Y$ are arithmetically Gorenstein projective schemes, the resolution of the structure sheaf is symmetrical. It follows that $\omega_X=\OO_X(-n)$ for some $n \geq 0$. If $\omega_Y=\OO_Y(-m)$, it follows from the above proposition that $\omega_{X \ast Y}(-m-n)$.
+If $X$ and $Y$ are arithmetically Gorenstein projective schemes, their canonical modules are $\OO_X(n)$ and $\OO_Y(m)$ for some $m,n$, respectively. It follows from the above proposition that $\omega_{X \ast Y} = \OO_{X \ast Y}(m+n)$.
 \end{remark}
 
 %%%%%%%%%
@@ -462,7 +464,11 @@ If $\K$ is a 3-dimensional simplicial sphere, then a smoothing of $X_0=\P(\K)$ w
 Let $\pi:\mathscr X \to S$ be a smoothing. Since $\K$ is a sphere, it follows from \cref{lemma:srcohom} that $H^i(X_0,\OO_{X_0})=k$ for $i=0,3$, and zero for $i \neq 0,3$. The triviality of the canonical bundle is proved in Theorem 6.1 in \cite{eisenbud_graphcurves}. Since $H^1(\K;k)=H^2(\K;k)=0$, it follows from the semicontinuity theorem (Theorem 12.8 in Chapter III in \cite{hartshorne}) that $H^i(X_t,\OO_{X_t})=0$ for all $t \in S$. Similarly, if $\omega_0 \simeq \OO_{X_0}$, all nearby fibers must have trivial canonical bundle as well.
 \end{proof}
 
-It is an important fact that since Stanley--Reisner rings are defined by monomial ideals, their coordinate rings and all important modules associated to them are \emph{multigraded}, meaning that they are graded not only by $\Z$, but by $\Z^n$. If $M$ is a multigraded module, we write $M_{\mathbf a}$ for the component of $M$ in degree $\mathbf a \in \N$.
+It is an important fact that since Stanley--Reisner rings are defined by monomial ideals, their coordinate rings and all important modules associated to them are \emph{multigraded}, meaning that they are graded not only by $\Z$, but by $\Z^n$. If $M$ is a multigraded module, we write $M_{\mathbf a}$ for the component of $M$ in degree $\mathbf a \in \N$. Given a weight vector $\mathbf c \in \Z^n$, we can write $\mathbf c$ uniquely as $\mathbf a - \mathbf b$ with $\mathbf a, \mathbf b \in \N_0$, such that $\mathbf a$ and $\mathbf b$ have disjoint supports\footnote{The \emph{support} of a vector $\mathbf a$ is the set of its non-zero coordinates.}. The \emph{support $[\K]$ of a simplicial complex $\K$} is defined by:
+
+\[
+[\K] = \{ i \in [n] \mid \{ i\} \in \K \}.
+\]
 
 The following is a result by Altmann and Christophersen (\cite[Theorem 4.6]{deforming_christophersen}. It expresses the deformation theory of Stanley--Reisner schemes purely in terms of their combinatorial data. We refer the reader to the original article for the details.
 
@@ -478,7 +484,7 @@ $$
 \end{theorem}
 Here $\mathcal B(\K)$ is defined as follows:
 \begin{definition}
-The set $\mathcal B(\K)$ is the set of $b \subset \K$ with $|b| \geq 2$ such that
+The set $\mathcal B(\K)$ is the set of $b \subseteq [\K]$ with $|b| \geq 2$ such that
 \begin{enumerate}
 	\item $\K = L \ast \partial b$, where $|L|$ is an $(n-|b|+1)$-sphere, if $b \not \in \K$.
 	\item $\K = L \ast \partial b \cup \partial L \ast \bar{b}$ where $|L|$ is an $(n-|b|+1)$-ball, if $b \in \K$.
