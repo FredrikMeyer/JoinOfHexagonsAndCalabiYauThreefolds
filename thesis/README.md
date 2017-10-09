@@ -1,6 +1,6 @@
 # Joins of hexagons and Calabi-Yau threefolds
 
-This is the source code of my thesis for the degree of Philosophiae Doctor. The PDF file is [here][main.pdf].
+This is the source code of my thesis for the degree of Philosophiae Doctor. The PDF file is [here](main.pdf).
 
 ## Abstract
 
@@ -14,4 +14,4 @@ I can be reached on Twitter (@FredrikMeyer), on e-mail (hrmeyer + some big email
 
 ## About the setup
 
-The LaTeX template I'm using is written by [Martin Helsø][http://folk.uio.no/martibhe/LaTeX/].
+The LaTeX template I'm using is written by [Martin Helsø](http://folk.uio.no/martibhe/LaTeX/).
