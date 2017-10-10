@@ -159,11 +159,11 @@ x_7 & x_8 & x_9
 M_2 = \begin{pmatrix}
 x_{10} & x_{11} & x_{12} \\
 x_{13} & x_{14} & x_{15} \\
-x_{16} & x_{16} & x_{17}
+x_{16} & x_{17} & x_{18}
 \end{pmatrix}.
 \]
 
-Then $M$ is defined by the zeroes of the $2 \times 2$-minors of $M_1$ and $M_2$. Then it is clear that $M$ is the projective join of two copies of $\mathbb P^2 \times \mathbb P^2 \hookrightarrow \mathbb P^8 \subset \P^{17}$, since the sets of variables are disjoint.
+Then $M$ is defined by the zeros of the $2 \times 2$-minors of $M_1$ and $M_2$. Then it is clear that $M$ is the projective join of two copies of $\mathbb P^2 \times \mathbb P^2 \hookrightarrow \mathbb P^8 \subset \P^{17}$, since the sets of variables are disjoint.
 
 The variety $M$ is $9$-dimensional: the affine cone over $M$, $C(M)$, is equal to $C(\mathbb P^2 \times \P^2) \times C(\mathbb P^2 \times \P^2)$. This variety has dimension $5+5=10$, hence its projectivization $M$ is $9$-dimensional. 
 
@@ -186,9 +186,7 @@ The singularities of $M$ are of dimension $4$. By Bertini's theorem, intersectin
 
 The fact that $X_1$ is Calabi--Yau follows from \cref{prop:anticanonicalsection}.
 
-To find the topological Euler characteristic, we compute in \MM. Computing the whole cotangent sheaf of $X_1$ is infeasible with current computer technology\footnote{An external computer has been trying to compute this sheaf for several months now without terminating.}.
-
-We make use of standard exact sequences. Let $\mathscr I$ be the ideal sheaf of $M$ in $\P^{17}$. First, we have the exact sequence
+To find the topological Euler characteristic, we compute in \MM. Computing the whole cotangent sheaf of $X_1$ is infeasible with current computer technology\footnote{An external computer has been trying to compute this sheaf for several months now without terminating.}. Instead we make use of standard exact sequences. Let $\mathscr I$ be the ideal sheaf of $M$ in $\P^{17}$. First, we have the exact sequence
 $$
 0 \to \restr{\mathscr I/\mathscr I^2}{X_1} \to \restr{\Omega_{\P^{17}}^1}{X_1} \to \restr{\Omega_M^1}{X_1} \to 0.
 $$
@@ -223,7 +221,7 @@ x_7 & x_8 & h_1+tg_3
 A_2 = \begin{pmatrix}
 h_2+tg_4 & x_{11} & x_{12} \\
 x_{13} & h_2+tg_5 & x_{15} \\
-x_{16} & x_{16} & h_2+tg_6
+x_{16} & x_{17} & h_2+tg_6
 \end{pmatrix}.
 \]
 
@@ -238,7 +236,7 @@ x_7 & x_8 & y_1
 A_2 = \begin{pmatrix}
 y_2 & x_{11} & x_{12} \\
 x_{13} & y_2 & x_{15} \\
-x_{16} & x_{16} & y_2
+x_{16} & x_{17} & y_2
 \end{pmatrix}
 \]
 is the join of $\dP6$ with itself. Since $X_Y \subset \dP6 \ast \dP6$, we see that $X_1$ lies in a deformation of $\dP6 \ast \dP6$.
@@ -249,7 +247,7 @@ We have not been able to rigorously compute the Hodge numbers of $X_1$. However,
 
 After about a week of computation on a modern desktop computer, the answer turns out to be $\dim_{\mathbb F_p} (T^1(S_{X_1}/\mathbb F_p,S_{X_1}))_0 = 39$ for several large primes $p$.
 
-This is plausible because of the following heuristic moduli count: $X_1$ is parametrized by the Grassmannian $\mathbb Gr(12,(E \otimes E)^{\oplus 2} )$, which has dimension $(18-12)\cdot 12 = 72$. Each $E$-factor is acted upon by $\GL(E)$. There are four of these factors, so we have an action of $\prod^4 \GL(E)$ on the Grassmannian. There is a torus subgroup $(\C^\ast)^4$ acting by $(v \otimes w, r \otimes s) \mapsto (t_1t_2 v \otimes w, t_3t_4 r \otimes s)$ on $\P^{17}$. Elements of $(\C^\ast)^4$ satisfying $t_1t_2=t_3t_4$ act trivially, forming an isotropy subgroup $K$.  Hence we have an action of the quotient group $G \stackrel \Delta = \left(\prod_{i=1}^4 \GL(4)\right)/K$ on the Grassmannian. This quotient group has dimension $9 \cdot 4 - 3 = 33$.
+This is plausible because of the following heuristic moduli count: $X_1$ is parametrized by the Grassmannian $\Gr(12,(E \otimes E)^{\oplus 2} )$, which has dimension $(18-12)\cdot 12 = 72$. Each $E$-factor is acted upon by $\GL(E)$. There are four of these factors, so we have an action of $\prod^4 \GL(E)$ on the Grassmannian. There is a torus subgroup $(\C^\ast)^4$ acting by $(v \otimes w, r \otimes s) \mapsto (t_1t_2 v \otimes w, t_3t_4 r \otimes s)$ on $\P^{17}$. Elements of $(\C^\ast)^4$ satisfying $t_1t_2=t_3t_4$ act trivially, forming an isotropy subgroup $K$.  Hence we have an action of the quotient group $G \stackrel \Delta = \left(\prod_{i=1}^4 \GL(4)\right)/K$ on the Grassmannian. This quotient group has dimension $9 \cdot 4 - 3 = 33$.
 
 We form the quotient space $\mathbb G(12,(E \otimes E)^{\oplus 2})/G$, which has dimension $72-33=39$.
 
@@ -360,7 +358,7 @@ x_7 & x_8 & h
 A_2 = \begin{pmatrix}
 h & x_{11} & x_{12} \\
 x_{13} & h & x_{15} \\
-x_{16} & x_{16} & h
+x_{16} & x_{17} & h
 \end{pmatrix}.
 \]
 
@@ -375,7 +373,7 @@ x_7 & x_8 & y
 A_2 = \begin{pmatrix}
 y & x_{11} & x_{12} \\
 x_{13} & y & x_{15} \\
-x_{16} & x_{16} & y
+x_{16} & x_{17} & y
 \end{pmatrix}.
 \]
 
@@ -541,7 +539,7 @@ We have a morphism $\pi:X_1 \to \P^2 \times \P^2 \times \P^2 \times \P^2$ define
 
 The same situation occurs with $X_2$. Here there is a morphism ${\pi:X_2 \to (\P^1)^{\times 6}}$. We do not know what the image is. Also here there should be a connection with $X_{8,44}$, since $X_{8,44}$ can also be realized as a complete intersection in $(\P^1)^{\times 6}$. See the introduction of \cite{braun_smallhodgenumbers}.
 
-It would also be interesting to find proofs of the Euler characteristics being $-72,-60$ and $-48$ not involving computer calculations. In all cases the Grassmannian parametrizing the $X_i$ have dimension $72$, $60$, and $48$, though we haven't seen the connection yet.
+It would also be interesting to find proofs of the Euler characteristics being $-72,-60$ and $-48$ not involving computer calculations. In all cases the Grassmannian parameterizing the $X_i$ have dimension $72$, $60$, and $48$, though we haven't seen the connection yet.
 
 Assuming that our, or rather our computer's, calculation of the Hodge numbers of the $X_i$ are correct, what are representatives of the generators of $\Pic X_i$? (being $\Z^3$, $\Z^5$ and $\Z^4$, respectively)
 

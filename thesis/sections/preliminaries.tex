@@ -1,7 +1,7 @@
 \chapter{Preliminaries}
 \label{sec:prelims}
 
-In this chapter we introduce the notation and results which will be used later. Some of the material in this chapter plays the role of motivation more than preliminary results.
+In this chapter we introduce the notation and results which will be used later. Some of the material in this chapter plays the rôle of motivation rather than preliminary results.
 
 %%%%%
 %%%%%
@@ -31,14 +31,14 @@ Let $X=\P(E)$ and $Y=\P(F)$, where $E,F$ are quasi-coherent $\OO_S$-modules. The
 
 The algebra $\mathscr R \otimes_{\OO_S} \mathscr S$ contains the ideal $\mathscr R \otimes \mathscr S_+$. The associated subscheme is denoted by $V_X$, and it is isomorphic to $X = \Proj \mathscr R$. We define $V_Y$ similarly. We call $V_X$ and $V_Y$ the \emph{fundamental subschemes} of $X \ast Y$.
 
-There is a geometric definition of the join, as described in section (C11) in \cite{altman_joins}. Let $E,F$ be quasi-coherent $\OO_S$-modules\footnote{In our case, $S=\Spec k$  always. So $E,F$ are just vector spaces.}. Suppose $X$ and $Y$ are closed subschemes of $\P(E)$ and $\P(F)$, respectively. Then $X\ast Y$ is a closed subscheme of $\P(E \oplus F)$. Identify $X$ and $Y$ with their fundamental subschemes in $X \ast Y$. Then it is not difficult to see that $X \ast Y$ is the (closure of the) locus of points lying on the lines of $\P(E \oplus F)$ determined by pairs of points of $X$ and $Y$. 
+There is a geometric definition of the join, as described in section (C11) in \cite{altman_joins}. Let $E,F$ be quasi-coherent $\OO_S$-modules\footnote{In our case, $S=\Spec k$  always. So $E,F$ are just vector spaces.}. Suppose $X$ and $Y$ are closed subschemes of $\P(E)$ and $\P(F)$, respectively. Then $X\ast Y$ is a closed subscheme of $\P(E \oplus F)$. Identify $X$ and $Y$ with their fundamental subschemes in $X \ast Y$. Then it is not difficult to see that $X \ast Y$ is the (closure of the) locus of points lying on the lines of $\P(E \oplus F)$ determined by pairs of points from $X$ and $Y$. 
 
 \begin{proposition}
 \label{lemma:join}
 Suppose $X/k \subset \P^n$ and $Y/k \subset \P^m$ are smooth projective schemes. Then their join, $X \ast Y$ has dimension $\dim X+\dim Y+1$. The singular locus is of dimension $\max\{\dim X,\dim Y\}$ and consists of the disjoint union of $V_X$ and $V_Y$.
 \end{proposition}
 \begin{proof}
-Let $S_X = \bigoplus_{d \geq 0} H^0\left(X,\OO_X(d)\right)$ and $S_Y = \bigoplus_{d \geq 0} H^0\left(Y,\OO_Y(d)\right)$ be the homogeneous coordinate rings of $X$ and $Y$, respectively. Then $X \ast Y \subset \P^{n+m+1}$. 
+Let $S_X = \bigoplus_{d \geq 0} H^0\left(X,\OO_X(d)\right)$ and $S_Y = \bigoplus_{d \geq 0} H^0\left(Y,\OO_Y(d)\right)$ be the homogeneous coordinate rings of $X$ and $Y$, respectively. We have that $X \ast Y \subset \P^{n+m+1}$. 
 
 Denote by $C(X \ast Y)$ the scheme $\Spec (S_X \otimes_k S_Y)$, which is the affine cone over $X \ast Y$. It is a general fact that if $A$, $B$ are two algebraic varieties, then the singular locus of the product is equal to the union $\Sing (A) \times B \cup A \times \Sing(B)$. It follows that the singular locus of $C(X \ast Y) = C(X) \times C(Y)$ is equal to
 
@@ -59,7 +59,7 @@ Recall that a scheme $X$ is \emph{Cohen--Macaulay} if all its local rings $\OO_{
 
 If the homogeneous coordinate ring of a projective variety $X$ is a Gorenstein ring, we say that $X$ is \emph{arithmetically Gorenstein}. In that case, the canonical sheaf can be computed as the sheaf associated to the graded module
 
-$$\Ext_R^{\codim X}(S_X,S_X(-\dim N-1))=S_X(-d),$$
+$$\Ext_R^{\codim X}\left(S_X,S_X(-\dim N-1)\right)=S_X(-d),$$
 where $R$ is the homogeneous coordinate ring of projective space. The last equality is true by definition of Gorenstein graded rings (see \cite[page 550]{eisenbud_commalg}). The number $d$ is the degree of the anticanonical embedding. 
 
 If $X$ and $Y$ are two arithmetically Gorenstein schemes, then their join is also arithmetically Gorenstein. Furthermore, we can compute the canonical sheaf in terms of the canonical sheaves of $X$ and $Y$.
@@ -84,7 +84,7 @@ If $X$ and $Y$ are arithmetically Gorenstein projective schemes, their canonical
 \section{Toric geometry}
 \label{sec:toric_geometry}
 
-Toric geometry lies somewhere in the intersection between algebraic geometry, combinatorics and convex geometry. Toric varieties and their geometry can be described completely in terms of explicit finite combinatorial data. This makes toric geometry well suited for examples and explicit computations. In this section we give a quick and dirty introduction to the toric geometry.
+Toric geometry lies somewhere in the intersection between algebraic geometry, combinatorics and convex geometry. Toric varieties and their geometry can be described completely in terms of explicit finite combinatorial data. This makes toric geometry well suited for examples and explicit computations. In this section we give a quick and dirty introduction to toric geometry.
 
 \begin{definition}
 A \emph{toric variety} is an irreducible normal variety containing the torus ${T={(\C^\ast)}^n}$  as a dense subset, such that the action of the torus on itself extends to an action on the variety.
@@ -137,7 +137,7 @@ Let $\sigma=\langle (1,0), (1,2) \rangle \subset \R^2$. Then
 \sigma^\vee = \langle (2,-1),(0,1) \rangle \subset \R^2.
 \]
 
-See \cref{fig:first_toric_example}. Then the semigroup ring $S_\sigma = \C[\sigma^\vee \cap M] = \C[x,y,x^2/y]$, where we have identified $x$ and $y$ with the standard basis of $\R^2$. This ring is isomorphic to $\C[a,b,c]/(a^2-bc)$, which is a quadric cone.
+See \cref{fig:first_toric_example}. Then the semigroup ring $S_\sigma$ is $\C[\sigma^\vee \cap M] = \C[x,y,x^2/y]$, where we have identified $x$ and $y$ with the standard basis of $\R^2$. This ring is isomorphic to $\C[a,b,c]/(a^2-bc)$, which is a quadric cone.
 \end{example}
 
 General toric varieties are described using collections of cones called \emph{fans}. A set $\Sigma$ of cones is called a \emph{fan} if it closed under intersections and faces of cones: if $\sigma, \sigma' \in \Sigma$, then we also have $\sigma \cap \sigma' \in \Sigma$, and if $\sigma' \subset \sigma$ is a face with $\sigma \in \Sigma$, then $\sigma' \in \Sigma$ also. Thus, given a fan $\Sigma$, we get a collection of affine toric varieties $U_\sigma$ for each cone $\sigma \in \Sigma$. We have inclusions $U_{\sigma \cap \sigma'} \subset U_\sigma$, and using these inclusions we may glue the affine open sets $U_\sigma$ to get a separated toric variety.
@@ -208,7 +208,7 @@ Given Cartier data of a divisor, we can define a convex function by the rule $u 
 
 Deformation theory is the infinitesimal study of algebro-geometric objects varying in families. Examples of such objects can be families of schemes, families of projective schemes (respecting the embedding), families of vector bundles, and so on.
 
-In this section we will review some notation and motivation from deformation theory. Although results from deformation theory are not central in thesis, many of the methods and objects have roots from or connections with deformation theory. A reference for deformation theory is the book by Hartshorne \cite{hartshorne_deformations}. For a leisurely popular account connecting deformation theory to other parts of mathematics, the article \cite{mazur_deformations} by Mazur is a nice read.
+In this section we will review some notation and motivation from deformation theory. Although results from deformation theory are not central in this thesis, many of the methods and objects have roots from or connections with deformation theory. A reference for deformation theory is the book by Hartshorne \cite{hartshorne_deformations}. For a leisurely popular account connecting deformation theory to other parts of mathematics, the article \cite{mazur_deformations} by Mazur is a nice read.
 
 \begin{definition}
 Given a scheme $X_0$ over $\C$, a \emph{family of deformations} of $X_0$ is a flat morphism $\pi:\mathscr X \to (S,0)$ with $S$ connected such that $\pi^{-1}(0)=X_0$. If $S$ is the spectrum of an artinian $\C$-algebra, then $\pi$ is an \emph{infinitesimal deformation}. If $S=\Spec \C[\epsilon]/\epsilon^2$, then  $\pi$ is a \emph{first order deformation}. An \emph{embedded deformation} of an embedded scheme $X_0 \subset \P^n$ is a deformation $\pi:\mathscr X \to (S,0)$ with $\mathscr X \subset \P^n \times S$ such that $\pi$ is the restriction of the projection $\pi:\P^n \times S \to S$. A deformation is \emph{trivial} if it is isomorphic to the projection $X_0 \times S \to S$.  
@@ -246,13 +246,17 @@ Let $B$ be an $A$-algebra, where $A$ is a commutative ring. Let $R$ be a polynom
 \[
 0 \to Q \to F \xrightarrow{j} I \to 0.
 \]
-There is a ``Koszul'' submodule $F_0$ of $F$ generated by the elements $aj(b)-bj(a)$, for $a,b \in B$. Note that $j(F_0)=0$, which implies that $F_0 \subset Q$. Let $L_2 \stackrel \Delta = Q/F_0$. Let $L_1 = F \otimes_R B$, and let $L_0 = \Omega_{R/A}^1 \otimes_R B$. These are the first few terms of the cotangent complex:
+There is a ``Koszul'' submodule $F_0$ of $F$ generated by the elements $aj(b)-bj(a)$, for $a,b \in F$. Note that $j(F_0)=0$, which implies that $F_0 \subset Q$. Let $L_2 \stackrel \Delta = Q/F_0$. Let $L_1 = F \otimes_R B$, and let $L_0 = \Omega_{R/A}^1 \otimes_R B$. These are the first few terms of the cotangent complex:
 \[
 L_\bullet: L_2 \xrightarrow{d_2} L_1 \xrightarrow{d_1}  L_0 \xrightarrow{0} 0.
 \]
 The map $d_2$ is induced by the inclusion $Q \to F$. The map $d_1$ is the composition of $j:F \to I$ with the derivation $R \to \Omega^1_{R/A}$.
 
-For any $R$-module $M$, we now define $T^i(B/A,M)$ as the homology $H^i(\Hom_B(L_\bullet,M))$. There are many things to be checked, but the details are all in \cite{hartshorne_deformations}.
+For any $R$-module $M$, we now define
+\[
+T^i(B/A,M) \stackrel \Delta = H^i(\Hom_B(L_\bullet,M)).
+\]
+There are many things to be checked, but the details are all in \cite{hartshorne_deformations}.
 
 We list a few of the important properties of the $T^i$-functors here:
 
@@ -524,7 +528,7 @@ Let $\Omega_X^1$ be the sheaf of holomorphic one-forms on $X$, and assume that $
 \end{array}
 \]
 
-Because of the \CY condition, we have that $h^{j0}=0$ for $0 < j < 3$, and also that $h^{00}=h^{0d}=1$. It follows by Serre duality (see \cite[Corollary 7.7, Chapter III]{hartshorne}) that $h^{ij}=h^{3-i,3-j}$. Note that this amounts to a horizontal symmetry of the Hodge diamond. Since $X$ was assumed to be a complex manifold, it follows that $h^{ij}=h^{ji}$ by complex conjugation. This amounts to vertical symmetry of the Hodge diamond. It follows that for 3-dimensional \CY varieties, the Hodge diamond simplifies to
+Because of the \CY condition, we have that $h^{j0}=0$ for $0 < j < 3$, and also that $h^{00}=h^{0d}=1$. It follows by Serre duality (see \cite[Corollary 7.7, Chapter III]{hartshorne}) that $h^{ij}=h^{3-i,3-j}$. Note that this amounts to a horizontal symmetry of the Hodge diamond. Since $X$ was assumed to be a complex manifold, it follows by complex conjugation that $h^{ij}=h^{ji}$. This amounts to vertical symmetry of the Hodge diamond. It follows that for 3-dimensional \CY varieties, the Hodge diamond simplifies to
 
 \[
 \begin{array}[c]{ccccccc}
