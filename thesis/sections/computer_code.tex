@@ -11,6 +11,7 @@ In some cases, equations simplify significantly in affine charts. Therefore, usi
 
 The following code produces a list of the components of the singular locus of the projective scheme with homogeneous ideal $I$.
 
+\begin{minipage}{\linewidth}
 \begin{lstlisting}[language=Macaulay2]
 fastSingularities = I -> (
     R := ring I;
@@ -27,6 +28,7 @@ fastSingularities = I -> (
     saturate intersect(singlist)
     )
 \end{lstlisting}
+\end{minipage}
 
 The method works by computing the singular locus in each affine chart, taking the radical, and then pulling back to the homogeneous coordinate ring. Finally, we get a list of singular loci in each affine chart. We return the (saturation of) the intersection of the ideals of the singular loci of each affine chart.
 
