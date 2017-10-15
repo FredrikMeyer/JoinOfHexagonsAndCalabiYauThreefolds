@@ -53,5 +53,26 @@ The singularity `C(dP6)` have two smoothing components, coming from different wa
 
 ## My constructions
 
-The idea is to join (literally) the equations of the smoothings of `C(dP6)` in the three possible ways (giving varieties in `P^15`, `P^16`, and `P^17`).
+The idea is to join (literally) the equations of the smoothings of `C(dP6)` in the three possible ways (giving varieties in `P^15`, `P^16`, and `P^17`)
 
+Let `E` be a 3-dimensional vector space with basis `e1,e2,e3`. Consider the 18-dimensional vector space `ExE + ExE` and the associated projective space `P^17=P(ExE + ExE)`. It can be thought of as the space of pairs of `3x3` matrices.
+
+Now let `Y` be the set of pairs `(A,B)` in `P^17` with rank `1+1`. This is defined by the `2x2` minors of two matrices with disjoint sets of variables. `Y` is a 9-dimensional toric variety with `omega_Y=OO_Y(-6)`.
+
+Let `X1` be `Y` intersected with a generic `P^11`. Then we show that `X1` is a smooth Calabi-Yau manifold. This follows from the adjunction formula (write it up).
+
+The Euler characteristic of `X1` can be calculated using `Macaulay2` and combinations of standard exact sequences. It turns out to be `-72`.
+
+My second construction goes as follows. Let `F` be a 2-dimensional vector space with basis `f1,f2`. Consider the 16-dimensional vector space `FxFxF + FxFxF`. It can be thought of as the space of pairs of `2x2x2`-tensors. Again, consider the set of "rank one"-tensors, and the associated toric variety `Y'`. This is an 7-dimensional toric variety with `omega_Y'=OO_Y(-4)`.
+
+Let `X2` be `Y'` intersected with a generic `P^11`. Then again, `X2` is a smooth Calabi-Yau manifold, this time with Euler characteristic `-48`.
+
+Finally, we consider the "mixed" construction, which comes from `ExE + FxFxF`. This time we get a Calabi-Yau `X3` with Euler characteristic `-60`.
+
+Let me also present a heuristic for the size of `h^11` of `X1` (similar reasoning holds for the other two manifolds). To produce `X1`, we choose a `P^11` inside the bigger `P^17`. This corresponds to choosing a point in the Grassmannian `Gr(12,18)`, which is 72-dimensional. However, there is an action of `GL(E)^4` on this Grassmannian, sending a pair `(A,B)` to the conjugate `(gAh^-1, kBl^-1)`. This group is `36`-dimensional. However, there is a torus subgroup which only scales, so it acts trivially. This group is 3-dimensional, so that we really have a `33`-dimensional group acting. All in all, we are left with `72-33=39` moduli parameters.
+
+Finite characteristic computations in `Macaulay2` seem to confirm this heuristic.
+
+## Mirror construction
+
+**orbifold construction**
