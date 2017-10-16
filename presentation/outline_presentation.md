@@ -11,7 +11,7 @@
  7. Explain orbifold construction. (~ 5 min)
  8. Finish (1 min)
 
-Sum tid: 35 min (for mye!)
+Sum time: 35 min (too much!)
 
 ---
 
@@ -75,4 +75,16 @@ Finite characteristic computations in `Macaulay2` seem to confirm this heuristic
 
 ## Mirror construction
 
-**orbifold construction**
+I also propose mirror candidates for two of the Calabi Yau manifolds I constructed. In both cases, the construction is based on orbifolding.
+
+It goes as follows. We first note that there is a `Z/3` action `E`. Let `omega` be a fixed third root of unity. Then we can define an action by `e_i -> omega^i * e_i`. This action extends to an action on `P^17 = P(ExE + ExE)`.
+
+There is also a non-toric permutation action defined on `E` by sending `e_i -> e_(i+1)`. This gives a `Z/3 x. Z/3` (semidirect product) action on `P^17`, and also on the join `P^2xP^2 * P^2xP^2`, since its definition is intrinsic.
+
+By choosing invariant `P^11`-planes, we can find invariant members of the `X1` family. One invariant family is given by (formula 4.4.1). These tensors span a `P^11`, and a calculation in `Macaulay2` show that the invariant Calabi-Yau we get `X_(H_t)`, has 48 double double points. We can form the quotient `X_(H_t)/(Z/3)` (here `Z/3` is the torus subgroup).
+
+The existence of a crepant resolution of this kind of variety was proved by Roan. He also gave a formula for the Euler characteristic of such a resolution (sshow formula from page 55).
+
+Miraculously, the formula shows that such a resolution will have Euler-characteristic `+72`, which is exactly what it would have if this is a mirror candidate for `X1`.
+
+Similar calculations hold for `X2`. 
