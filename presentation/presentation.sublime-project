@@ -4,5 +4,19 @@
 		{
 			"path": "."
 		}
-	]
+	],
+		"settings":
+	{
+		"TEXroot": "defence.tex",
+		"builder_settings":
+		{
+			"options": "--shell-escape",
+			"program": "latex"
+		},
+		"tex_file_exts":
+		[
+			".tex",
+			".tikz"
+		]
+	}
 }

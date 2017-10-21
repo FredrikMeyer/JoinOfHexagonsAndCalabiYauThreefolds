@@ -1,0 +1,50 @@
+\begin{frame}
+\frametitle{Calabi--Yau manifolds}
+
+\begin{definition}[Calabi--Yau variety]
+A Calabi--Yau variety is a smooth projective scheme $X/\C$ of dimension $3$ satisfying:
+\begin{itemize}
+	\item $H^0(X,\OO_X)=H^3(X,\OO_X)=k$ and $h^1(X,\OO_X)=h^2(\OO_X)=0$.
+	\item The canonical sheaf is trivial: $\omega_X \simeq \OO_X$. 
+\end{itemize}
+\end{definition}
+
+\begin{textblock}{0.5}(0.0, 0.6)
+\begin{itemize}
+	\item Easiest invariant are the Euler characteristic and the Hodge numbers.
+
+	\item We always have $\chi = 2(h^{11}-h^{12})$. 
+\end{itemize}
+\end{textblock}
+
+    \begin{textblock}{0.4}(0.60, 0.58)
+    \[
+    \only<1>{
+   \arraycolsep=1pt\def\arraystretch{0.5}
+\begin{array}[c]{ccccccc}
+&&&               h^{00} \\  
+ &         & h^{01} & & h^{10}  \\
+&	h^{02} && h^{11}  && h^{20}  \\
+   h^{03} && h^{12} && h^{21} && h^{30} \\
+&	h^{13} && h^{22}  && h^{31}  \\
+ &         & h^{23} & & h^{32}  \\
+                &&& h^{33} 
+\end{array}
+}
+\only<2>{
+\arraycolsep=1.5pt\def\arraystretch{1}
+\begin{array}[c]{ccccccc}
+&&& 1 \\  
+ &         & 0 & & 0  \\
+&	0 && h^{11}  && 0  \\
+1 && h^{12} && h^{12} && 1 \\
+&	0 && h^{11}  && 0  \\
+ &         & 0 & & 0  \\
+ &&& 1 
+\end{array}
+}
+\]
+
+\end{textblock}
+
+\end{frame}
