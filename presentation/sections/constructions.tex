@@ -1,0 +1,76 @@
+\begin{frame}
+\frametitle{Construction of a new Calabi--Yau: $X_1$}
+
+\begin{itemize}
+	\item Let $E$ be a vector space with basis $e_1,e_2,e_3$. Consider
+	$$
+	\P^{17} = \P(E \otimes E \oplus E \otimes E).
+	$$
+	The elements are pairs of $3 \times 3$ matrices, equal up to scalar multiplication.
+	\item Consider the set of pairs $M$ of matrices $(A,B)$ with rank $1+1$. 
+	\item Intersect $M$ with a generic $\P^{11} \subset \P^{17}$. Let $X_1 \stackrel \Delta = M \cap \P^{11}$.
+\end{itemize}
+
+\begin{theorem}
+$X_1$ is a smooth Calabi--Yau with Euler-characteristic $-72$.
+\end{theorem}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Construction of a new Calabi--Yau: $X_2$}
+
+\begin{itemize}
+	\item Let $F$ be a vector space with basis $f_1,f_2$. Consider
+	$$
+\P^{15} = \P(F \otimes F \otimes F \oplus F \otimes F \otimes),
+	$$
+	The elements are pairs of $2 \times 2 \times 2$-tensors, equal up to scalar multiplication.
+	\item Consider the set of pairs $N$ of tensors $(A,B)$ with rank $1+1$.
+	\item Intersect $N$ with a generic $\P^{11} \subset \P^{15}$. Let $X_2 \stackrel \Delta = N \cap \P^{11}$.
+\end{itemize}
+
+\begin{theorem}
+$X_2$ is a smooth Calabi--Yau with Euler-characteristic $-48$.
+\end{theorem}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Construction of a new Calabi--Yau: $X_3$}
+
+\begin{itemize}
+	\item Let $E$ and $F$ be as before. Consider
+	$$
+\P^{16} = \P(E \otimes E \oplus F \otimes F \otimes).
+	$$
+	\item Consider the set of pairs $W$ of tensors $(A,B)$ with rank $1+1$.
+	\item Intersect $W$ with a generic $\P^{11} \subset \P^{16}$. Let $X_3 \stackrel \Delta =  W \cap \P^{11}$.
+\end{itemize}
+
+\begin{theorem}
+$X_3$ is a smooth Calabi--Yau with Euler-characteristic $-60$.
+\end{theorem}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Hodge number heuristics}
+\begin{conjecture}
+$X_1$ have Hodge numbers $h^{11}=3$ and $h^{12}=39$.
+\end{conjecture}
+\begin{proof}[``Reason'']
+
+\begin{enumerate}
+	\item We know the Euler characteristic, so it is enough to find $h^{12}$ ($=$ number of parameters).
+	\item The Grassmannian of $\P^{11}$'s in $\P^{17}$ is $72$-dimensional.
+	\item We can act by automorphism from $\prod_{i=1}^4 \GL(E)$.
+	\item The subgroup $\{ t_1t_2=t_3t_4 \} \subset (\C^\ast)^4 \subset \prod_{i=1}^4 \GL(E)$ acts trivially.
+	\item Hence $h^{12}=72-(\dim \prod_{i=1}^4 \GL(E) - 3) = 72-33=39$.
+\end{enumerate}
+
+\end{proof}
+
+
+\end{frame}
