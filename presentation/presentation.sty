@@ -1,13 +1,31 @@
 \NeedsTeXFormat{LaTeX2e}[1994/12/01]
-\ProvidesClass{presentation}
+\ProvidesPackage{presentation}
 
 
 \RequirePackage[utf8]{inputenx}
 \RequirePackage[final]{microtype}
+\RequirePackage{xspace}
+\RequirePackage{amssymb}
+\RequirePackage{mathtools}
+\RequirePackage{mathrsfs}
+\RequirePackage{tikz,tikz-cd}
 \RequirePackage{textcomp}
 \RequirePackage[absolute, overlay]{textpos}
 \setlength{\TPHorizModule}{\paperwidth}
 \setlength{\TPVertModule}{\paperheight}
+
+
+\DeclareMathOperator{\dP6}{dP_6}
+\DeclareMathOperator{\Gr}{\mathbb{G}}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\GL}{GL}
+
+
+\newcommand{\CY}{Calabi--\kern-0.4exYau\xspace}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb C}
+\newcommand{\OO}{\mathscr{O}}
+\renewcommand{\P}{\mathbb{P}}
 
 
 \endinput
