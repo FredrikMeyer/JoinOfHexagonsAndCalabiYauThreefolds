@@ -1,17 +1,17 @@
 \begin{frame}
-\frametitle{Calabi--Yau manifolds}
+\frametitle{Calabi--Yau varieties}
 
 \begin{definition}[Calabi--Yau variety]
-A Calabi--Yau variety is a smooth projective scheme $X/\C$ of dimension $3$ satisfying:
+A Calabi--Yau variety is an irreducible smooth projective scheme $X/\C$ of dimension $3$ satisfying:
 \begin{itemize}
-	\item $H^0(X,\OO_X)=H^3(X,\OO_X)=k$ and $h^1(X,\OO_X)=h^2(\OO_X)=0$.
+	\item $H^0(X,\OO_X)=H^3(X,\OO_X)=\C$ and $H^1(X,\OO_X)=H^2(X,\OO_X)=0$.
 	\item The canonical sheaf is trivial: $\omega_X \simeq \OO_X$. 
 \end{itemize}
 \end{definition}
 
 \begin{textblock}{0.5}(0.0, 0.6)
 \begin{itemize}
-	\item Easiest invariant are the Euler characteristic and the Hodge numbers.
+	\item Easiest invariants are the Euler characteristic and the Hodge numbers. $h^{ij}=h^j(X,\Omega_{X/\C}^i)$.
 
 	\item We always have $\chi = 2(h^{11}-h^{12})$. 
 \end{itemize}
@@ -46,5 +46,23 @@ A Calabi--Yau variety is a smooth projective scheme $X/\C$ of dimension $3$ sati
 \]
 
 \end{textblock}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Hodge numbers}
+
+\begin{itemize}
+  \item The quintic $X=V(f) \subset \P^4$ is the canonical example of a Calabi--Yau. It has Hodge numbers $h^{11}=1$ and $h^{12}=101$.
+\end{itemize}
+
+\begin{remark}[Heuristic]
+The number $h^{12}$ is the dimension of the ``space of parameters'' of $X$. The following heuristic will give us the correct Hodge number:
+\begin{itemize}
+  \item The space of degree $5$ polynomials $H^0(\P^4,\OO_{\P^4}(5))$ in $\P^4$ is $\binom{4+5}{5}=\binom{9}{4}=126$-dimensional. Hence $\P \left(H^0(\P^4,\OO_{\P^4}(5))\right) = \P^{125}$.
+  \item This is not unique, but we can act by $\PGL(5)$ to identify isomorphic quintics. We have $\dim_\C \PGL(5)=25-1=24$.
+  \item In total: $125-24=101$, which is $h^{12}(X)$.
+\end{itemize}
+\end{remark}
 
 \end{frame}
