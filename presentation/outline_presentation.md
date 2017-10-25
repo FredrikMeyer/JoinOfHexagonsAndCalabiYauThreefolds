@@ -15,7 +15,7 @@ Sum time: 35 min (too much!)
 
 ---
 
-## Short outline
+## Outline
 
 The thesis consists of three main themes. The first chapter describes an unsuccessful attempt to find new families of hyper-Kähler varieties. In the second chapter I study a special toric singularity: the cone over a del Pezzo surface of degree 6. It is a 3-dimensional toric variety, having two smoothing components. I describe the smoothing components, and I calculate the singular homology groups of the two smoothings.
 

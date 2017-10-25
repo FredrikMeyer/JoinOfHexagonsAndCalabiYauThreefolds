@@ -1,11 +1,11 @@
 \begin{frame}
-\frametitle{\CY manifolds}
+\frametitle{\CY varieties}
 
 \begin{definition}%[\CY variety]
-    A \alert{\CY variety} is a smooth projective scheme $X/\C$ of dimension~$3$ satisfying:
+    A \alert{\CY variety} is an irreducible, smooth, projective scheme $X/\C$ of dimension~$3$ satisfying:
     \begin{itemize}
     	\item
-	    $H^0(X,\OO_X)=H^3(X,\OO_X)=k$ and $h^1(X,\OO_X)=h^2(\OO_X)=0$.
+	    $H^0(X, \OO_X) = H^3(X, \OO_X) = \C$ and $H^1(X, \OO_X) = H^2(X, \OO_X) = 0$.
 
 	    \item
 	    The canonical sheaf is trivial: $\omega_X \simeq \OO_X$. 
@@ -17,10 +17,10 @@
     \begin{column}{0.6\textwidth}
         \begin{itemize}
 	        \item
-	        Easiest invariants are the \structure{Euler characteristic} and the \structure{Hodge numbers}.
+	        Easiest invariants are the \structure{Euler characteristic} and the \structure{Hodge numbers}, $h^{ij} = h^j\Big(X, \Omega_{X/\C}^i\Big)\mkern-2mu$.
 
             \item
-            We always have $\chi = 2(h^{11}-h^{12})$. 
+            We always have $\chi = 2(h^{11} - h^{12})$. 
         \end{itemize}
     \end{column}
 \end{columns}
@@ -62,5 +62,28 @@
         \]
     \end{textblock}
 }
+\end{frame}
+
+
+% This frame contains a lot of text
+% with no highlighting or overlay effects
+\begin{frame}
+\frametitle{Hodge numbers}
+
+The quintic $X = V(f) \subset \P^4$ is the canonical example of a \CY. It has Hodge numbers $h^{11}=1$ and $h^{12}=101$.
+
+\begin{remark}[Heuristic]
+    The number $h^{12}$ is the dimension of the ``space of parameters'' of $X$. The following heuristic will give us the correct Hodge number:
+    \begin{itemize}
+	    \item
+	    The space of degree $5$ polynomials $H^0\big(\P^4, \OO_{\P^4}(5)\big)$ in $\P^4$ is $\binom{4 + 5}{5} = \binom{9}{4} = 126$-dimensional. Hence $\P\big(H^0\big(\P^4, \OO_{\P^4}(5)\big)\big) = \P^{125}$.
+
+	    \item
+	    This is not unique, but we can act by $\PGL(5)$ to identify isomorphic quintics. We have $\dim \PGL(5)=25-1=24$.
+
+	    \item
+	    In total: $125 - 24 = 101$, which is $h^{12}(X)$.
+    \end{itemize}
+\end{remark}
 
 \end{frame}
