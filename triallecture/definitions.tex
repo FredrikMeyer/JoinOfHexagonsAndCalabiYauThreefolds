@@ -1,0 +1,61 @@
+\documentclass[11pt, english]{article} 
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}   % S P R A A K
+
+
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage[poly,matrix]{xy}   % for comm.diagram
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{style} % stilfilen
+\usepackage{enumerate}  % lister $
+\usepackage{float}
+\usepackage{tikz}
+
+\title{Definitions in preparation of trial lecture}
+\author{Fredrik Meyer}
+\date{}
+\begin{document}  
+\maketitle
+
+\section{Problems}
+
+\begin{itemize}
+	\item \textbf{Schottky problem}
+
+	$(A,\Theta)$ principally polarized abelian variety. Find geometric conditions on $(A,\Theta)$ for it to be isomorphic the Jacobian of non-singular genus $g$ curve $C$.
+	\item \textbf{Riemann's singularity theorem}
+
+	For every $L \in \Pic^{(g-1)}(C)$, we have $\mathrm{mult}_L W_{g-1} = h^0(L)$.
+	\item \textbf{Torelli theorem}
+
+	If $(J(C), \Theta)$ and $(J(C'),\Theta')$ are isomorphic as principally poralized abelian varieties, then $C \approx C'$.
+\end{itemize}
+
+\section{Definitions}
+
+\begin{itemize}
+	\item \textbf{Jacobian variety of curve $C$}
+
+	Algebraic definition: the group $\Pic^0 (C)$ of line bundles of degree zero.
+
+	Analytic definition: $J(C) = H^0(\omega_C)^\ast / H_1(C,\Z)$: choose a basis $\lambda_i$ ($i=1,\ldots,2g$) of $H_1(C,\Z)$, and $\omega_1, \ldots,\omega_g \in H^0(\omega_C)$. We have $\lambda_i = \sum_{j=1}^g (\int_{\lambda_i} \omega_j)\omega_j^\ast$, which span a $\Z$-lattice.
+
+	The algebraic definition relates as follows:
+
+	$$
+	\Pic^0(C) \ni D \mapsto \{ \omega \mapsto \sum_{i=1}^N \int_{P_i}^{Q_i} \omega \} \pmod{H_1(C,\Z)}
+	$$
+	where we have written $D$ as a sum $\sum (P_i-Q_i)$.
+
+	The \textbf{Abel-Jacobi theorem} states that this map is is well-defined and an isomorphism.
+	\item \textbf{Theta characteristic on a curve $C$}
+
+	A line bundle $\mathcal L$ such that $\mathcal L^{\otimes 2} \approx \omega_C$. It is called even/odd if $h^(\mathcal L)$ is even/odd.
+\end{itemize}
+
+
+
+\end{document}

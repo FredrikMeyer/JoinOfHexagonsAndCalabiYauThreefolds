@@ -1,0 +1,193 @@
+\renewcommand{\d}[1]{\mathrm{d}{#1}}
+%Teoremting
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{corr}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\declaretheorem[style=definition,qed=$\blacksquare$,sibling=thm, name=Definition]{defi}
+
+\renewcommand*{\arraystretch}{1.5}
+\newcommand{\pullbackcorner}[1][dr]{\save*!/#1-1pc/#1:(1,-1)@^{|-}\restore}
+\newcommand{\pushoutcorner}[1][dr]{\save*!/#1+1pc/#1:(-1,1)@^{|-}\restore}
+
+
+%\newtheorem{example}[thm]{Example}
+\declaretheorem[style=definition, qed=$\bigstar$, sibling=thm]{example}
+
+
+\declaretheorem[style=definition,name=Oppgave, qed=$\blacksquare$]{oppg}
+\declaretheorem[style=definition,name=L\o sning, qed=$\heartsuit$]{losn}
+\declaretheorem[style=definition,name=Exercise, qed=$\spadesuit$]{exc}
+\declaretheorem[style=definition,name=Solution, qed=$\heartsuit$]{sol}
+
+
+%Remark
+\newtheorem*{remark}{Remark}
+%Figref
+\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+
+%Matematikkommandoer
+%Kategorier
+\newcommand{\catname}[1]{\mathsf{#1}}
+\newcommand{\Set}{\catname{Set}}
+\newcommand{\VBundles}{\catname{VBundles}}
+\newcommand{\PreSheaves}[1]{\catname{PreSheaves}_{#1}}
+\newcommand{\Diff}{\catname{Diff}}
+\newcommand{\Sh}{\catname{Sh}}
+\newcommand{\SchS}[1]{\mathsf{Sch}_{#1}}
+\newcommand{\Rep}[1]{\mathsf{Rep}(#1)}
+\newcommand{\Sch}{\catname{Sch}}
+\newcommand{\AffSch}{\catname{AffSch}}
+\newcommand{\Aff}{\catname{Aff}}
+\newcommand{\CR}{\catname{CR}}
+\newcommand{\Gpd}{\catname{Gpd}}
+\newcommand{\Grps}{\catname{Grps}}
+\newcommand{\Top}{\catname{Top}}
+\newcommand{\Mod}[1]{\catname{Mod}_{#1}}
+\newcommand{\Qcoh}[1]{\catname{Qcoh}({#1})}
+\newcommand{\Coh}[1]{\catname{Coh}({#1})}
+\newcommand{\QCOH}{\catname{QCOH}}
+\newcommand{\Mor}{\catname{Mor}}
+\newcommand{\Et}[1]{\catname{\acute{E}t}(#1)}
+
+
+% Curly letters
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\Isom}{\mathfrak{Isom}}
+\newcommand{\DD}{\mathscr{D}}
+
+%Andre
+
+
+\newcommand*{\rmap}[1][]{\mathbin{\tikz [baseline=-0.25ex,-latex, ->, densely dashed,#1] \draw [#1] (0pt,0.5ex) -- (1.3em,0.5ex);}}%
+
+\newcommand\restr[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+  }}
+
+\newcommand{\surj}{\twoheadrightarrow}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Hh}{\mathbb{H}}
+\newcommand{\dd}[2]{\frac{\partial {#1}}{\partial {#2}}}
+\DeclareMathOperator{\rank}{\mathrm{rank}}
+\DeclareMathOperator{\vol}{\mathrm{vol}}
+\newcommand{\K}{\mathcal K}
+\DeclareMathOperator{\HOM}{\catname{HOM}}
+%\DeclareMathOperator{\Shom}{\mathscr{H}om}
+\DeclareMathOperator{\Shom}{\mathscr{H}\text{\kern -3pt {\calligra\large om}}\,}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\OO}{\mathscr{O}}
+\DeclareMathOperator{\Cone}{Cone}
+\DeclareMathOperator{\ord}{ord}
+\renewcommand{\div}{\mathrm{div}}
+%\newcommand{\Span}[1]{\mathrm{Span}\{#1\}}
+\DeclareMathOperator{\Span}{Span}
+\newcommand{\X}{\times}
+\newcommand{\g}{\mathfrak g}
+\newcommand{\XX}{\mathfrak X}
+\newcommand{\E}{\mathcal E}
+\newcommand{\Gr}{\mathbb{G}}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\Tor}{\mathrm{Tor}}
+\DeclareMathOperator{\Ext}{\mathrm{Ext}}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Sing}{Sing}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\tr}{Tr}
+\DeclareMathOperator{\SSpec}{\boldsymbol{Spec}}
+\DeclareMathOperator{\colim}{colim}
+\DeclareMathOperator{\Conv}{Conv}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Der}{Der}
+\newcommand{\RR}{\mathfrak{R}}
+\DeclareMathOperator{\Pic}{Pic}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\dprime}{{\prime\prime}} % double prime
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\aut}{\mbox{Aut}}
+\newcommand{\pr}{\mathrm{pr}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Aa}{\mathbb{A}}
+\newcommand{\F}{\mathbb{F}}
+\renewcommand{\S}{\mathcal{S}}
+\newcommand{\nil}{\mathfrak{N}}
+\newcommand{\jac}{\mathfrak{J}}
+\newcommand{\pp}{\mathfrak{p}}
+\newcommand{\qq}{\mathfrak{q}}
+\newcommand{\ia}{\mathfrak{a}}
+\newcommand{\ib}{\mathfrak{b}}
+\newcommand{\ic}{\mathfrak{c}}
+\newcommand{\mm}{\mathfrak{m}}
+\newcommand{\kk}{\mathfrak{k}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\II}{\mathfrak{I}}
+\DeclareMathOperator{\FF}{\mathscr{F}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\MM}{\mathcal{M}}
+\newcommand{\NN}{\mathcal{N}}
+\newcommand{\HH}{\mathcal{H}}
+\newcommand{\UU}{\mathscr{U}}
+\newcommand{\ub}{\mathbf{u}}
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\ho}{\mbox{Hom}}
+\newcommand{\Stab}{\text{Stab}}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\res}{\text{res}}
+\newcommand{\Ker}{\text{Ker}}
+\newcommand{\Ass}{\text{Ass}}
+\newcommand{\Ann}{\text{Ann}}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Sec}{Sec}
+\newcommand{\id}{\text{id}}
+\newcommand{\coker}{\text{coker}}
+\newcommand{\Var}{\text{Var}}
+\newcommand{\tor}{\text{Tor}}
+\newcommand{\ext}{\text{Ext}}
+\newcommand{\tot}{\text{Tot}}
+\DeclareMathOperator{\Aut}{Aut}
+\newcommand{\disc}{\text{disc}}
+\newcommand{\cone}{\text{cone}}
+\newcommand{\norm}{\text{N}}
+\newcommand{\con}{\overline}
+\newcommand{\lb}{\left\{}
+\newcommand{\rb}{\right\}}
+\newcommand{\lk}{\text{lk}}
+\newcommand{\bs}{\backslash}
+%\newcommand{\Ø}{\varnothing}
+\newcommand{\<}{\preccurlyeq}
+\newcommand{\length}{\mathrm{length}}
+\newcommand{\Blow}{\mathrm{Blow}}
+\newcommand{\Hilb}{\mathcal{H}\mathrm{ilb}}
+
+% Greek letters
+\newcommand{\eps}{\epsilon}
+
+% Matte
+\newcommand{\dotp}{\langle \, , \, \rangle}
+\newcommand{\dt}{\text{ dt}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+\DeclareMathOperator{\dP6}{dP_6}
+\DeclareMathOperator{\conv}{conv}
+
+% latex in header
+\newcommand{\lh}[2]{\texorpdfstring{#1}{#2}}
