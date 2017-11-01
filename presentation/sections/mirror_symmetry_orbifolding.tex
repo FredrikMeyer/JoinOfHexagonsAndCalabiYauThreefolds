@@ -1,36 +1,55 @@
 \begin{frame}
 \frametitle{The orbifold heuristic}
 
-Sometimes the following method produces a mirror manifold of a Calabi--Yau $X$.
+Sometimes the following method produces a mirror manifold of a \CY $X$:
 
 \begin{enumerate}
-	\item \only<1>{Suppose $X$ has a natural degeneration $X_0$ with a finite automorphism group $G$.}
-	\only<2->{
-	\alert{The general quintic degenerates to the singular scheme $V(x_0x_1x_2x_3x_4)$.}} % Rød farge?
-
-	\item \only<1-2>{Find a family $\pi: \mathscr X \to S$ on which $G$ act, and such that the general fiber $X_t$ have only isolated singularities.}
-	\only<3->{
-	\alert{
-		The family defined by $f_t=x_0x_1x_2x_3x_4 +t \sum_{i=0}^4 x_i^5$ is $S_5$-invariant.
-	}
+    \alert<2-4>
+	{
+	    \item
+	    \alt<1>
+	    {Suppose $X$ has a natural degeneration $X_0$ with a finite automorphism group $G$.}
+	    {The general quintic degenerates to the singular scheme $V(x_0x_1x_2x_3x_4)$.}
 	}
 
-	\item \only<1-3>{There might be a finite subgroup $H$ of the big torus acting. A mirror candidate is then a crepant resolution of $X_t/H$.}
-	\only<4->{
-	\alert{
-		There is an action of $H \stackrel \Delta = (\Z/5)^5/(\Z/5)$ on $X_t$. Crepant resolutions of $X_t/H$ exists, and is a mirror.
+    \alert<3-4>
+    {
+	    \item
+	    \alt<1-2>
+	    {Find a family $\pi \colon \mathscr{X} \to S$ on which $G$ act, and such that the general fiber $X_t$ has only isolated singularities.}
+	    {The family defined by $f_t=x_0x_1x_2x_3x_4 + t \sum_{i = 1}^5 x_i^5$ is $S_5$-invariant.}
 	}
+
+    \alert<4-4>
+    {
+	    \item
+	    \alt<1-3>
+	    {
+	        There might be a finite subgroup $H$ of the big torus acting.
+	        \par
+	        A mirror candidate is then a crepant resolution of $X_t/H$.
+	    }
+	    {
+	        There is an action of $H \defeq (\Z/5)^5/(\Z/5)$ on $X_t$.
+	        \par
+	        Crepant resolutions of $X_t/H$ exists, and is a mirror.
+	    }
 	}
 \end{enumerate}
 
 
-\only<5->{
-We can use \emph{Roan's formula} to compute the Euler characteristic.
+\only<5->
+{
+    We can use \alert{Roan's formula} to compute the Euler characteristic:
 
-\begin{theorem}[Roan's formula]
-$$
-\chi(\widetilde{X_t/H}) = \frac 1{|H|} \sum_{g,h \in H} \chi \left(X_t^g \cap X_t^h\right).
-$$
-\end{theorem}
+    \begin{theorem}[Roan's formula]
+    \[
+        \displaystyle
+        \chi\Big(\widetilde{X_t/H}\Big)
+        =
+        \frac 1{|H|} \sum_{g,h \in H} \chi \Big(X_t^g \cap X_t^h\Big)
+    \]
+    \end{theorem}
 }
+
 \end{frame}

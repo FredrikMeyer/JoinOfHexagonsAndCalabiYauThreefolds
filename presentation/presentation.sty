@@ -1,13 +1,39 @@
 \NeedsTeXFormat{LaTeX2e}[1994/12/01]
-\ProvidesClass{presentation}
+\ProvidesPackage{presentation}
 
 
 \RequirePackage[utf8]{inputenx}
 \RequirePackage[final]{microtype}
+\RequirePackage{xspace}
+\RequirePackage{amssymb}
+\RequirePackage{mathtools}
+\RequirePackage{mathrsfs}
 \RequirePackage{textcomp}
+\RequirePackage{tikz,tikz-cd}
+\usetikzlibrary{calc,matrix,arrows,decorations.pathmorphing}
+\usetikzlibrary{intersections}
+\usetikzlibrary{decorations.markings}
 \RequirePackage[absolute, overlay]{textpos}
 \setlength{\TPHorizModule}{\paperwidth}
 \setlength{\TPVertModule}{\paperheight}
+
+
+\DeclareMathOperator{\dP6}{dP_6}
+\DeclareMathOperator{\Gr}{\mathbb{G}}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\GL}{GL}
+
+
+\newcommand{\CY}{Calabi--\kern-0.37exYau\xspace}
+\newcommand{\defeq}{\mathrel{\stackrel{\Delta}{=}}} %{\coloneqq}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\A}{\mathbb{A}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\OO}{\mathscr{O}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\T}{\mathcal{T}}
 
 
 \endinput
