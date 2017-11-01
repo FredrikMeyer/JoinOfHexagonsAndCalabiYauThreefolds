@@ -1,68 +1,89 @@
 \begin{frame}
-\frametitle{Calabi--Yau varieties}
+\frametitle{\CY varieties}
 
-\begin{definition}[Calabi--Yau variety]
-A Calabi--Yau variety is an irreducible smooth projective scheme $X/\C$ of dimension $3$ satisfying:
-\begin{itemize}
-	\item $H^0(X,\OO_X)=H^3(X,\OO_X)=\C$ and $H^1(X,\OO_X)=H^2(X,\OO_X)=0$.
-	\item The canonical sheaf is trivial: $\omega_X \simeq \OO_X$. 
-\end{itemize}
+\begin{definition}%[\CY variety]
+    A \alert{\CY variety} is an irreducible, smooth, projective scheme $X/\C$ of dimension~$3$ satisfying:
+    \begin{itemize}
+      \item
+      $H^0(X, \OO_X) = H^3(X, \OO_X) = \C$ and $H^1(X, \OO_X) = H^2(X, \OO_X) = 0$.
+
+      \item
+      The canonical sheaf is trivial: $\omega_X \simeq \OO_X$. 
+    \end{itemize}
 \end{definition}
 
-\begin{textblock}{0.5}(0.0, 0.6)
-\begin{itemize}
-	\item Easiest invariants are the Euler characteristic and the Hodge numbers. $h^{ij}=h^j(X,\Omega_{X/\C}^i)$.
+\unskip
+\begin{columns}[onlytextwidth]
+    \begin{column}{0.6\textwidth}
+        \begin{itemize}
+          \item
+          Easiest invariants are the {Euler characteristic} and the {Hodge numbers}, $h^{ij} = h^j\left(X, \Omega_{X/\C}^i\right)\mkern-2mu$.
 
-	\item We always have $\chi = 2(h^{11}-h^{12})$. 
-\end{itemize}
-\end{textblock}
+            \item
+            We always have $\chi = 2(h^{11} - h^{12})$. 
+        \end{itemize}
+    \end{column}
+\end{columns}
 
-    \begin{textblock}{0.4}(0.60, 0.58)
-    \[
-    \only<1>{
-   \arraycolsep=1pt\def\arraystretch{0.5}
-\begin{array}[c]{ccccccc}
-&&&               h^{00} \\  
- &         & h^{01} & & h^{10}  \\
-&	h^{02} && h^{11}  && h^{20}  \\
-   h^{03} && h^{12} && h^{21} && h^{30} \\
-&	h^{13} && h^{22}  && h^{31}  \\
- &         & h^{23} & & h^{32}  \\
+\only<1>
+{
+    \begin{textblock}{0.4}(0.58, 0.58)
+        \[
+            \arraycolsep = 1pt
+            \def\arraystretch{0.5}
+            \begin{array}[c]{ccccccc}
+                &&& h^{00}                               \\  
+                &&  h^{01} && h^{10}                     \\
+                &   h^{02} && h^{11} && h^{20}           \\
+                    h^{03} && h^{12} && h^{21} && h^{30} \\
+                &   h^{13} && h^{22} && h^{31}           \\
+                &&  h^{23} && h^{32}                     \\
                 &&& h^{33} 
-\end{array}
+            \end{array}
+        \]  
+    \end{textblock}
 }
-\only<2>{
-\arraycolsep=1.5pt\def\arraystretch{1}
-\begin{array}[c]{ccccccc}
-&&& 1 \\  
- &         & 0 & & 0  \\
-&	0 && h^{11}  && 0  \\
-1 && h^{12} && h^{12} && 1 \\
-&	0 && h^{11}  && 0  \\
- &         & 0 & & 0  \\
- &&& 1 
-\end{array}
-}
-\]
 
-\end{textblock}
+\only<2>
+{
+    \begin{textblock}{0.4}(0.62, 0.62)
+        \[
+            \arraycolsep = 1.5pt
+            \def\arraystretch{0.7}
+            \begin{array}[c]{ccccccc}
+                &&& 1                          \\
+                &&  0 && 0                     \\
+                &   0 && h^{11} && 0           \\
+                    1 && h^{12} && h^{12} && 1 \\
+                &   0 && h^{11} && 0           \\
+                &&  0 && 0                     \\
+                &&& 1 
+            \end{array}
+        \]
+    \end{textblock}
+}
 \end{frame}
-
 
 \begin{frame}
 \frametitle{Hodge numbers}
 
-\begin{itemize}
-  \item The quintic $X=V(f) \subset \P^4$ is the canonical example of a Calabi--Yau. It has Hodge numbers $h^{11}=1$ and $h^{12}=101$.
-\end{itemize}
+The quintic $X = V(f) \subset \P^4$ is the canonical example of a \CY. It has Hodge numbers $h^{11}=1$ and $h^{12}=101$.
 
 \begin{remark}[Heuristic]
-The number $h^{12}$ is the dimension of the ``space of parameters'' of $X$. The following heuristic will give us the correct Hodge number:
-\begin{itemize}
-  \item The space of degree $5$ polynomials $H^0(\P^4,\OO_{\P^4}(5))$ in $\P^4$ is $\binom{4+5}{5}=\binom{9}{4}=126$-dimensional. Hence $\P \left(H^0(\P^4,\OO_{\P^4}(5))\right) = \P^{125}$.
-  \item This is not unique, but we can act by $\PGL(5)$ to identify isomorphic quintics. We have $\dim_\C \PGL(5)=25-1=24$.
-  \item In total: $125-24=101$, which is $h^{12}(X)$.
-\end{itemize}
+    The number $h^{12}$ is the dimension of the ``space of parameters'' of $X$. The following heuristic will give us the correct Hodge number:
+    \begin{itemize}
+      \item
+      The space of degree $5$ polynomials $H^0\big(\P^4, \OO_{\P^4}(5)\big)$ in $\P^4$ is $\binom{4 + 5}{5} = \binom{9}{4} = 126$-dimensional. Hence $\P\big(H^0\big(\P^4, \OO_{\P^4}(5)\big)\big) = \P^{125}$.
+      \pause
+
+      \item
+      This is not unique, but we can act by $\PGL(5)$ to identify isomorphic quintics. We have $\dim \PGL(5)=25-1=24$.
+      \pause
+
+      \item
+      In total: $125 - 24 = 101$, which is $h^{12}(X)$.
+      \pause
+    \end{itemize}
 \end{remark}
 
 \end{frame}
