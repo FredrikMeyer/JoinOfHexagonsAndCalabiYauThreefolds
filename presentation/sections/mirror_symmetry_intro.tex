@@ -2,9 +2,18 @@
 \frametitle{Mirror symmetry}
 
 \begin{itemize}
-	\item \CY threefolds seem to ``always'' have ``mirror partners''.
-	\item Mirror partner $X^\circ$ to $X$ has ``mirrored Hodge diamond''.
-	\item Hence $\chi(X^\circ) = - \chi(X)$.
+	\item
+    \CY threefolds seem to ``always'' have ``mirror partners''.
+    \only<2->
+    {
+	\item
+    Mirror partner $X^\circ$ to $X$ has ``mirrored Hodge diamond''.
+    }
+    \only<3->
+    {
+	\item
+    Hence $\chi(X^\circ) = - \chi(X)$.
+    }
 \end{itemize}
 
 \unskip
@@ -48,5 +57,60 @@
     }
 \end{columns}
 
+\end{frame}
+
+\begin{frame}
+\frametitle{The orbifold heuristic}
+
+Sometimes the following method produces a mirror manifold of a \CY $X$:
+
+\begin{enumerate}
+    \alert<2-4>
+    {
+        \item
+        \alt<1>
+        {Suppose $X$ has a natural degeneration $X_0$ with a finite automorphism group $G$.}
+        {The general quintic degenerates to the singular scheme $V(x_0x_1x_2x_3x_4)$.}
+    }
+
+    \alert<3-4>
+    {
+        \item
+        \alt<1-2>
+        {Find a family $\pi \colon \mathscr{X} \to S$ on which $G$ act, and such that the general fiber $X_t$ has only isolated singularities.}
+        {The family defined by $f_t=x_0x_1x_2x_3x_4 + t \sum_{i = 1}^5 x_i^5$ is $S_5$-invariant.}
+    }
+
+    \alert<4-4>
+    {
+        \item
+        \alt<1-3>
+        {
+            There might be a finite subgroup $H$ of the big torus acting.
+            \par
+            A mirror candidate is then a crepant resolution of $X_t/H$.
+        }
+        {
+            There is an action of $H \defeq (\Z/5)^5/(\Z/5)$ on $X_t$.
+            \par
+            Crepant resolutions of $X_t/H$ exists, and are mirrors.
+        }
+    }
+\end{enumerate}
+
+
+\only<5->
+{
+    We can use \alert{Roan's formula} to compute the Euler characteristic:
+
+    \begin{theorem}[Roan's formula]
+    \[
+        \displaystyle
+        \chi\Big(\widetilde{X_t/H}\Big)
+        =
+        \frac 1{|H|} \sum_{g,h \in H} \chi \Big(X_t^g \cap X_t^h\Big)
+    \]
+    \end{theorem}
+}
 
 \end{frame}
