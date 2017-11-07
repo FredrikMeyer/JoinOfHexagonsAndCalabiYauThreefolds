@@ -7,15 +7,16 @@
 	\pause
 	\item Apply the Jacobian functor $J(-)$ to get a morphism:
 	\begin{align*}
-	\Nm:J(\widetilde C) &\to J(C) \\
-	\OO_{\widetilde C}(\widetilde D) &\mapsto \OO_C(\pi_\ast \widetilde D).
+	\Nm\colon J\Big(\widetilde C\Big) &\to J(C) \\[1ex]
+	\OO_{\widetilde C}\Big(\widetilde D\Big) &\mapsto \OO_C\Big(\pi_\ast \widetilde D\Big).
 	\end{align*}
+	\vskip-3ex
 	\pause
 
 	\item Then:
 	\alert{
 	\[
-	\Prym(\widetilde C, C) := \left(\ker \Nm \right)_0.
+	\Prym\Big(\widetilde C, C\Big) \defeq (\ker \Nm)_0.
 	\]
 	}
 \end{itemize}
@@ -27,13 +28,13 @@
 \frametitle{First properties of Pryms}
 
 \begin{itemize}
-	\item Every double cover comes with an involution $\sigma:  \widetilde C \circlearrowleft$ exchanging sheets.
+	\item Every double cover comes with an involution $\sigma \colon  \widetilde C \circlearrowleft$ exchanging sheets.
 \end{itemize}
 
 
 \begin{proposition}
 \[
-(\ker Nm)_0 = \mathrm{Im}(1-\sigma).
+(\ker Nm)_0 = \im(1-\sigma).
 \]
 \end{proposition}
 \begin{proof}["Proof"]
@@ -47,19 +48,19 @@ One way is okay. Suppose $D= \sum a_i P_i - \sum a_i \sigma{P_i}$ is in the imag
 \begin{frame}
 \frametitle{The induced polarization}
 
-The induced polarization comes from \alert{$i^\ast \Theta$}, where $i:\Prym(\widetilde C, \C) \to J(\widetilde C)$ is the inclusion.
+The induced polarization comes from \alert{$i^\ast \Theta$}, where $i\colon\mkern-2mu\Prym\mkern-2mu\Big(\widetilde C, \C\Big)\mkern-2mu \to J(C)$ is the inclusion.
 
 \begin{theorem}
 The induced polarization on $P$ is twice a principal polarization.
 \end{theorem}
 \pause
 \begin{remark}
-In the complex setting, polarizations correspond to Hermitian forms on $\C^n$. It is principal if the Hermitian form can be written as 
+In the complex setting, polarizations correspond to Hermitian forms on $\C^n\mkern-3mu$. It is principal if the Hermitian form can be written as 
 \[
-\begin{pmatrix}
+\begin{pmatrix*}[r]
 0 & I \\
 -I &0
-\end{pmatrix}
+\end{pmatrix*}
 \]
 in the standard basis.
 \end{remark}
@@ -69,11 +70,11 @@ in the standard basis.
 \frametitle{Set-up}
 
 \begin{itemize}
-	\item Recall the description of $J(\widetilde C)$ as $H^0(\widetilde C, \omega_{\widetilde C})^\ast/H_1(\widetilde C, \Z)$.
+	\item Recall the description of $J\Big(\widetilde C\Big)$ as $H^0\Big(\widetilde C, \omega_{\widetilde C}\Big)^{\mkern-7mu\ast}/H_1\Big(\widetilde C, \Z\Big)$.
 	\item We can identify
 	\alert{
 	\[
-	\Prym(\widetilde C, C) = \left(H^0(\widetilde C, \omega_{\widetilde C})^\ast\right)^- /{H_1(\widetilde C, \Z)}^-,
+	\Prym\Big(\widetilde C, C\Big) = \Big(H^0\Big(\widetilde C, \omega_{\widetilde C}\Big)^{\mkern-7mu\ast}\Big)^{\mkern-7mu-} / {H_1\Big(\widetilde C, \Z\Big)}^{\mkern-7mu-}\mkern-7mu,
 	\]
 	}
 	where the $(-)^-$, denotes the $-1$-eigenspaces.
@@ -114,22 +115,23 @@ in the standard basis.
 
 
 \begin{frame}
+    
 
-\begin{enumerate}
+\begin{enumerate}[<+->]
 	\item Choose a symplectic basis $\lambda_0, \ldots, \lambda_g$, $\mu_0, \ldots, \mu_g$ of $H_1(C,\Z)$.
-	\pause
+
 	\item A degree $2$ covering is determined by a cycle $\mu_0$ in $H_1(C, \Z/2)$.
-	\pause
-	\item A symplectic basis for $H_1(\widetilde C, \Z)$ are the lifts $\widetilde{\mu^+}_i, \widetilde{\mu^-}_i$, $\widetilde{\lambda^-}_i, \widetilde{\lambda^+}_i$ and $\widetilde{\mu}_0, \widetilde{\lambda}_0$. (from this we see that $\widetilde C$ has genus $2g+1$ if $C$ has genus $g-1$)
-	\pause
+
+	\item A symplectic basis for $H_1\Big(\widetilde C, \Z\Big)$ consists of the lifts $\widetilde{\mu^+}_i, \widetilde{\mu^-}_i$, $\widetilde{\lambda^-}_i, \widetilde{\lambda^+}_i$ and $\widetilde{\mu}_0, \widetilde{\lambda}_0$. (From this we see that $\widetilde C$ has genus $2g+1$ if $C$ has genus $g-1$)
+
 	\item A basis for the $(-1)$-eigenspace of $H_1(\widetilde C,\Z)$ is then
 	\begin{align*}
-	\alpha_i := \lambda_i^+ - \lambda_i^-, && \beta_i := \mu_i^+ - \mu_i^- && i=1,\ldots, g
+	\alpha_i \defeq \lambda_i^+ - \lambda_i^-, && \beta_i \defeq \mu_i^+ - \mu_i^- && i=1,\ldots, g
 	\end{align*}
-	\pause
+
 	\item The restriction of the Hermitian form is:
 	\begin{align*}
-	E(\alpha_i,\beta_j)= 2 \delta_{ij} && E(\alpha_i, \alpha_j) = E(\beta_i,\beta_j)=0,
+	E\big(\alpha_i,\beta_j\big)= 2 \delta_{ij} && E\big(\alpha_i, \alpha_j\big) = E\big(\beta_i,\beta_j\big)=0,
 	\end{align*}
 	which means it is twice a principal polarization.
 \end{enumerate}
