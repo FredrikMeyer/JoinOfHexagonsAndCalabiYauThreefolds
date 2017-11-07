@@ -1,0 +1,54 @@
+\begin{frame}
+\frametitle{Irrationality of smooth cubic threefolds}
+
+The theory of Pryms can be used to prove irrationality of some special varieties. Here we sketch the ideas involved.
+\pause
+
+\begin{itemize}
+	\item ``Schottky problem'' for Pryms. Which abelian varieties are Prym varieties? (more general than Jacobians).
+	\begin{theorem}[Shokurov]
+	Let $g \neq 4$. If $\Prym(\widetilde C, C)$ is a Jacobian, then $C$ is hyperelliptic, trigonal, or a plane quintic with $h^0(\OO_C(1) \otimes \eta)=0$. 
+	\end{theorem}
+	\pause
+	\item We want to violate this condition.
+\end{itemize}
+
+\begin{theorem}[Clemens-Griffiths criterion]
+If $X$ is rational, then $J(X)$ is a Jacobian or a product of Jacobians.
+\end{theorem}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Intermediate Jacobians}
+
+\begin{itemize}
+	\item Want to mimic the definition of ordinary Jacobians for more general varieties.
+	\item Often no natural polarization to choose.
+	\item For simplicity: if $X$ is a smooth threefold with $h^{3,0}=0$, then we define its \alert{intermediate Jacobian} as
+	\[
+	J(X) := H^{1,2}(X)/H^3(X,\Z).
+	\]
+	The intersection form on $H^3(X,\Z)$ defines in this case a principal polarization.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Proof of irrationality}
+
+\begin{enumerate}
+	\item Choose $\ell \subset X$ and blow up $X_\ell \to X$.
+	\pause
+	\item The projection from $\ell$ to a generic $\P^2$ defines a morphism $X_\ell \to \P^2$ inducing the structure of a conic bundle on $X_\ell$.
+	\pause
+	\item Can show that the blow-up doesn't change the intermediate Jacobian $J(X)=J(X_\ell)$.
+	\pause
+	\item The discriminant curve $C$ of $X_\ell \to \P^2$ is a smooth quintic. The fibers are pairs of lines (=degenerate conics). This gives $\widetilde C \xrightarrow{2:1} C$.
+	\pause
+	\item But $h^0(\OO_C(1) \otimes \eta)=1 \Rightarrow J(X)$ is not a Jacobian.
+	\pause
+	\item So $X$ cannot be rational!
+\end{enumerate}
+
+\end{frame}
