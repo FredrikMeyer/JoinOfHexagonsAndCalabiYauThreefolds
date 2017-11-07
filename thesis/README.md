@@ -14,7 +14,7 @@ There is an error in the calculation of the induced map of Picard groups on page
 
 ## Contact
 
-I can be reached on Twitter ([https://twitter.com/fredrikmeyer](@FredrikMeyer)), on e-mail (hrmeyer + some big email-provider which is also a search engine).
+I can be reached on Twitter ([@FredrikMeyer](https://twitter.com/fredrikmeyer)), on e-mail (hrmeyer + some big email-provider which is also a search engine).
 
 ## About the LaTeX setup
 
