@@ -5,15 +5,16 @@ The theory of Pryms can be used to prove irrationality of some special varieties
 \pause
 
 \begin{itemize}
-	\item ``Schottky problem'' for Pryms. Which abelian varieties are Prym varieties? (more general than Jacobians).
+	\item ``Schottky problem'' for Pryms.
+	Which abelian varieties are Prym varieties? (More general than Jacobians).
 	\begin{theorem}[Shokurov]
-	Let $g \neq 4$. If $\Prym(\widetilde C, C)$ is a Jacobian, then $C$ is hyperelliptic, trigonal, or a plane quintic with $h^0(\OO_C(1) \otimes \eta)=0$. 
+	Let $g \neq 4$. If $\Prym\Big(\widetilde C, C\Big)$ is a Jacobian, then $C$ is hyperelliptic, trigonal, or a plane quintic with $h^0(\OO_C(1) \otimes \eta)=0$. 
 	\end{theorem}
 	\pause
 	\item We want to violate this condition.
 \end{itemize}
 
-\begin{theorem}[Clemens-Griffiths criterion]
+\begin{theorem}[Clemens--Griffiths criterion]
 If $X$ is rational, then $J(X)$ is a Jacobian or a product of Jacobians.
 \end{theorem}
 
@@ -22,14 +23,14 @@ If $X$ is rational, then $J(X)$ is a Jacobian or a product of Jacobians.
 \begin{frame}
 \frametitle{Intermediate Jacobians}
 
-\begin{itemize}
+\begin{itemize}[<+->]
 	\item Want to mimic the definition of ordinary Jacobians for more general varieties.
-	\pause
+
 	\item Often no natural polarization to choose.
-	\pause
-	\item For simplicity: if $X$ is a smooth threefold with $h^{3,0}=0$, then we define its \alert{intermediate Jacobian} as
+
+	\item For simplicity: If $X$ is a smooth threefold with $h^{3,0}=0$, then we define its \alert{intermediate Jacobian} as
 	\[
-	J(X) := H^{1,2}(X)/H^3(X,\Z).
+	J(X) \defeq H^{1,2}(X)/H^3(X,\Z).
 	\]
 	The intersection form on $H^3(X,\Z)$ defines in this case a principal polarization.
 \end{itemize}
@@ -39,17 +40,17 @@ If $X$ is rational, then $J(X)$ is a Jacobian or a product of Jacobians.
 \begin{frame}
 \frametitle{Proof of irrationality of cubic threefold}
 
-\begin{enumerate}
+\begin{enumerate}[<+->]
 	\item Choose $\ell \subset X$ and blow up $X_\ell \to X$.
-	\pause
-	\item The projection from $\ell$ to a generic $\P^2$ defines a morphism $X_\ell \to \P^2$ inducing the structure of a conic bundle on $X_\ell$.
-	\pause
-	\item Can show that the blow-up doesn't change the intermediate Jacobian $J(X)=J(X_\ell)$.
-	\pause
+
+	\item The projection from $\ell$ to a generic $\P^2$ defines a morphism $X_\ell \to \P^2\mkern-4mu$, inducing the structure of a conic bundle on $X_\ell$.
+
+	\item Can show that the blow-up does not change the intermediate Jacobian $J(X)=J(X_\ell)$.
+
 	\item The discriminant curve $C$ of $X_\ell \to \P^2$ is a smooth quintic. The fibers are pairs of lines (=degenerate conics). This gives $\widetilde C \xrightarrow{2:1} C$.
-	\pause
-	\item But $h^0(\OO_C(1) \otimes \eta)=1 \Rightarrow J(X)$ is not a Jacobian.
-	\pause
+
+	\item But $h^0(\OO_C(1) \otimes \eta)=1 \implies J(X)$ is not a Jacobian.
+
 	\item So $X$ cannot be rational!
 \end{enumerate}
 
