@@ -1,6 +1,6 @@
 # Joins of hexagons and Calabi-Yau threefolds
 
-This is the source code of my thesis for the degree of Philosophiae Doctor. The PDF file is [here](main.pdf).
+This is the source code of my thesis for the degree of Philosophiae Doctor. The PDF file is [here](thesis/main.pdf).
 
 ## Abstract
 
