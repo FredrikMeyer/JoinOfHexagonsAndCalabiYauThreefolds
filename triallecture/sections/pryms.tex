@@ -7,8 +7,8 @@
 	\pause
 	\item Apply the Jacobian functor $J(-)$ to get a morphism:
 	\begin{align*}
-	\Nm\colon J\Big(\widetilde C\Big) &\to J(C) \\[1ex]
-	\OO_{\widetilde C}\Big(\widetilde D\Big) &\mapsto \OO_C\Big(\pi_\ast \widetilde D\Big).
+	\Nm\colon J(\widetilde C) &\to J(C) \\[1ex]
+	\OO_{\widetilde C}(\widetilde D) &\mapsto \OO_C(\pi_\ast \widetilde D).
 	\end{align*}
 	\vskip-3ex
 	\pause
@@ -16,7 +16,7 @@
 	\item Then:
 	\alert{
 	\[
-	\Prym\Big(\widetilde C, C\Big) \defeq (\ker \Nm)_0.
+	\Prym(\widetilde C, C) \defeq (\ker \Nm)_0.
 	\]
 	}
 \end{itemize}
@@ -48,7 +48,7 @@ One way is okay. Suppose $D= \sum a_i P_i - \sum a_i \sigma{P_i}$ is in the imag
 \begin{frame}
 \frametitle{The induced polarization}
 
-The induced polarization comes from \alert{$i^\ast \Theta$}, where $i\colon\mkern-2mu\Prym\mkern-2mu\Big(\widetilde C, \C\Big)\mkern-2mu \to J(C)$ is the inclusion.
+The induced polarization comes from \alert{$i^\ast \Theta$}, where $i\colon\Prym(\widetilde C, C )\mkern-2mu \to J(C)$ is the inclusion.
 
 \begin{theorem}
 The induced polarization on $P$ is twice a principal polarization.
@@ -70,14 +70,14 @@ in the standard basis.
 \frametitle{Set-up}
 
 \begin{itemize}
-	\item Recall the description of $J\Big(\widetilde C\Big)$ as $H^0\Big(\widetilde C, \omega_{\widetilde C}\Big)^{\mkern-7mu\ast}/H_1\Big(\widetilde C, \Z\Big)$.
+	\item Recall the description of $J(\widetilde C)$ as ${H^0(\widetilde C, \omega_{\widetilde C})}^{\ast}/H_1(\widetilde C, \Z)$.
 	\item We can identify
 	\alert{
 	\[
-	\Prym\Big(\widetilde C, C\Big) = \Big(H^0\Big(\widetilde C, \omega_{\widetilde C}\Big)^{\mkern-7mu\ast}\Big)^{\mkern-7mu-} / {H_1\Big(\widetilde C, \Z\Big)}^{\mkern-7mu-}\mkern-7mu,
+	\Prym\left(\widetilde C, C\right) = \left({H^0(\widetilde C, \omega_{\widetilde C})}^{\ast}\right)^{\mkern-7mu-} / {H_1(\widetilde C, \Z)}^{\mkern-7mu-}\mkern-7mu,
 	\]
 	}
-	where the $(-)^-$, denotes the $-1$-eigenspaces.
+	where the $(-)^-$, denotes the $(-1)$-eigenspaces.
 \end{itemize}
 
 
@@ -122,7 +122,7 @@ in the standard basis.
 
 	\item A degree $2$ covering is determined by a cycle $\mu_0$ in $H_1(C, \Z/2)$.
 
-	\item A symplectic basis for $H_1\Big(\widetilde C, \Z\Big)$ consists of the lifts $\widetilde{\mu^+}_i, \widetilde{\mu^-}_i$, $\widetilde{\lambda^-}_i, \widetilde{\lambda^+}_i$ and $\widetilde{\mu}_0, \widetilde{\lambda}_0$. (From this we see that $\widetilde C$ has genus $2g+1$ if $C$ has genus $g-1$)
+	\item A symplectic basis for $H_1(\widetilde C, \Z)$ consists of the lifts $\widetilde{\mu^+}_i, \widetilde{\mu^-}_i$, $\widetilde{\lambda^-}_i, \widetilde{\lambda^+}_i$ and $\widetilde{\mu}_0, \widetilde{\lambda}_0$. (From this we see that $\widetilde C$ has genus $2g+1$ if $C$ has genus $g-1$)
 
 	\item A basis for the $(-1)$-eigenspace of $H_1(\widetilde C,\Z)$ is then
 	\begin{align*}
