@@ -8,10 +8,14 @@ The main goal of my thesis is the construction of new Calabi-Yau manifolds. I st
 
 The last chapter is devoted to the construction of new Calabi-Yau manifolds. I also propose mirror candidates.
 
+## Known errors
+
+There is an error in the calculation of the induced map of Picard groups on page 40. I claim that the middle map is the identity map, but a quick argument clearly shows that this cannot be. 
+
 ## Contact
 
-I can be reached on Twitter (@FredrikMeyer), on e-mail (hrmeyer + some big email-provider which is also a search engine).
+I can be reached on Twitter ([@FredrikMeyer](https://twitter.com/fredrikmeyer)), on e-mail (hrmeyer + some big email-provider which is also a search engine).
 
-## About the setup
+## About the LaTeX setup
 
 The LaTeX template I'm using is written by [Martin Helsø](http://folk.uio.no/martibhe/LaTeX/).
