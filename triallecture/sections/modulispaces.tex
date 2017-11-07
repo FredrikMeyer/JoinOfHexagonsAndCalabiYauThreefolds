@@ -1,26 +1,24 @@
 \begin{frame}
 \frametitle{Maps between moduli spaces}
 
-\begin{itemize}
-	\item Let $\A_g$ denote the moduli space of principally polarized abelian varieties (dimension $d(d+1)/2$).
-	\pause
+\begin{itemize}[<+->]
+	\item Let $\A_g$ denote the moduli space of principally polarized abelian varieties \big(dimension $d(d+1)/2$\big).
+
 	\item Let $\mathfrak M_g$ denote the moduli space of genus $g$ curves.
-	\pause
+
 	\item Let $R_g$ denote the space of double covers $\widetilde C \to C$.
 \end{itemize}
-\pause
-
-
-\begin{center}
+\unskip\vskip1ex
+\only<4->{
 \[
 \xymatrix{
- & R_g \ar[dl]_{\pi_1} \ar[dr]^{\mathrm{Prym}}  & \\
+ & R_g \ar[dl]_{\pi_1} \ar[dr]^{\Prym}  & \\
 \mathfrak M_g & & \A_{g-1}
 }
 \]
-\end{center}
 
-The forgetful map is a $(2^{2g}-1)$-cover. 
+The forgetful map is a $\Big(2^{2g}-1\Big)$-cover. 
+}
 
 \end{frame}
 
@@ -28,7 +26,7 @@ The forgetful map is a $(2^{2g}-1)$-cover.
 \begin{frame}
 \frametitle{The Prym map}
 
-The structure of the map $\mathrm{Prym}:R_g \to \A_{g-1}$ is very interesting (analogue of the Torelli map $J:\mathfrak M_g \to \A_g$).
+The structure of the map $\Prym\colon R_g \to \A_{g-1}$ is very interesting (analogue of the Torelli map $J\colon\mathfrak M_g \to \A_g$).
 
 \pause
 
@@ -39,14 +37,14 @@ For $g \geq 7$, the Prym map is generically injective.
 \end{theorem}
 \pause
 
-It is however \alert{never} injective, because of the so-called \alert{tetragonal construction}, which we're now going to explain.
+It is however \alert{never} injective, because of the so-called \alert{tetragonal construction}, which we are going to explain now.
 \end{frame}
 
 \begin{frame}
 \frametitle{The tetragonal construction (Donagi)}
 
 \begin{itemize}
-	\item Recall that a curve is \alert{tetragonal} if it admits a $4:1$ map $C \xrightarrow{f} \P^1$.
+	\item Recall that a curve is \alert{tetragonal} if it admits a $4:1$ map $C \xrightarrow{f} \P^1\mkern-4mu$.
 	\pause
 	\item Let $\widetilde C \to C$ be a double covering.
 	\pause
@@ -68,25 +66,25 @@ f_\ast \widetilde C = \left\{ (D,p) \mid f^{(4)}(\Nm(D)) = \widetilde f (p) \rig
 \begin{frame}
 \frametitle{The tetragonal construction (continued)}
 
-\begin{enumerate}
-	\item The involution of $\widetilde C$ act on $f_\ast \widetilde C$ as well.
-	\pause
+\begin{enumerate}[<+->]
+	\item The involution of $\widetilde C$ acts on $f_\ast \widetilde C$ as well.
+
 	\item There is an equivalence relation in $f_\ast \widetilde C$ defined as follows:
 	\[
-	(D,p) \sim (D',p') \Leftrightarrow
+	(D,p) \sim \big(D',p'\big) \iff
 	\begin{cases}
 	\#(D \cap D') \equiv 0 \pmod 2 \\
 	p = p'
 	\end{cases}
 	\]
-	\pause
+
 	\item Then I (Donagi, really) claim the following:
 	\begin{enumerate}
-		\item $\widetilde f: f_\ast \widetilde C = C_1 \sqcup C_2 \to \P^1$, with $C_i$ tetragonal.
+		\item $\widetilde f\colon f_\ast \widetilde C = C_1 \sqcup C_2 \to \P^1\mkern-4mu$, with $C_i$ tetragonal.
 		\item $C_i \to C_i/\iota$ are unramified double coverings.
 		\item Their associated Pryms are equal!
 		\[
-		\Prym(\widetilde C, C)=\Prym(C_1,C_1/\iota)=\Prym(C_2,C_2/\iota).
+		\Prym\Big(\widetilde C, C\big)=\Prym\big(C_1,C_1/\iota\big)=\Prym\big(C_2,C_2/\iota\big).
 		\]
 	\end{enumerate}
 \end{enumerate}
