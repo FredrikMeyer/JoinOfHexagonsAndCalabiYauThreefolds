@@ -1,0 +1,47 @@
+\NeedsTeXFormat{LaTeX2e}[1994/12/01]
+\ProvidesPackage{presentation}
+
+
+\RequirePackage[utf8]{inputenx}
+\RequirePackage[final]{microtype}
+\RequirePackage{xspace}
+\RequirePackage{amssymb}
+\RequirePackage{mathtools}
+\RequirePackage{mathrsfs}
+\RequirePackage{textcomp}
+
+\usepackage[poly,matrix]{xy}   % for comm.diagram
+
+\usetikzlibrary{calc,matrix,arrows,decorations.pathmorphing}
+\usetikzlibrary{intersections}
+\usetikzlibrary{decorations.markings}
+\RequirePackage[absolute, overlay]{textpos}
+\setlength{\TPHorizModule}{\paperwidth}
+\setlength{\TPVertModule}{\paperheight}
+
+
+\DeclareMathOperator{\dP6}{dP_6}
+\DeclareMathOperator{\Gr}{\mathbb{G}}
+\DeclareMathOperator{\Nm}{Nm}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Prym}{Prym}
+
+
+\newcommand{\CY}{Calabi--\kern-0.37exYau\xspace}
+\newcommand{\defeq}{\mathrel{\stackrel{\Delta}{=}}} %{\coloneqq}
+\newcommand{\dash}{\textthreequartersemdash\xspace}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\OO}{\mathscr{O}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\A}{\mathcal{A}}
+\renewcommand{\L}{\mathcal{L}}
+
+
+\endinput

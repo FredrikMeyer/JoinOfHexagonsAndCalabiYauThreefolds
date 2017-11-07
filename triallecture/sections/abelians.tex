@@ -1,0 +1,74 @@
+\begin{frame}
+\frametitle{Abelian varieties}
+
+\begin{itemize}
+	\item Named from Niels Henrik Abel (1802-1829).
+	\item Integration of
+	 \[
+	\int_\gamma \frac{dz}{\sqrt{f(z)}}.
+	\]
+	$\gamma$ is a path in $\C$. \pause
+	\item Enter Riemann surfaces: $C=\{ (w,z) \mid w^2=f(z) \}$.
+	\item Let 
+	\[
+	\omega_i = z^{i-1} \frac{dz}{\sqrt{f(z)}}, \, \, i=1,\ldots,g
+	\]
+	be a basis for $H^0(C,\omega_C)$.
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{The Albanese map}
+
+Fix a point $p_0 \in C$ and consider
+\[
+p \mapsto \left(
+\int_{p_0}^p \omega_1, \ldots,  \int_{p_0}^p \omega_g
+\right)
+\]
+defined on a small $U \ni p_0$.
+\pause
+
+Cannot be extended to all of $C$, but well-defined modulo $H_1(C,\Z)$:
+
+\begin{align*}
+\alpha_{c_0}:C &\to H^0(C,\omega_C)^\ast/ H_1(C,\Z) =: J(C) \\
+p &\mapsto \int_{p_0}^p \omega
+\end{align*}
+
+Isomorphic to $(S^1)^{2g}$.
+\end{frame}
+
+\begin{frame}
+\frametitle{Abelian varieties in general}
+
+\begin{itemize}
+	\item Over $\C$, $X=\C^n/\Lambda$, where $\Lambda$ is lattice of full rank (i.e. $\Lambda \otimes_\Z \R = \C^n$) and such that $\Lambda$ satisfies the \emph{Riemann relations}.
+	\item They are all projective varieties.
+	\item The \alert{dual abelian variety}:
+	\begin{align*}
+	\hat X &= (\C^n)^\ast/ \Lambda ^\ast \\
+	&=\{ \text{line bundles $\L$ with $c_1(\L)=0$} \} &(= \Pic^0(X)).
+	\end{align*}
+	\pause
+	\item Given $\L \in \Pic(X)$, we get a map $\varphi_\L$
+	\[
+	X \ni x \stackrel{\varphi_\L}{\mapsto} t_x^\ast \L \otimes L^{-1} \in \Pic^0(X) = \hat X.
+	\]
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Abelian varieties in general}
+
+\begin{itemize}
+	\item A \alert{polarization} on $X$ is a morphism $\rho: X \to \hat X$ such that $\rho=\varphi_\mathcal L$ for some \emph{ample} $\mathcal L$.
+	\item It is \alert{principal} if it is an isomorphism. \pause
+	\item If it is principal, then $H^0(X, \L)=\sigma \C$, and the divisor-of-zeroes of $\sigma$ is then a \alert{$\Theta$-divisor}.
+	\pause
+	\item Principally polarized abelian varieties = nice \alert{$\ddot\smile$} $\Rightarrow$ well behaved moduli spaces.
+\end{itemize}
+\end{frame}

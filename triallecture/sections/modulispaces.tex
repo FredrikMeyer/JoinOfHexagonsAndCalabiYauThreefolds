@@ -1,0 +1,96 @@
+\begin{frame}
+\frametitle{Maps between moduli spaces}
+
+\begin{itemize}
+	\item Let $\A_g$ denote the moduli space of principally polarized abelian varieties (dimension $d(d+1)/2$).
+	\pause
+	\item Let $\mathfrak M_g$ denote the moduli space of genus $g$ curves.
+	\pause
+	\item Let $R_g$ denote the space of double covers $\widetilde C \to C$.
+\end{itemize}
+\pause
+
+
+\begin{center}
+\[
+\xymatrix{
+ & R_g \ar[dl]_{\pi_1} \ar[dr]^{\mathrm{Prym}}  & \\
+\mathfrak M_g & & \A_{g-1}
+}
+\]
+\end{center}
+
+The forgetful map is a $(2^{2g}-1)$-cover. 
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{The Prym map}
+
+The structure of the map $\mathrm{Prym}:R_g \to \A_{g-1}$ is very interesting (analogue of the Torelli map $J:\mathfrak M_g \to \A_g$).
+
+\pause
+
+\begin{theorem}[Generic Torelli]
+
+For $g \geq 7$, the Prym map is generically injective. 
+
+\end{theorem}
+\pause
+
+It is however \alert{never} injective, because of the so-called \alert{tetragonal construction}, which we're now going to explain.
+\end{frame}
+
+\begin{frame}
+\frametitle{The tetragonal construction (Donagi)}
+
+\begin{itemize}
+	\item Recall that a curve is \alert{tetragonal} if it admits a $4:1$ map $C \xrightarrow{f} \P^1$.
+	\pause
+	\item Let $\widetilde C \to C$ be a double covering.
+	\pause
+	\item Consider the symmetric product ${\widetilde C}^{(4)} \subset \Pic^4(\widetilde C)$.
+\end{itemize}
+\pause
+
+Consider the Cartesian diagram:
+
+\[
+\xymatrix{
+f_\ast \widetilde C = \left\{ (D,p) \mid f^{(4)}(\Nm(D)) = \widetilde f (p) \right\} \ar[r] \ar[dd] & {\widetilde C}^{(4)} \ar[d] \\
+ & C^{(4)} \ar[d] \\
+\P^1 \ar[r]^\Delta & {\P^1}^{(4)} = \P^4
+}
+\]
+\end{frame}
+
+\begin{frame}
+\frametitle{The tetragonal construction (continued)}
+
+\begin{enumerate}
+	\item The involution of $\widetilde C$ act on $f_\ast \widetilde C$ as well.
+	\pause
+	\item There is an equivalence relation in $f_\ast \widetilde C$ defined as follows:
+	\[
+	(D,p) \sim (D',p') \Leftrightarrow
+	\begin{cases}
+	\#(D \cap D') \equiv 0 \pmod 2 \\
+	p = p'
+	\end{cases}
+	\]
+	\pause
+	\item Then I (Donagi, really) claim the following:
+	\begin{enumerate}
+		\item $\widetilde f: f_\ast \widetilde C = C_1 \sqcup C_2 \to \P^1$, with $C_i$ tetragonal.
+		\item $C_i \to C_i/\iota$ are unramified double coverings.
+		\item Their associated Pryms are equal!
+		\[
+		\Prym(\widetilde C, C)=\Prym(C_1,C_1/\iota)=\Prym(C_2,C_2/\iota).
+		\]
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\end{frame}

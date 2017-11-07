@@ -20,6 +20,8 @@
 \begin{document}  
 \maketitle
 
+We assume $k = \overline{k}$ or $k=\C$.
+
 \section{Problems and theorems}
 
 \begin{itemize}
@@ -36,12 +38,22 @@
 
 \section{Definitions}
 
-\begin{itemize}
-	\item \textbf{Jacobian variety of curve $C$}
+\subsubsection{Dual abelian variety} % (fold)
+\label{ssub:dual_abelian_variety}
 
-	Algebraic definition: the group $\Pic^0 (C)$ of line bundles of degree zero.
+Analytically, if $X$ is $\C^n/\Lambda$, then $\hat X$ is ${\C^n}^\ast/\Lambda^\ast$,  where $\Lambda^\ast$ is the space of $\Z$-valued forms on $\Lambda$.
 
-	Analytic definition: $J(C) = H^0(\omega_C)^\ast / H_1(C,\Z)$: choose a basis $\lambda_i$ ($i=1,\ldots,2g$) of $H_1(C,\Z)$, and $\omega_1, \ldots,\omega_g \in H^0(\omega_C)$. We have $\lambda_i = \sum_{j=1}^g (\int_{\lambda_i} \omega_j)\omega_j^\ast$, which span a $\Z$-lattice.
+% subsubsection dual_abelian_variety (end)
+
+\subsection{Isogeny}
+
+An \emph{isogeny} of algebraic groups is a surjective morphism with finite kernel.
+
+\subsection{Jacobian variety of curve $C$}
+
+Algebraic definition: the group $\Pic^0 (C)$ of line bundles of degree zero.
+
+Analytic definition: $J(C) = H^0(\omega_C)^\ast / H_1(C,\Z)$: choose a basis $\lambda_i$ ($i=1,\ldots,2g$) of $H_1(C,\Z)$, and $\omega_1, \ldots,\omega_g \in H^0(\omega_C)$. We have $\lambda_i = \sum_{j=1}^g (\int_{\lambda_i} \omega_j)\omega_j^\ast$, which span a $\Z$-lattice.
 
 	The algebraic definition relates as follows:
 
@@ -51,13 +63,25 @@
 	where we have written $D$ as a sum $\sum (P_i-Q_i)$.
 
 	The \textbf{Abel-Jacobi theorem} states that this map is is well-defined and an isomorphism.
-	\item \textbf{Theta characteristic on a curve $C$}
+
+
+\subsubsection{Polarization} % (fold)
+ \label{ssub:polarization}
+
+ A \emph{polarization} on $X$ is an isogeny $\lambda: X \to X^\vee$ such that $\lambda=\lambda_{\mathcal L}$ for some ample sheaf $\mathcal L$.
+
+ Here $\lambda_{\mathcal L}$ is the map $X \to X^\vee$ given by $a \mapsto (t_a^\ast \mathcal \otimes \mathcal L^{-1})$.
+ 
+ % subsubsection polarization (end) 
+
+\subsection{Theta characteristic on a curve $C$}
 
 	A line bundle $\mathcal L$ such that $\mathcal L^{\otimes 2} \approx \omega_C$. It is called even/odd if $h^0(\mathcal L)$ is even/odd.
-	\item \textbf{Prym variety}
+
+\subsection{Prym variety}
 
 	First definition: let $\pi: \widetilde C \to C$ be an étale double covering of smooth algebraic curves. Let $\iota: \widetilde C \to \widetilde C$ be the involution switching the two sheets of $\pi$. Then $\sigma$ acts on $J(\widetilde C)$. Then $P \stackrel \Delta = \mathrm{im}(1-\sigma^\ast) \subset J(\widetilde C)$, the ``odd'' part of $J(\widetilde C)$. This is also equal to the connected component of the identity of the kernel of the ``norm map'' $\mathrm {Nm}:J(\widetilde C) \to J(C)$.
-\end{itemize}
+
 
 
 
