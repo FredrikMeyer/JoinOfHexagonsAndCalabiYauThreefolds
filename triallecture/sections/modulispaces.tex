@@ -5,14 +5,18 @@
 	\item Let $\A_g$ denote the moduli space of principally polarized abelian varieties \big(dimension $d(d+1)/2$\big).
 
 	\item Let $\mathfrak M_g$ denote the moduli space of genus $g$ curves.
+	\pause
+	\item Let $R_g$ denote the space of double covers $\widetilde C \to C$. It can identified with
+	\[
+	R_g = \{ [C,\eta] \mid C \in \mathfrak M_g, \eta \in \Pic^0(C) \backslash \{ \OO_C\}, \eta^{\otimes 2}=\OO_C \}.
+	\]
 
-	\item Let $R_g$ denote the space of double covers $\widetilde C \to C$.
 \end{itemize}
 \unskip\vskip1ex
 \only<4->{
 \[
 \xymatrix{
- & R_g \ar[dl]_{\pi_1} \ar[dr]^{\Prym}  & \\
+ & R_g \ar[dl]_{\pi_1} \ar[dr]^{\Pr}  & \\
 \mathfrak M_g & & \A_{g-1}
 }
 \]
@@ -56,9 +60,9 @@ Consider the Cartesian diagram:
 
 \[
 \xymatrix{
-f_\ast \widetilde C = \left\{ (D,p) \mid f^{(4)}(\Nm(D)) = \widetilde f (p) \right\} \ar[r] \ar[dd] & {\widetilde C}^{(4)} \ar[d] \\
- & C^{(4)} \ar[d] \\
-\P^1 \ar[r]^\Delta & {\P^1}^{(4)} = \P^4
+f_\ast \widetilde C = \left\{ (D,p) \mid f^{(4)}(\Nm(D)) = \widetilde f (p) \right\} \ar[r] \ar[dd]_{\widetilde f} & {\widetilde C}^{(4)} \ar[d]^{\pi^{(4)}} \\
+ & C^{(4)} \ar[d]^{f^{(4)}} \\
+\P^1 \ar[r]^\Delta & {(\P^1)}^{(4)} = \P^4
 }
 \]
 \end{frame}
